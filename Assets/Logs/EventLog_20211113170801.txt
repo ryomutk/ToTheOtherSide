@@ -1,0 +1,818 @@
+---0
+---1
+
+--STEP ACTION--
+actionType:enter
+depthDelta:0
+    stepId:_0ShallowSea
+
+---2
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---3
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---4
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---5
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---6
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---7
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---8
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---9
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---10
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---11
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---12
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---13
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---14
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---15
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---16
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---17
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---18
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---19
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---20
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---21
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---22
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---23
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---24
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---25
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---26
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-2
+    stepId:_0ShallowSea
+
+---27
+
+--STEP ACTION--
+actionType:cleared
+depthDelta:0
+    stepId:_0ShallowSea
+
+
+--STEPEXPLORE--
+StepId:_0ShallowSea
+ State:traveled
+
+---28
+
+--STEP ACTION--
+actionType:enter
+depthDelta:0
+    stepId:_1garakutaEntry
+
+---29
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaEntry
+
+---30
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaEntry
+
+---31
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaEntry
+
+---32
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaEntry
+
+---33
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaEntry
+
+---34
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaEntry
+
+---35
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaEntry
+
+---36
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaEntry
+
+---37
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaEntry
+
+---38
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaEntry
+
+---39
+
+--STEP ACTION--
+actionType:cleared
+depthDelta:0
+    stepId:_1garakutaEntry
+
+
+--STEPEXPLORE--
+StepId:_1garakutaEntry
+ State:traveled
+
+---40
+
+--STEP ACTION--
+actionType:confirm
+depthDelta:0
+    stepId:_1garakutaGateway
+
+---41
+
+--STEP ACTION--
+actionType:confirm
+depthDelta:0
+    stepId:_1LostYumekuni
+
+
+--STEPEXPLORE--
+StepId:_1LostYumekuni
+ State:unavalable
+
+---42
+
+--STEP ACTION--
+actionType:enter
+depthDelta:0
+    stepId:_1garakutaGateway
+
+---43
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaGateway
+
+---44
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaGateway
+
+---45
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaGateway
+
+---46
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaGateway
+
+---47
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaGateway
+
+---48
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaGateway
+
+---49
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaGateway
+
+---50
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaGateway
+
+---51
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaGateway
+
+---52
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaGateway
+
+---53
+
+--STEP ACTION--
+actionType:cleared
+depthDelta:0
+    stepId:_1garakutaGateway
+
+
+--STEPEXPLORE--
+StepId:_1garakutaGateway
+ State:traveled
+
+---54
+
+--STEP ACTION--
+actionType:enter
+depthDelta:0
+    stepId:_2Hiroba
+
+---55
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---56
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---57
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---58
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---59
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---60
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---61
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---62
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---63
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---64
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---65
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---66
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---67
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---68
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---69
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---70
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---71
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---72
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---73
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---74
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---75
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---76
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---77
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---78
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---79
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---80
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---81
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---82
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---83
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---84
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---85
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---86
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---87
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---88
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---89
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---90
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---91
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---92
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---93
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---94
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---95
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---96
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---97
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---98
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---99
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---100
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---101
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---102
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---103
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---104
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_2Hiroba
+
+---105
+
+--STEP ACTION--
+actionType:cleared
+depthDelta:0
+    stepId:_2Hiroba
+
+
+--STEPEXPLORE--
+StepId:_2Hiroba
+ State:traveled
+
+---106
+
+--STEP ACTION--
+actionType:confirm
+depthDelta:0
+    stepId:_1garakutaEntry
+
+---107
+
+--STEP ACTION--
+actionType:enter
+depthDelta:0
+    stepId:_1garakutaEntry
+
+---108
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaEntry
+
+---109
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaEntry
+
+---110
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaEntry
+
+---111
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaEntry
+
+---112
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-1
+    stepId:_1garakutaEntry
+
+---113
+
+--STEP ACTION--
+actionType:escaped
+depthDelta:0
+    stepId:_1garakutaEntry
+
+

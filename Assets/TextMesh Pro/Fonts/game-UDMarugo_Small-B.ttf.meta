@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: f3c9cc583c0facd44a4047d1ddcf1208
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - game-UDMarugo_Small
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 208c99e8c86375b45a2ec3075f109b24, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

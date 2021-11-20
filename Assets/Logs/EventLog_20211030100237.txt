@@ -1,0 +1,1771 @@
+---0
+---1
+
+--STEP ACTION--
+actionType:enter
+depthDelta:0
+    stepId:_0ShallowSea
+
+---2
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---3
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---4
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---5
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---6
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---7
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---8
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---9
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---10
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---11
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---12
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---13
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---14
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---15
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---16
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---17
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---18
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---19
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---20
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---21
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---22
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---23
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---24
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---25
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---26
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---27
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---28
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---29
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---30
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---31
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---32
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---33
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---34
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---35
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---36
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---37
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---38
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---39
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---40
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---41
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---42
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---43
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---44
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---45
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---46
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---47
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---48
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---49
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---50
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---51
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---52
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---53
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---54
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---55
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---56
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---57
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---58
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---59
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---60
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---61
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---62
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---63
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---64
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---65
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---66
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---67
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---68
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---69
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---70
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---71
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---72
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---73
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---74
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---75
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---76
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---77
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---78
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---79
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---80
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---81
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---82
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---83
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---84
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---85
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---86
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---87
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---88
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---89
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---90
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---91
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---92
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---93
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---94
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---95
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---96
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---97
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---98
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---99
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---100
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---101
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---102
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---103
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---104
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---105
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---106
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---107
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---108
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---109
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---110
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---111
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---112
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---113
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---114
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---115
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---116
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---117
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---118
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---119
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---120
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---121
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---122
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---123
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---124
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---125
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---126
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---127
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---128
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---129
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---130
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---131
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---132
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---133
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---134
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---135
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---136
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---137
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---138
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---139
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---140
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---141
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---142
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---143
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---144
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---145
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---146
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---147
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---148
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---149
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---150
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---151
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---152
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---153
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---154
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---155
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---156
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---157
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---158
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---159
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---160
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---161
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---162
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---163
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---164
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---165
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---166
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---167
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---168
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---169
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---170
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---171
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---172
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---173
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---174
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---175
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---176
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---177
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---178
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---179
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---180
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---181
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---182
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---183
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---184
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---185
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---186
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---187
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---188
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---189
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---190
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---191
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---192
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---193
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---194
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---195
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---196
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---197
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---198
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---199
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---200
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---201
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---202
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---203
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---204
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---205
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---206
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---207
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---208
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---209
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---210
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---211
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---212
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---213
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---214
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---215
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---216
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---217
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---218
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---219
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---220
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---221
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---222
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---223
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---224
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---225
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---226
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---227
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---228
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---229
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---230
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---231
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---232
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---233
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---234
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---235
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---236
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---237
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---238
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---239
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---240
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---241
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---242
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---243
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---244
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---245
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---246
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---247
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---248
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---249
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---250
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---251
+
+--STEP ACTION--
+actionType:interact
+depthDelta:-0.2
+    stepId:_0ShallowSea
+
+---252
+
+--STEP ACTION--
+actionType:exit
+depthDelta:0
+    stepId:_0ShallowSea
+
+
+--STEPEXPLORE--
+StepId:_0ShallowSea
+ State:traveled
+
+

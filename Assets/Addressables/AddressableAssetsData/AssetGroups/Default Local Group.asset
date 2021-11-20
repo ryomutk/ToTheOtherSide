@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: cd7d7ef8b4fee88419a0fde63994e987
+  m_SerializeEntries:
+  - m_GUID: 044d6a6f24d8ad34ebab21d4f8745ec7
+    m_Address: Scriptables/StepData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - StepData
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: a70c4471438c9e84a91036edeb7926c0
+    m_Address: Scriptables/SectorData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SectorData
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 90e38a969091fee4f928f0612002bc35
+    m_Address: Scriptables/TalkData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - TalkData
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: fa5464f45a4e1434f9bb0127512483d5
+    m_Address: Assets/Addressables/Scriptables/Valuables/Selected.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - VSelected
+    - V_Selected
+    m_MainAsset: {fileID: 11400000, guid: fa5464f45a4e1434f9bb0127512483d5, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: fa5464f45a4e1434f9bb0127512483d5, type: 2}
+  - m_GUID: bbb9917423a932b4fa1e6945e73bf738
+    m_Address: Assets/Addressables/Scriptables/ArmBotData/ArmBotData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ArmBotData
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b68bd2c3932a2434e9d9223a7f6e4e2d
+    m_Address: Assets/Addressables/Scriptables/Events/ScreenTouchEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Ev_ScreenTouch
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: f03cd3536cec5ca43bcb43117452ad55
+    m_Address: Assets/Addressables/Scriptables/ExploreData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ExploreData
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 117b50853454f3444a5e4c767c1e1bdd
+    m_Address: Assets/Addressables/Scriptables/ItemData/Equipments
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Item
+    - Equipments
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 056c5e1fe34d59944a60fbfdfef79900
+    m_Address: Assets/Addressables/Scriptables/ItemData/Resources
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Item
+    - Resource
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 07bef0714095c014d9d055afff14bc43
+    m_Address: Assets/Addressables/Scriptables/ExEvent/ExploreEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Ev_Explore
+    m_MainAsset: {fileID: 11400000, guid: 07bef0714095c014d9d055afff14bc43, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 07bef0714095c014d9d055afff14bc43, type: 2}
+  - m_GUID: 355d4eacfb74ec7478e87eabe8334f34
+    m_Address: Assets/Addressables/Scriptables/ExEvent/RealtimeExEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Ev_ExRealtime
+    m_MainAsset: {fileID: 11400000, guid: 355d4eacfb74ec7478e87eabe8334f34, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 355d4eacfb74ec7478e87eabe8334f34, type: 2}
+  - m_GUID: 14c9412ea1aefe34197564f16cc2b442
+    m_Address: Assets/Addressables/Scriptables/DataSets/LogDatasets.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Li_ExLogDataSets
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 21d99b7404ef3184f8a3700295c7c772
+    m_Address: Assets/Addressables/Scriptables/SessionData/NowSessionData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - V_NowSession
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5f02200a1319907409168417aafe4d26, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ced6fecf54ba48a4dbef0ef3176053b4, type: 2}
+    - {fileID: 11400000, guid: af024a7a41caf824598ea87e5a30c79d, type: 2}
