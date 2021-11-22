@@ -21,41 +21,8 @@ public class StepConfig : ScriptableObject
         set { _name = value; }
     }
 
-    public int iD { get { return _id; } }
     [SerializeField] int _id;
-
-    [ShowInInspector, ReadOnly]
-    public int alignSector
-    {
-        get
-        {
-            if (!isRoot)
-            {
-                if (parent == null)
-                {
-                    return _alignSector;
-                }
-                return parent.alignSector;
-            }
-            else
-            {
-                return _alignSector;
-            }
-        }
-    }
-
-    public Sprite thumbNail { get { return _thumbnail; } }
-
-    //Rootだけのためのメンバー
-    //それ以外はフィールドのほうを参照すること
-    [HideInInspector] public int _alignSector = 0;
-
-    public SectorStep.StepBehaviourBase behaviour
-    {
-        get { return _behaviour; }
-    }
-    public EnvironmentAttribute defaultAttribute { get { return _attribute; } }
-    public string detail { get { return _detail; } }
+    
     public int rawDurability { get { return _durability; } }
     [SerializeField, HideInInspector] string _name;
     [SerializeField, HorizontalGroup("Split", 55, LabelWidth = 100)]
