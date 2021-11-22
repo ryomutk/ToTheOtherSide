@@ -2,8 +2,19 @@ using System.Text;
 using System;
 using UnityEngine;
 
+public class SalvageExArg:ISEventArg
+{
+    public int sessionID{get;}
+    public ExploreArg exploreArg{get;}
+    public SalvageExArg(int sessionID,ExploreArg exploreArg)
+    {
+        this.sessionID = sessionID;
+        this.exploreArg = exploreArg;
+    }
+}
+
 [Serializable]
-public abstract class ExploreArg:ISEventArg
+public abstract class ExploreArg
 {
     public abstract ExploreObjType type { get; }
     public abstract bool Equals(ExploreArg arg);

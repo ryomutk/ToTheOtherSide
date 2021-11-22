@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu]
-public class ExploreEvent:SalvageEvent<ExploreArg>
+public class ExploreEvent:SalvageEvent<SalvageExArg>
 {
 
 }

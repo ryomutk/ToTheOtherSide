@@ -46,14 +46,14 @@ public class SalvageEvent<T> : SalvageEvent, ISalvageData
 where T:ISEventArg
 {
     [ShowInInspector,ReadOnly]List<IEventListener<T>> registrations = new List<IEventListener<T>>();
-    public void Register(IEventListener<T> fukidashi)
+    public void Register(IEventListener<T> listener)
     {
-        registrations.Add(fukidashi);
+        registrations.Add(listener);
     }
 
-    public bool DisRegister(IEventListener<T> fukidashi)
+    public bool DisRegister(IEventListener<T> listener)
     {
-        return registrations.Remove(fukidashi);
+        return registrations.Remove(listener);
     }
 
     /// <summary>
