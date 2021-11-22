@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine.AddressableAssets;
 using UnityEngine;
 using System.Linq;
-
+/*
 public class SessionSequencerProto:ISessionSequencer
 {
     //今回かかわったすべての人
@@ -63,14 +63,14 @@ public class SessionSequencerProto:ISessionSequencer
         }
     }
 
-    /*
+    
         SectorStep SelectUpward(SectorStep lastStep)
         {
             var step = lastStep.parent;
 
             return step;
         }
-    */
+    
     SectorStep SelectStep(SectorStep lastStep)
     {
         SectorStep step = null;
@@ -191,3 +191,4 @@ public class SessionSequencerProto:ISessionSequencer
         step.SetState(StepState.traveled);
     }
 }
+*/
