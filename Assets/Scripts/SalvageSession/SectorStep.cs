@@ -82,9 +82,6 @@ public class SectorStep
     public string name { get; private set; }
     public int iD { get; }
     public StepBehaviourBase behaviour { get; }
-    //セッション毎にリセットする？
-    //で、discoveredになってたらスルーするなり掘るのが早くなるなり。
-    int rawDurability;
     public StepState state { get; private set; }
     public SectorStep parent { get; set; }
     public SectorStep[] children { get; private set; }
@@ -92,16 +89,13 @@ public class SectorStep
     SalvageEvent<ExploreArg> exploreEvent;
 
 
-    public int durability
-    {
-        get; private set;
-    }
 
-    public SectorStep(SectorStepData data, SalvageEvent<ExploreArg> exploreEvent)
+    public SectorStep(StepConfig data, SalvageEvent<ExploreArg> exploreEvent)
     {
+        throw new NotImplementedException();
+
         this.exploreEvent = exploreEvent;
         this.behaviour = data.behaviour;
-        this.rawDurability = data.rawDurability;
 
         this.iD = data.iD;
 
@@ -115,10 +109,11 @@ public class SectorStep
 
     protected SectorStep(SectorStepData data, SalvageEvent<ExploreArg> exploreEvent, SectorStep parent)
     {
+        throw new NotImplementedException();
+
         this.parent = parent;
         this.exploreEvent = exploreEvent;
         this.behaviour = data.behaviour;
-        this.rawDurability = data.rawDurability;
         this.alignSector = data.alignSector;
 
 
@@ -156,14 +151,6 @@ public class SectorStep
         this.state = state;
     }
 
-    public void ResetDurability()
-    {
-        //Durabilityを操作する方式ではなく、採掘速度を変化させる方式に変更。
-        //どー考えてもそっちのほうが合理的
-        durability = rawDurability;
-    }
-
-
     public void Enter(ArmBotData.Entity bot)
     {
         var arg = new StepActionArg(StepActionType.enter, 0, iD);
@@ -178,30 +165,24 @@ public class SectorStep
     /// <returns>進んだdepth</returns>
     public float Interact(ArmBotData.Entity bot)
     {
-        var before = durability;
+        throw new NotImplementedException();
+        /*
         behaviour.OnInteract(bot, this);
-        var delta = durability - before;
-        var deltaDepth = delta * SessionConfig.instance.depthPerDurability;
 
         var arg = new StepActionArg(StepActionType.interact, deltaDepth, iD);
         exploreEvent.Notice(arg);
 
         return deltaDepth;
+        */
     }
 
     public void Exit(ArmBotData.Entity bot)
     {
         StepActionArg arg;
 
-        if (durability <= 0)
-        {
-            arg = new StepActionArg(StepActionType.cleared, 0, iD);
-        }
-        else
-        {
-            arg = new StepActionArg(StepActionType.escaped,0,iD);
-        }
+        arg = new StepActionArg(StepActionType.leave, 0, iD);
         exploreEvent.Notice(arg);
+
         behaviour.OnExit(bot, this);
     }
 }
