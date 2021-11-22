@@ -126,9 +126,10 @@ public class SessionManager : MonoBehaviour
         var resEvent = DataManager.LoadDataAsync(L_sessionEvent);
         yield return new WaitUntil(() => resEvent.ready);
 
-        var sessionArg = new SessionEventArg(SessionState.compleate,SessionData);
+        throw new System.NotImplementedException();
+        //var sessionArg = new SessionEventArg(SessionState.compleate,SessionData);
         
-        (resEvent.result as SalvageEvent<SessionEventArg>).Notice(sessionArg);
+        //(resEvent.result as SalvageEvent<SessionEventArg>).Notice(sessionArg);
 
         DataManager.ReleaseData(resEvent.result);
     }
