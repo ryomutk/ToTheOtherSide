@@ -21,8 +21,8 @@ public class SectorStepData : ScriptableTreeStructuredData<SectorStepData>, ISal
         set { _name = value; }
     }
 
-    public StepID iD { get { return _id; } }
-    [SerializeField] StepID _id;
+    public int iD { get { return _id; } }
+    [SerializeField] int _id;
 
     [ShowInInspector, ReadOnly]
     public int alignSector

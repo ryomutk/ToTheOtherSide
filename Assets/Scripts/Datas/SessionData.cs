@@ -17,8 +17,8 @@ public class SessionData : ISalvageData, IEventListener<ExploreArg>
     public float maxDepth { get; private set; }
     [ShowInInspector,ReadOnly]
     public List<SerializableExArg> eventsOccoured{get;private set;}
-    public List<StepID> visitedPlace{get;private set;}
-    public StepID nowPlace{get;private set;}
+    public List<int> visitedPlace{get;private set;}
+    public int nowPlace{get;private set;}
     //exArgは投げない。変更に対応しずらくなるので。
     public event Action onUpdate;
 
@@ -65,7 +65,7 @@ public class SessionData : ISalvageData, IEventListener<ExploreArg>
 
     public SessionData()
     {
-        visitedPlace = new List<StepID>();
+        visitedPlace = new List<int>();
         eventsOccoured = new List<SerializableExArg>();
         nowState = SessionState.onGoing;
     }

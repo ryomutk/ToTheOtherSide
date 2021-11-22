@@ -35,7 +35,7 @@ public class SerializableExArg : ExploreArg
 public class StepActionArg : SerializableExArg
 {
     public override ExploreObjType type { get { return ExploreObjType.Interact; } }
-    public StepActionArg(StepActionType type, float delta, StepID id)
+    public StepActionArg(StepActionType type, float delta, int id)
     {
         this.depthDelta = delta;
         this.stepId = id;
@@ -55,7 +55,7 @@ public class StepActionArg : SerializableExArg
 
     public StepActionType actionType;
     public float depthDelta;
-    public StepID stepId;
+    public int stepId;
 
 
 #if UNITY_EDITOR
@@ -81,7 +81,7 @@ public class StepExArg : SerializableExArg
 {
     public override ExploreObjType type { get { return ExploreObjType.Step; } }
 
-    public StepExArg(StepID iD, StepState state)
+    public StepExArg(int iD, StepState state)
     {
         this.step = iD;
         this.state = state;
@@ -95,7 +95,7 @@ public class StepExArg : SerializableExArg
         }
         return false;
     }
-    public StepID step;
+    public int step;
     public StepState state;
 
 #if UNITY_EDITOR

@@ -80,7 +80,7 @@ public class SectorStep
     }
 
     public string name { get; private set; }
-    public StepID iD { get; }
+    public int iD { get; }
     public StepBehaviourBase behaviour { get; }
     //セッション毎にリセットする？
     //で、discoveredになってたらスルーするなり掘るのが早くなるなり。

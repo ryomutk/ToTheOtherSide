@@ -21,7 +21,7 @@ public class ExploreData : ScriptableObject, IPermanentData
         if (rawData is SessionData data)
         {
             EditorUtility.SetDirty(this);
-            StepID nowID = default;
+            int nowID = default;
             StepStateData nowStateData = null;
 
             foreach (var arg in data.eventsOccoured)
@@ -64,7 +64,7 @@ public class ExploreData : ScriptableObject, IPermanentData
         return false;
     }
 
-    StepStateData GetStateData(StepID id)
+    StepStateData GetStateData(int id)
     {
         var stepstate = stepdatas.Find(x => x.target == id);
         if (stepstate == null)
@@ -77,7 +77,7 @@ public class ExploreData : ScriptableObject, IPermanentData
     }
 
     [SerializeField, ReadOnly] List<StepStateData> stepdatas;
-    public StepState GetState(StepID id)
+    public StepState GetState(int id)
     {
         var stepState = stepdatas.Find(x => x.target == id);
         if (stepState != null)
@@ -88,10 +88,10 @@ public class ExploreData : ScriptableObject, IPermanentData
         return StepState.unfound;
     }
 
-    public StepID[] GetFoundSteps()
+    public int[] GetFoundSteps()
     {
         var founds = stepdatas.FindAll(x => x.state >= StepState.found);
-        var ids = new StepID[founds.Count];
+        var ids = new int[founds.Count];
         for (int i = 0; i < founds.Count; i++)
         {
             ids[i] = founds[i].target;
@@ -125,10 +125,10 @@ public class ExploreData : ScriptableObject, IPermanentData
         [SerializeField] StepState _state;
         [SerializeField] List<ItemID> _foundItems = new List<ItemID>();
         [SerializeField] int _count;
-        [SerializeField] StepID _target;
-        public StepID target { get { return _target; } private set { _target = value; } }
+        [SerializeField] int _target;
+        public int target { get { return _target; } private set { _target = value; } }
 
-        public StepStateData(StepID id)
+        public StepStateData(int id)
         {
             this.target = id;
         }
