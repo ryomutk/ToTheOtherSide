@@ -41,10 +41,7 @@ public class ExploreData : ScriptableObject, IPermanentData
                         {
                             nowID = tmpAction.stepId;
                             nowStateData = GetStateData(nowID);
-                        }
-                        else if (tmpAction.actionType == StepActionType.cleared)
-                        {
-                            nowStateData.clearedCount++;
+                            nowStateData.visitedCount++;
                         }
 
                         break;
@@ -121,7 +118,7 @@ public class ExploreData : ScriptableObject, IPermanentData
             }
         }
 
-        public int clearedCount { get { return _count; } set { _count = value; } }
+        public int visitedCount { get { return _count; } set { _count = value; } }
         [SerializeField] StepState _state;
         [SerializeField] List<ItemID> _foundItems = new List<ItemID>();
         [SerializeField] int _count;

@@ -1,7 +1,15 @@
 using UnityEngine;
 using System;
 
+public class SectorStep
+{
+    public int id;
+    public int miasmaLv{get;set;}
+    public int resourceLv{get;set;}
+    public int radius{get;set;}
+}
 
+/*
 //ゲーム内で使われるSectorのStepインスタンス。
 //Dataから生成される。
 //ここ意外とSectorStepDataの依存をなくす。
@@ -166,14 +174,14 @@ public class SectorStep
     public float Interact(ArmBotData.Entity bot)
     {
         throw new NotImplementedException();
-        /*
+        
         behaviour.OnInteract(bot, this);
 
         var arg = new StepActionArg(StepActionType.interact, deltaDepth, iD);
         exploreEvent.Notice(arg);
 
         return deltaDepth;
-        */
+        
     }
 
     public void Exit(ArmBotData.Entity bot)
@@ -186,3 +194,4 @@ public class SectorStep
         behaviour.OnExit(bot, this);
     }
 }
+*/
