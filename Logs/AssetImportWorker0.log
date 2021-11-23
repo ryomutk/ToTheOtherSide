@@ -120,3 +120,11 @@ Received Import Request.
 Start importing Assets/Scripts/SalvageSession/ISessionSequencer.cs using Guid(2f2f96f0e03c606478258b324dd7431f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fec6a4581394205f1001670ecde2d30d') in 0.001631 seconds
   Import took 0.025179 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 81546.144253 seconds.
+  path: Assets/Scripts/SalvageSession/SessionSequencerProto.cs
+  artifactKey: Guid(601b4c469fdcac14d93c6b5085b8250b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SalvageSession/SessionSequencerProto.cs using Guid(601b4c469fdcac14d93c6b5085b8250b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f46fce03ee80fb43b0b3ef2328a3805d') in 0.016642 seconds
+  Import took 0.644147 seconds .
+

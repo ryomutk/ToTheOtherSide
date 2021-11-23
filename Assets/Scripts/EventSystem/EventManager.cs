@@ -5,7 +5,8 @@ using System.Collections;
 public enum EventName
 {
     none,
-    ExploreEvent,
+    SystemExploreEvent,
+    RealtimeExploreEvent,
     SessionEvent
 }
 
@@ -13,6 +14,36 @@ public class EventManager : Singleton<EventManager>
 {
     [SerializeField] SerializableDictionary<EventName, AssetLabelReference> eventLabelTable = new SerializableDictionary<EventName, AssetLabelReference>();
     Dictionary<EventName, SalvageEvent> eventTable = new Dictionary<EventName, SalvageEvent>();
+
+    public int Notice(EventName name)
+    {
+        if(eventTable.TryGetValue(name,out var eve))
+        {
+            return eve.Notice();
+        }
+
+        #if DEBUG
+        Debug.LogWarning("no one is listening"+name);
+        #endif
+
+        return 0;
+    }
+
+    public int Notice<T>(EventName name,T arg)
+    where T:ISalvageEventArg
+    {
+        if(eventTable.TryGetValue(name,out var eve))
+        {
+            var teve = eve as SalvageEvent<T>;
+            return teve.Notice(arg);
+        }
+
+        #if DEBUG
+        Debug.LogWarning("no one is listening"+name);
+        #endif
+
+        return 0;
+    }
 
     public SmallTask Register(IEventListener listener, EventName eventName)
     {
@@ -61,21 +92,54 @@ public class EventManager : Singleton<EventManager>
         {
             var ev = eventTable[eventName];
 
-            throw new System.Exception(ev +" is not salvageEvent of type " + typeof(T));
+            throw new System.Exception(ev + " is not salvageEvent of type " + typeof(T));
         }
     }
 
-    public bool Disregister<T>(IEventListener<T> listener,EventName name)
-    where T:ISalvageEventArg
+    public bool Disregister<T>(IEventListener<T> listener, EventName name)
+    where T : ISalvageEventArg
     {
         var eve = eventTable[name] as SalvageEvent<T>;
-        return eve.DisRegister(listener);
+        if (eve != null)
+        {
+            var result = eve.DisRegister(listener);
+            if (eve.listeners == 0)
+            {
+                ReleaseEvent(name);
+            }
+        }
+
+        #if DEBUG
+        Debug.LogWarning("event is null");
+        #endif
+
+        return false;
     }
 
-    public bool Disregister(IEventListener listener,EventName name)
+    public bool Disregister(IEventListener listener, EventName name)
     {
         var eve = eventTable[name];
-        return eve.DisRegister(listener);
+        if (eve != null)
+        {
+            var result = eve.DisRegister(listener);
+            if (eve.listeners == 0)
+            {
+                ReleaseEvent(name);
+            }
+        }
+
+        #if DEBUG
+        Debug.LogWarning("event is null");
+        #endif
+        
+        return false;
+    }
+
+    void ReleaseEvent(EventName name)
+    {
+        var eve = eventTable[name];
+        DataManager.ReleaseData(eve);
+        eventTable.Remove(name);
     }
 
     IEnumerator LoadEvent(SmallTask task, EventName name)
@@ -84,7 +148,5 @@ public class EventManager : Singleton<EventManager>
 
         var loadtask = DataManager.LoadDataAsync(label);
         yield return new WaitUntil(() => loadtask.ready);
-
-
     }
 }

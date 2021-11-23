@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class SalvageEvent : ScriptableObject, ISalvageData
 {
+    public virtual int listeners{get{return registrations.Count;}}
     List<IEventListener> registrations = new List<IEventListener>();
     public void Register(IEventListener fukidashi)
     {
@@ -45,6 +46,7 @@ public class SalvageEvent : ScriptableObject, ISalvageData
 public class SalvageEvent<T> : SalvageEvent, ISalvageData
 where T:ISalvageEventArg
 {
+    public override int listeners{get{return base.listeners + registrations.Count;}}
     [ShowInInspector,ReadOnly]List<IEventListener<T>> registrations = new List<IEventListener<T>>();
     public void Register(IEventListener<T> fukidashi)
     {

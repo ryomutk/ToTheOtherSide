@@ -7,34 +7,15 @@ using Sirenix.OdinInspector;
 /// <summary>
 /// 実行中のセッションを追跡し、記録する人
 /// </summary>
-public class SessionTracker : MonoBehaviour, IEventListener
+public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>
 {
-    [SerializeField] AssetLabelReference L_sessionStartEvent;
-    [SerializeField] AssetLabelReference L_sessionEndEvent;
-    [SerializeField] AssetLabelReference L_realtimeEvent;
-    [SerializeField] AssetLabelReference L_LastSessionDataVar;
+
 
     //Start又はEndのEvent
     SalvageEvent startEndEvent;
     SalvageEvent<ExploreArg> realtimeEvent;
     SalvageValuable<ISalvageData> lastSessionDataVar;
 
-    [ShowInInspector,ReadOnly]
-    SessionData lastSessionData
-    {
-        get
-        {
-            if (lastSessionDataVar == null)
-            {
-                return null;
-            }
-            return lastSessionDataVar.value as SessionData;
-        }
-        set
-        {
-            lastSessionDataVar.value = value;
-        }
-    }
 
 
     void Start()
@@ -50,31 +31,29 @@ public class SessionTracker : MonoBehaviour, IEventListener
 
 
     //StartEv か EndEvが発行されたとき
-    public bool OnNotice()
+    public bool OnNotice(SessionEventArg arg)
     {
-        StartCoroutine(TransitionProcess());
+        StartCoroutine(TransitionProcess(arg));
         return true;
     }
 
     //状態遷移プロセス。
     //要するに出口または入り口の処理
-    IEnumerator TransitionProcess()
+    IEnumerator TransitionProcess(SessionEventArg arg)
     {
-        startEndEvent.DisRegister(this);
         DataManager.ReleaseData(startEndEvent);
         //Sessionが動いていないとき
-        if (lastSessionData == null || lastSessionData.isFinished)
+        if (arg.state == SessionState.start)
         {
-            var realtimeLoad = DataManager.LoadDataAsync(L_realtimeEvent);
+            var realtimeLoad = DataManager.LoadDataAsync();
             yield return new WaitUntil(() => realtimeLoad.ready);
             realtimeEvent = realtimeLoad.result as SalvageEvent<ExploreArg>;
 
             lastSessionData = new SessionData();
             realtimeEvent.Register(lastSessionData);
 
-            var endTask = DataManager.LoadDataAsync(L_sessionEndEvent);
             yield return new WaitUntil(() => endTask.ready);
-            startEndEvent = endTask.result as SalvageEvent;
+
         }
         else if (!lastSessionData.isFinished)
         {
@@ -83,16 +62,12 @@ public class SessionTracker : MonoBehaviour, IEventListener
 
             DataManager.ReleaseData(realtimeEvent);
 
-            var startTask = DataManager.LoadDataAsync(L_sessionStartEvent);
             yield return new WaitUntil(() => startTask.ready);
-            startEndEvent = startTask.result as SalvageEvent;
         }
         else
         {
             Debug.LogError("SomethingWentWrong");
         }
-
-        startEndEvent.Register(this);
     }
 
 
