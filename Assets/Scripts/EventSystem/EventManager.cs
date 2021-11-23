@@ -34,7 +34,7 @@ public class EventManager : Singleton<EventManager>
     }
 
     public SmallTask Register<T>(IEventListener<T> listener, EventName eventName)
-    where T : ISEventArg
+    where T : ISalvageEventArg
     {
         try
         {
@@ -62,6 +62,19 @@ public class EventManager : Singleton<EventManager>
 
             throw new System.Exception(ev +" is not salvageEvent of type " + typeof(T));
         }
+    }
+
+    public bool Disregister<T>(IEventListener<T> listener,EventName name)
+    where T:ISalvageEventArg
+    {
+        var eve = eventTable[name] as SalvageEvent<T>;
+        return eve.DisRegister(listener);
+    }
+
+    public bool Disregister(IEventListener listener,EventName name)
+    {
+        var eve = eventTable[name];
+        return eve.DisRegister(listener);
     }
 
     IEnumerator LoadEvent(SmallTask task, EventName name)

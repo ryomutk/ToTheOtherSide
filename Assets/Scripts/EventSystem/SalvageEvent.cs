@@ -43,7 +43,7 @@ public class SalvageEvent : ScriptableObject, ISalvageData
 }
 
 public class SalvageEvent<T> : SalvageEvent, ISalvageData
-where T:ISEventArg
+where T:ISalvageEventArg
 {
     [ShowInInspector,ReadOnly]List<IEventListener<T>> registrations = new List<IEventListener<T>>();
     public void Register(IEventListener<T> fukidashi)
