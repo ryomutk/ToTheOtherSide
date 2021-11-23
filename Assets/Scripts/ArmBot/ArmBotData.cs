@@ -3,7 +3,7 @@ using Sirenix.OdinInspector;
 using System;
 
 [CreateAssetMenu]
-public class ArmBotData : ScriptableObject, ISalvageData
+public abstract class ArmBotData : ScriptableObject, ISalvageData
 {
     //内部情報いじらせると出口入り口できぬゆえ。
     /*
@@ -13,7 +13,7 @@ public class ArmBotData : ScriptableObject, ISalvageData
 
     //public InventoryData inventory { get { return _inventory; } }
 
-    [SerializeField] BotStatusList _status;
+     protected abstract BotStatusList status{get;}
     [SerializeField] EquipmentHolder _equipment;
     [SerializeField] SalvageEvent<ExploreArg> exploreEvent;
 
@@ -47,6 +47,10 @@ public class ArmBotData : ScriptableObject, ISalvageData
         return false;
     }
 
+    protected abstract bool InteractAction(SectorStep step);
+    //終了条件
+    protected abstract bool EndStatus(Entity entity);
+
 
     //セッションで使うInstanceを取得
     [Serializable]
@@ -58,39 +62,50 @@ public class ArmBotData : ScriptableObject, ISalvageData
         [SerializeField] EquipmentHolder equipment;
         [SerializeField] InventoryData inventory;
         Action<ExploreArg> noticer;
+        Func<SectorStep, bool> interactAction;
+        Func<bool> endStatusCheck;
 
         BotStatusList nowStatus;
-        public int genki
+        public int hp
         {
-            get { return nowStatus.GetValue(StatusType.genki); }
-            set { nowStatus.SetValue(StatusType.genki, value); }
+            get { return nowStatus.GetValue(StatusType.hp); }
+            set { nowStatus.SetValue(StatusType.hp, value); }
         }
         public int searchP { get { return nowStatus.GetValue(StatusType.search); } }
 
 
         public Entity(ArmBotData data)
         {
-            defaultStatus = data._status;
-            nowStatus = data._status.CopySelf();
+            defaultStatus = data.status;
+            nowStatus = data.status.CopySelf();
             equipment = data._equipment;
             inventory = new InventoryData();
             noticer = (x) => data.exploreEvent.Notice(x);
+            interactAction = data.InteractAction;
+            endStatusCheck = () => data.EndStatus(this);
         }
+
 
         //まだ動ける？
         public bool CheckMovility()
         {
-            //ここは変わるかも
-            return nowStatus.GetValue(StatusType.genki) > 0 && nowStatus.GetValue(StatusType.hp) > 0;
+            return endStatusCheck();
+        }
+
+
+
+        public bool OnInteract(SectorStep step)
+        {
+            return interactAction(step);
         }
 
         public bool HasEquip(ItemID id)
         {
-            if(id == 0)
+            if (id == 0)
             {
                 return true;
             }
-            
+
             return equipment.Has(id);
         }
 
@@ -105,7 +120,7 @@ public class ArmBotData : ScriptableObject, ISalvageData
         }
     }
 
-    public Entity CreateInstance()
+    protected Entity CreateInstance()
     {
         return new Entity(this);
     }

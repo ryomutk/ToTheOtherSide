@@ -43,7 +43,7 @@ public class SessionManager : MonoBehaviour
 
         //EvBuilderとSequencerを準備
         builder = new ExploreEventBuilder(exEvent.result.GetData<SalvageEvent<ExploreArg>>(0));
-        var sequencer = new SessionSequencerProto(exData.result.GetData<ExploreData>(0), sectorTask.result, entity, exEvent.result.GetData<SalvageEvent<ExploreArg>>(0));
+        ISessionSequencer sequencer = new SessionSequencerProto(exData.result.GetData<ExploreData>(0), sectorTask.result, entity, exEvent.result.GetData<SalvageEvent<ExploreArg>>(0));
 
         //処理開始
         sequencer.BuildSession();

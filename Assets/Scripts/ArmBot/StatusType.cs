@@ -1,6 +1,9 @@
 public enum StatusType
 {
     hp,
+    speed,
     search,
-    genki
+    capacity,
+    mining,
+    tomoshibi
 }

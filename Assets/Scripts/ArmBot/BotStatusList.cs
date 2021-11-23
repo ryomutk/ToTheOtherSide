@@ -7,17 +7,16 @@ using System.Collections.Generic;
 [Serializable]
 public class BotStatusList:ISalvageData
 {
-    public BotStatusList()
+    public BotStatusList(params StatusType[] states)
     {
-        var status = Enum.GetValues(typeof(StatusType)) as StatusType[];
-
-        foreach(var state in status)
+        foreach(var state in states)
         {
             var data = new LabeledData<StatusType,int>();
             data.type = state;
             values.Add(data);
         }
     }
+
     [SerializeField]List<LabeledData<StatusType,int>> values = new List<LabeledData<StatusType, int>>();
 
     public void SetValue(StatusType type,int value)
