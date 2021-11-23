@@ -51,7 +51,7 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
     }
 
     //
-    protected abstract bool OnInteract(SectorStep step);
+    protected abstract bool OnInteract(Entity entity,SectorStep step);
     //終了条件はbotによって違う
     protected abstract bool CheckIfEnd(Entity entity);
 
@@ -85,7 +85,7 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             inventory = new InventoryData();
             noticer = (x) => data.exploreEvent.Notice(x);
 
-            interactAction = data.OnInteract;
+            interactAction = (x) => data.OnInteract(this,x);
             endStatusCheck = () => data.CheckIfEnd(this);
         }
 
@@ -114,7 +114,7 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
         {
             inventory.Add(item);
 
-            var arg = new ItemExArg(item, ItemActionType.get);
+            var arg = new ItemExArg(this,item, ItemActionType.get);
             noticer(arg);
 
             return inventory.items.Count;

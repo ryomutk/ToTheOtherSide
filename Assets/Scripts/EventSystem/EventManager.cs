@@ -5,7 +5,8 @@ using System.Collections;
 public enum EventName
 {
     none,
-    ExploreEvent
+    ExploreEvent,
+    SessionEvent
 }
 
 public class EventManager : Singleton<EventManager>
