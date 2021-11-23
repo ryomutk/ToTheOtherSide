@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 
 //キャラクターのステータス値を保持するやつ。
 //インスタンスでも使うのでScriptableにしない
@@ -17,7 +18,8 @@ public class BotStatusList:ISalvageData
         }
     }
 
-    [SerializeField]List<LabeledData<StatusType,int>> values = new List<LabeledData<StatusType, int>>();
+    [SerializeField,ListDrawerSettings(HideAddButton = true)]
+    List<LabeledData<StatusType,int>> values = new List<LabeledData<StatusType, int>>();
 
     public void SetValue(StatusType type,int value)
     {
