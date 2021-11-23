@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 
 [CreateAssetMenu]
-public abstract class ArmBotData : ScriptableObject, ISalvageData
+public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, ISalvageData
 {
     //内部情報いじらせると出口入り口できぬゆえ。
     /*
@@ -50,10 +50,15 @@ public abstract class ArmBotData : ScriptableObject, ISalvageData
         return false;
     }
 
+    //
+    protected abstract bool OnInteract(SectorStep step);
+    //終了条件はbotによって違う
+    protected abstract bool CheckIfEnd(Entity entity);
+
 
     //セッションで使うInstanceを取得
     [Serializable]
-    public abstract class Entity
+    public class Entity
     {
         //変更されてはたまったものじゃないので公開しない
         //session中、jsonで保存するためにSerializeする
@@ -63,6 +68,7 @@ public abstract class ArmBotData : ScriptableObject, ISalvageData
         public BotType type { get; }
         Action<ExploreArg> noticer;
         Func<bool> endStatusCheck;
+        Func<SectorStep,bool> interactAction;
 
         BotStatusList nowStatus;
         public int hp
@@ -80,13 +86,20 @@ public abstract class ArmBotData : ScriptableObject, ISalvageData
             equipment = data._equipment;
             inventory = new InventoryData();
             noticer = (x) => data.exploreEvent.Notice(x);
+
+            interactAction = data.OnInteract;
+            endStatusCheck = () => data.CheckIfEnd(this);
         }
 
-        //
-        public abstract bool OnInteract(SectorStep step);
-        //終了条件はbotによって違う
-        protected abstract bool CheckIfEnd(Entity entity);
-
+        public bool CheckMovility()
+        {
+            return endStatusCheck();
+        }
+        
+        public bool OnInteract(SectorStep step)
+        {
+            return interactAction(step);
+        }
 
 
         public bool HasEquip(ItemID id)
@@ -116,6 +129,6 @@ public abstract class ArmBotData : ScriptableObject, ISalvageData
 
     static public Entity CreateInstance(BotType type)
     {
-        return 
+        return variantInstances.Find(x => x.type == type).CreateInstance();
     }
 }
