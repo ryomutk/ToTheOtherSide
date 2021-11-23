@@ -22,21 +22,54 @@ public class EventManager : Singleton<EventManager>
         }
 
         var task = new SmallTask();
-        StartCoroutine(LoadEvent(task,eventName));
+        task.onReady += () =>
+        {
+            var eve = eventTable[eventName];
+            eve.Register(listener);
+        };
 
+        StartCoroutine(LoadEvent(task, eventName));
+
+        return task;
     }
 
-    public SmallTask Register<T>(IEventListener<T> listener)
+    public SmallTask Register<T>(IEventListener<T> listener, EventName eventName)
+    where T : ISEventArg
     {
+        try
+        {
+            if (eventTable.TryGetValue(eventName, out SalvageEvent ev))
+            {
+                var tev = ev as SalvageEvent<T>;
+                tev.Register(listener);
+                return SmallTask.nullTask;
+            }
 
+            var task = new SmallTask();
+            task.onReady += () =>
+            {
+                var eve = eventTable[eventName] as SalvageEvent<T>;
+                eve.Register(listener);
+            };
+
+            StartCoroutine(LoadEvent(task, eventName));
+
+            return task;
+        }
+        catch (System.NullReferenceException)
+        {
+            var ev = eventTable[eventName];
+
+            throw new System.Exception(ev +" is not salvageEvent of type " + typeof(T));
+        }
     }
 
-    IEnumerator LoadEvent(SmallTask task,EventName name,IEventListener listener)
+    IEnumerator LoadEvent(SmallTask task, EventName name)
     {
         var label = eventLabelTable[name];
-        
+
         var loadtask = DataManager.LoadDataAsync(label);
-        yield return new WaitUntil(()=>loadtask.ready);
+        yield return new WaitUntil(() => loadtask.ready);
 
 
     }
