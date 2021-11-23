@@ -24,6 +24,7 @@ where T : class
 public class SmallTask
 {
     static SmallTask _nullTask = new SmallTask();
+    public event Action onReady;
     public static SmallTask nullTask
     {
         get
@@ -35,7 +36,20 @@ public class SmallTask
             return _nullTask;
         }
     }
-    public bool ready;
+    bool _ready;
+    public bool ready
+    {
+        get { return _ready; }
+        set
+        {
+            if (value&&onReady!=null)
+            {
+                onReady();
+                onReady = null;
+            }
+            _ready = value;
+        }
+    }
     public SmallTask()
     {
         ready = false;
