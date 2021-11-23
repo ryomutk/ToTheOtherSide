@@ -18,7 +18,7 @@ public class BotStatusList:ISalvageData
         }
     }
 
-    [SerializeField,ListDrawerSettings(HideAddButton = true)]
+    [SerializeField,ListDrawerSettings(HideAddButton = true,HideRemoveButton = true)]
     List<LabeledData<StatusType,int>> values = new List<LabeledData<StatusType, int>>();
 
     public void SetValue(StatusType type,int value)

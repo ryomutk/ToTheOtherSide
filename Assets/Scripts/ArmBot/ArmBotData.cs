@@ -1,6 +1,7 @@
 using UnityEngine;
 using Sirenix.OdinInspector;
 using System;
+using System.Collections.Generic;
 
 [CreateAssetMenu]
 public abstract class ArmBotData : ScriptableObject, ISalvageData
@@ -13,9 +14,11 @@ public abstract class ArmBotData : ScriptableObject, ISalvageData
 
     //public InventoryData inventory { get { return _inventory; } }
 
-     protected abstract BotStatusList status{get;}
+    protected abstract BotStatusList status { get; }
+    [SerializeField] public BotType type { get; }
+
     [SerializeField] EquipmentHolder _equipment;
-    [SerializeField] SalvageEvent<ExploreArg> exploreEvent;
+    [SerializeField] protected SalvageEvent<ExploreArg> exploreEvent;
 
     //これはセッション中のアイテムがストックされる場所なので、いらない。
     //最初に持たせるものはすべてEquipmentHodlerへ。
@@ -47,22 +50,18 @@ public abstract class ArmBotData : ScriptableObject, ISalvageData
         return false;
     }
 
-    protected abstract bool InteractAction(SectorStep step);
-    //終了条件
-    protected abstract bool EndStatus(Entity entity);
-
 
     //セッションで使うInstanceを取得
     [Serializable]
-    public class Entity
+    public abstract class Entity
     {
         //変更されてはたまったものじゃないので公開しない
         //session中、jsonで保存するためにSerializeする
         [SerializeField] BotStatusList defaultStatus;
         [SerializeField] EquipmentHolder equipment;
         [SerializeField] InventoryData inventory;
+        public BotType type { get; }
         Action<ExploreArg> noticer;
-        Func<SectorStep, bool> interactAction;
         Func<bool> endStatusCheck;
 
         BotStatusList nowStatus;
@@ -81,23 +80,14 @@ public abstract class ArmBotData : ScriptableObject, ISalvageData
             equipment = data._equipment;
             inventory = new InventoryData();
             noticer = (x) => data.exploreEvent.Notice(x);
-            interactAction = data.InteractAction;
-            endStatusCheck = () => data.EndStatus(this);
         }
 
-
-        //まだ動ける？
-        public bool CheckMovility()
-        {
-            return endStatusCheck();
-        }
+        //
+        public abstract bool OnInteract(SectorStep step);
+        //終了条件はbotによって違う
+        protected abstract bool CheckIfEnd(Entity entity);
 
 
-
-        public bool OnInteract(SectorStep step)
-        {
-            return interactAction(step);
-        }
 
         public bool HasEquip(ItemID id)
         {
@@ -120,8 +110,12 @@ public abstract class ArmBotData : ScriptableObject, ISalvageData
         }
     }
 
-    protected Entity CreateInstance()
+    protected List<ArmBotData> datas = new List<ArmBotData>();
+
+    protected abstract Entity CreateInstance();
+
+    static public Entity CreateInstance(BotType type)
     {
-        return new Entity(this);
+        return 
     }
 }

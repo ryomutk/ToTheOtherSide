@@ -3,7 +3,8 @@ using UnityEngine;
 public class SingleScriptableObject<T> : ScriptableObject
 where T : SingleScriptableObject<T>
 {
-    static T _instance;
+    static T _instance;        public BotType type{get;}
+
     public static T instance
     {
         get
