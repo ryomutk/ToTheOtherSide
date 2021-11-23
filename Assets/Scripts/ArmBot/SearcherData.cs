@@ -5,13 +5,25 @@ public class SearcherData:ArmBotData
     BotStatusList statusList = new BotStatusList(StatusType.hp,StatusType.speed,StatusType.search);
     protected override BotStatusList status{get{return statusList;}}
 
-    protected override bool InteractAction(SectorStep step)
-    {
-        new 
+    protected override bool OnInteract(SectorStep step)
+    {   
+        //発見報告をするンゴねぇ
+        //目視で角煮！
+        var arg = new StepActionArg(StepActionType.confirm,step.id);
+        exploreEvent.Notice(arg);
+
+        return true;
     }
 
-    protected override bool EndStatus(Entity entity)
+    protected override bool CheckIfEnd(Entity entity)
     {
-        throw new System.NotImplementedException();
+        //"セッション"終了
+        if(entity.hp < 0)
+        {
+            return true;
+        }
+
+        return false;
     }
+
 }

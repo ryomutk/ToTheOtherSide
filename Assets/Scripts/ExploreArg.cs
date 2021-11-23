@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public abstract class ExploreArg:ISEventArg
+public abstract class ExploreArg : ISEventArg
 {
     public abstract ExploreObjType type { get; }
     public abstract bool Equals(ExploreArg arg);
@@ -35,9 +35,8 @@ public class SerializableExArg : ExploreArg
 public class StepActionArg : SerializableExArg
 {
     public override ExploreObjType type { get { return ExploreObjType.Interact; } }
-    public StepActionArg(StepActionType type, float delta, int id)
+    public StepActionArg(StepActionType type, int id)
     {
-        this.depthDelta = delta;
         this.stepId = id;
         this.actionType = type;
     }
@@ -46,7 +45,7 @@ public class StepActionArg : SerializableExArg
     {
         if (obj is StepActionArg arg)
         {
-            return arg.depthDelta == this.depthDelta &&
+            return
             this.stepId == arg.stepId &&
             this.actionType == arg.actionType;
         }
@@ -54,7 +53,6 @@ public class StepActionArg : SerializableExArg
     }
 
     public StepActionType actionType;
-    public float depthDelta;
     public int stepId;
 
 
@@ -65,8 +63,6 @@ public class StepActionArg : SerializableExArg
         builder.AppendLine("--STEP ACTION--");
         builder.Append("actionType:");
         builder.AppendLine(actionType.ToString());
-        builder.Append("depthDelta:");
-        builder.AppendLine(depthDelta.ToString());
         builder.Append("    stepId:");
         builder.AppendLine(stepId.ToString());
         builder.AppendLine();

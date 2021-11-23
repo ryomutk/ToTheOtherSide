@@ -76,8 +76,6 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             get { return nowStatus.GetValue(StatusType.hp); }
             set { nowStatus.SetValue(StatusType.hp, value); }
         }
-        public int searchP { get { return nowStatus.GetValue(StatusType.search); } }
-
 
         public Entity(ArmBotData data)
         {
@@ -125,7 +123,10 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
 
     protected List<ArmBotData> datas = new List<ArmBotData>();
 
-    protected abstract Entity CreateInstance();
+    protected Entity CreateInstance()
+    {
+        return new Entity(this);
+    }
 
     static public Entity CreateInstance(BotType type)
     {
