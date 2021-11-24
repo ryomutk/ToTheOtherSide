@@ -70,6 +70,8 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
         Func<bool> endStatusCheck;
         Func<SectorStep,bool> interactAction;
 
+        public Vector2 facingDirection{get;private set;}
+
         BotStatusList nowStatus;
         public int hp
         {
@@ -87,6 +89,11 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
 
             interactAction = (x) => data.OnInteract(this,x);
             endStatusCheck = () => data.CheckIfEnd(this);
+        }
+
+        public void SetFaceDirection(Vector2 direction)
+        {
+            facingDirection = direction;
         }
 
         public bool CheckMovility()

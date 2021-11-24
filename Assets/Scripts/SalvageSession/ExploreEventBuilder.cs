@@ -1,3 +1,4 @@
+/*
 using System.Collections.Generic;
 using System;
 using Sirenix.OdinInspector;
@@ -12,9 +13,8 @@ public class ExploreEventBuilder : IEventListener<ExploreArg>
     int stepCount;
 
 
-    public ExploreEventBuilder(SalvageEvent<ExploreArg> exploreEvent)
+    public ExploreEventBuilder()
     {
-        exploreEvent.Register(this);
         eventTimeLine[0] = new List<ExploreArg>(); 
     }
 
@@ -32,3 +32,4 @@ public class ExploreEventBuilder : IEventListener<ExploreArg>
         return true;
     }
 }
+*/
