@@ -7,6 +7,12 @@ public class SectorMap
     Dictionary<Vector2Int, SectorStep> _mapData;
     public Dictionary<Vector2Int, SectorStep> mapData { get { return _mapData; } }
 
+    public bool SetIsland()
+    {
+        
+    }
+
+
     //座標を探る。Rangeを入れると、その範囲内にあるシマの中で一番座標に近いものを返す
     public SectorStep CheckCoordinate(Vector2Int coordinate, float range = 0)
     {
