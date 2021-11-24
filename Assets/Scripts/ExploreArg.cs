@@ -20,7 +20,7 @@ public abstract class ExploreArg : ISalvageEventArg
 
 public class SerializableExArg : ExploreArg
 {
-    public SerializableExArg(ArmBotData.Entity from):base(from){}
+    public SerializableExArg(ArmBotData.Entity from) : base(from) { }
 
     public override ExploreObjType type => throw new NotImplementedException();
     public override void BuildLog(ref StringBuilder builder)
@@ -35,6 +35,31 @@ public class SerializableExArg : ExploreArg
 }
 
 
+//いちじょーほー
+public class TravelExArg : SerializableExArg
+{
+    public Vector2 coordinate { get; }
+    public Vector2 traveledVec { get; }
+
+    public TravelExArg(ArmBotData.Entity from, Vector2 coordinate, Vector2 traveledVec) : base(from)
+    {
+        this.coordinate = coordinate;
+        this.traveledVec = traveledVec;
+    }
+
+#if UNITY_EDITOR
+    public override void BuildLog(ref StringBuilder builder)
+    {
+        builder.AppendLine();
+        builder.AppendLine("--TRAVELED ARG--");
+        builder.Append("coordinate:");
+        builder.AppendLine(coordinate.ToString());
+        builder.Append("  traveled:");
+        builder.AppendLine(traveledVec.ToString());
+        builder.AppendLine();
+    }
+#endif
+}
 
 //DepthDeltaも持ってるのあんまよくないかも…
 //とったアクションだけを記録したいので…
@@ -42,7 +67,7 @@ public class SerializableExArg : ExploreArg
 public class StepActionArg : SerializableExArg
 {
     public override ExploreObjType type { get { return ExploreObjType.Interact; } }
-    public StepActionArg(ArmBotData.Entity from,StepActionType type, int id):base(from)
+    public StepActionArg(ArmBotData.Entity from, StepActionType type, int id) : base(from)
     {
         this.stepId = id;
         this.actionType = type;
@@ -84,7 +109,7 @@ public class StepExArg : SerializableExArg
 {
     public override ExploreObjType type { get { return ExploreObjType.Step; } }
 
-    public StepExArg(ArmBotData.Entity from,int iD, StepState state):base(from)
+    public StepExArg(ArmBotData.Entity from, int iD, StepState state) : base(from)
     {
         this.step = iD;
         this.state = state;
@@ -119,7 +144,7 @@ public class StepExArg : SerializableExArg
 public class ItemExArg : SerializableExArg
 {
     public override ExploreObjType type { get { return ExploreObjType.Item; } }
-    public ItemExArg(ArmBotData.Entity from, ItemID iD, ItemActionType type):base(from)
+    public ItemExArg(ArmBotData.Entity from, ItemID iD, ItemActionType type) : base(from)
     {
         this.itemID = iD;
         this.actionType = type;
@@ -155,7 +180,7 @@ public class ItemExArg : SerializableExArg
 public class EventExArg : SerializableExArg
 {
     public override ExploreObjType type { get { return ExploreObjType.Event; } }
-    public EventExArg(ArmBotData.Entity from):base(from)
+    public EventExArg(ArmBotData.Entity from) : base(from)
     {
         throw new System.NotImplementedException();
     }

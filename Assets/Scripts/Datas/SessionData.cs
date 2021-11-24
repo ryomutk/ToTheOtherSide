@@ -13,14 +13,16 @@ using Sirenix.OdinInspector;
 public class SessionData : ISalvageData, IEventListener<ExploreArg>
 {
     public bool isFinished { get { return nowState == SessionState.compleated; } }
-    public float nowDepth { get; private set; }
-    public float maxDepth { get; private set; }
-    [ShowInInspector,ReadOnly]
-    public List<SerializableExArg> eventsOccoured{get;private set;}
-    public List<int> visitedPlace{get;private set;}
-    public int nowPlace{get;private set;}
+    public ArmBotData.Entity master { get; }
+
+    public float nowHp { get; private set; }
+    [ShowInInspector, ReadOnly]
+    public List<SerializableExArg> eventsOccoured { get; private set; }
+    public List<int> visitedPlace { get; private set; }
+    public int nowPlace { get; private set; }
     //exArgは投げない。変更に対応しずらくなるので。
     public event Action onUpdate;
+    public Vector2 nowCoordinate{get;private set;}
 
     SessionState nowState;
     enum SessionState
@@ -33,38 +35,41 @@ public class SessionData : ISalvageData, IEventListener<ExploreArg>
 
     public bool OnNotice(ExploreArg arg)
     {
-        if (arg.type == ExploreObjType.Interact)
+        if (arg.from == master)
         {
-            #if UNITY_EDITOR
-            Debug.Log("nowDepth:"+nowDepth);
-            #endif
-            nowDepth += (arg as StepActionArg).depthDelta;
-            if (nowDepth > maxDepth)
+
+            if (arg.type == ExploreObjType.Travel)
             {
-                maxDepth = nowDepth;
+#if DEBUG
+                Debug.Log("nowCoordinate" + nowCoordinate);
+#endif
+                nowCoordinate += (arg as TravelExArg).coordinate;
             }
-        }
-        else if(arg is StepExArg sarg)
-        {
-            if(!visitedPlace.Contains(sarg.step))
+            else if (arg is StepExArg sarg)
             {
-                visitedPlace.Add(sarg.step);
+                if (!visitedPlace.Contains(sarg.step))
+                {
+                    visitedPlace.Add(sarg.step);
+                }
+                nowPlace = sarg.step;
             }
-            nowPlace = sarg.step;
+
+            eventsOccoured.Add(arg as SerializableExArg);
+
+            if (onUpdate != null)
+            {
+                onUpdate();
+            }
+
+            return true;
         }
 
-        eventsOccoured.Add(arg as SerializableExArg);
-
-        if(onUpdate!=null)
-        {
-            onUpdate();
-        }
-
-        return true;
+        return false;
     }
 
-    public SessionData()
+    public SessionData(ArmBotData.Entity wingMan)
     {
+        this.master = wingMan;
         visitedPlace = new List<int>();
         eventsOccoured = new List<SerializableExArg>();
         nowState = SessionState.onGoing;
@@ -74,5 +79,7 @@ public class SessionData : ISalvageData, IEventListener<ExploreArg>
     {
         nowState = SessionState.compleated;
         onUpdate = null;
+        //master = null;
+        //場合によっては
     }
 }

@@ -9,12 +9,7 @@ using Sirenix.OdinInspector;
 /// </summary>
 public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>
 {
-
-
-    //Start又はEndのEvent
-    SalvageEvent startEndEvent;
-    SalvageEvent<ExploreArg> realtimeEvent;
-    SalvageValuable<ISalvageData> lastSessionDataVar;
+    List<SessionData> ongoingSessions = new List<SessionData>();
 
 
 
@@ -41,47 +36,38 @@ public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>
     //要するに出口または入り口の処理
     IEnumerator TransitionProcess(SessionEventArg arg)
     {
-        DataManager.ReleaseData(startEndEvent);
+
         //Sessionが動いていないとき
         if (arg.state == SessionState.start)
         {
-            var realtimeLoad = DataManager.LoadDataAsync();
+            var newSession = new SessionData(arg.data.master);
+            ongoingSessions.Add(newSession);
+            var realtimeLoad = EventManager.instance.Register(newSession,EventName.RealtimeExploreEvent);
             yield return new WaitUntil(() => realtimeLoad.ready);
-            realtimeEvent = realtimeLoad.result as SalvageEvent<ExploreArg>;
-
-            lastSessionData = new SessionData();
-            realtimeEvent.Register(lastSessionData);
-
-            yield return new WaitUntil(() => endTask.ready);
-
         }
-        else if (!lastSessionData.isFinished)
+        else if (arg.state == SessionState.compleate)
         {
-            lastSessionData.Compleated();
-            realtimeEvent.DisRegister(lastSessionData);
-
-            DataManager.ReleaseData(realtimeEvent);
-
-            yield return new WaitUntil(() => startTask.ready);
+            var targetSession = ongoingSessions.Find(x => x.master == arg.data.master);
+            targetSession.Compleated();
+            ongoingSessions.Remove(targetSession);
+            EventManager.instance.Disregister(targetSession,EventName.RealtimeExploreEvent);
         }
-        else
-        {
-            Debug.LogError("SomethingWentWrong");
-        }
+
     }
 
 
     //初期化
-    IEnumerator InitEvents(SmallTask task = null)
+    IEnumerator InitEvents(SmallTask task)
     {
+        /*
         var LSTask = DataManager.LoadDataAsync(L_LastSessionDataVar);
         yield return new WaitUntil(() => LSTask.ready);
         lastSessionDataVar = LSTask.result as SalvageValuable<ISalvageData>;
+        */
 
-        var startTask = DataManager.LoadDataAsync(L_sessionStartEvent);
-        yield return new WaitUntil(() => startTask.ready);
-        startEndEvent = startTask.result as SalvageEvent;
-        startEndEvent.Register(this);
+        var loadTask = EventManager.instance.Register(this,EventName.SessionEvent);
+        yield return new WaitUntil(()=>loadTask.ready);
+        task.ready = true;
     }
 
 
@@ -89,13 +75,7 @@ public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>
 
     void OnDisable()
     {
-        startEndEvent.DisRegister(this);
-        DataManager.ReleaseData(startEndEvent);
-
-        if (lastSessionDataVar == null)
-        {
-            DataManager.ReleaseData(lastSessionDataVar);
-        }
+        EventManager.instance.Disregister(this,EventName.SessionEvent);
     }
 
 }

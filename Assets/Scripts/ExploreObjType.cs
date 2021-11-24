@@ -4,5 +4,6 @@ public enum ExploreObjType
     Step,       //ステップ
     Sector,     //セクター
     Event,      //出来事
-    Interact    //Interact
+    Interact,    //Interact
+    Travel       //一回のトラベル
 }
