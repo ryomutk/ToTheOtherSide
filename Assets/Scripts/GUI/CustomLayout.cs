@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class CustomLayout : MonoBehaviour
+public class CustomLayout : MonoBehaviour, IEventListener<SystemEventArg>
 {
     [SerializeField] Transform[] elementTransforms;
     [SerializeField, Tooltip("Correct children transforms automaticly")] bool autoCollectChild;
@@ -11,22 +11,24 @@ public class CustomLayout : MonoBehaviour
 
     protected virtual void Start()
     {
-        GameManager.instance.OnSystemEvent += (x) =>
-        {
-            if (autoCollectChild)
-            {
-                elementTransforms = new Transform[transform.childCount];
-                for (int i = 0; i < transform.childCount; i++)
-                {
-                    elementTransforms[i] = transform.GetChild(i);
-                }
-            }
-            defaultChildCount = transform.childCount;
+        EventManager.instance.Register(this,EventName.SystemEvent);
+    }
 
-            var task = new SmallTask();
-            task.ready = true;
-            return task;
-        };
+    public ITask OnNotice(SystemEventArg arg)
+    {
+        if (autoCollectChild)
+        {
+            elementTransforms = new Transform[transform.childCount];
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                elementTransforms[i] = transform.GetChild(i);
+            }
+        }
+        defaultChildCount = transform.childCount;
+
+        var task = new SmallTask();
+        task.compleated = true;
+        return task;
     }
 
     bool AddElement(Transform element)

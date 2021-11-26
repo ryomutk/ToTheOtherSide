@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AddressableAssets;
 
-public class ButtonField : DataImportField
+public class ButtonField : DataImportField, IEventListener<SystemEventArg>
 {
     protected override AssetLabelReference loadKey { get { return choiceKey; } }
     [SerializeField] Transform buttonPlace;
@@ -23,19 +23,23 @@ public class ButtonField : DataImportField
 
     void Start()
     {
-        GameManager.instance.OnSystemEvent += (x) =>
+        EventManager.instance.Register(this, EventName.SystemEvent);
+    }
+
+    public ITask OnNotice(SystemEventArg arg)
+    {
+        if (arg.state == GameState.ViewInitialize)
         {
-            if (x == GameState.ViewInitialize)
-            {
-                buttonPool = new InstantPool<GUIControllButton>(buttonPlace);
-                buttonPool.CreatePool(buttonPref, prepareNum, false);
+            buttonPool = new InstantPool<GUIControllButton>(buttonPlace);
+            buttonPool.CreatePool(buttonPref, prepareNum, false);
 
-                buttonPool.ForeachObject(
-                    (button) => button.baseButton.onClick.AddListener(() => OnClick(button)));
-            }
-            return SmallTask.nullTask;
-        };
+            buttonPool.ForeachObject(
+                (button) => button.baseButton.onClick.AddListener(() => OnClick(button)));
 
+
+            EventManager.instance.Disregister(this, EventName.SystemEvent);
+        }
+        return SmallTask.nullTask;
     }
 
     void OnClick(GUIControllButton button)
@@ -90,4 +94,5 @@ public class ButtonField : DataImportField
         //デフォルトでのデータのやり取りはSValを介している前提のやつ
         return entity.GetData<SalvageValuable<ISalvageData>>(0).value as DataIndexer;
     }
+
 }

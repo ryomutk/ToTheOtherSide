@@ -1,6 +1,6 @@
 public interface IEventListener
 {
-    bool OnNotice();
+    ITask OnNotice();
 }
 
 /// <summary>
@@ -9,5 +9,5 @@ public interface IEventListener
 /// <typeparam name="T"></typeparam>
 public interface IEventListener<T>
 {
-    bool OnNotice(T arg);
+    ITask OnNotice(T arg);
 }

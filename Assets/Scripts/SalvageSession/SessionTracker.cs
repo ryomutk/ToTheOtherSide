@@ -7,7 +7,7 @@ using Sirenix.OdinInspector;
 /// <summary>
 /// 実行中のセッションを追跡し、記録する人
 /// </summary>
-public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>
+public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>, IEventListener<SystemEventArg>
 {
     List<SessionData> ongoingSessions = new List<SessionData>();
 
@@ -15,21 +15,24 @@ public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>
 
     void Start()
     {
-        GameManager.instance.OnSystemEvent += (x) =>
-        {
-            var task = new SmallTask();
-            StartCoroutine(InitEvents(task));
+        EventManager.instance.Register<SystemEventArg>(this,EventName.SystemEvent);
+    }
 
-            return task;
-        };
+    public ITask OnNotice(SystemEventArg arg)
+    {
+        var task = new SmallTask();
+        StartCoroutine(InitEvents(task));
+        EventManager.instance.Disregister<SystemEventArg>(this,EventName.SystemEvent);
+
+        return task;
     }
 
 
     //StartEv か EndEvが発行されたとき
-    public bool OnNotice(SessionEventArg arg)
+    public ITask OnNotice(SessionEventArg arg)
     {
         StartCoroutine(TransitionProcess(arg));
-        return true;
+        return SmallTask.nullTask;
     }
 
     //状態遷移プロセス。
@@ -42,7 +45,7 @@ public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>
         {
             var newSession = new SessionData(arg.data.master);
             ongoingSessions.Add(newSession);
-            var realtimeLoad = EventManager.instance.Register(newSession,EventName.RealtimeExploreEvent);
+            var realtimeLoad = EventManager.instance.Register(newSession, EventName.RealtimeExploreEvent);
             yield return new WaitUntil(() => realtimeLoad.compleated);
         }
         else if (arg.state == SessionState.compleate)
@@ -50,7 +53,7 @@ public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>
             var targetSession = ongoingSessions.Find(x => x.master == arg.data.master);
             targetSession.Compleated();
             ongoingSessions.Remove(targetSession);
-            EventManager.instance.Disregister(targetSession,EventName.RealtimeExploreEvent);
+            EventManager.instance.Disregister(targetSession, EventName.RealtimeExploreEvent);
         }
 
     }
@@ -65,8 +68,8 @@ public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>
         lastSessionDataVar = LSTask.result as SalvageValuable<ISalvageData>;
         */
 
-        var loadTask = EventManager.instance.Register(this,EventName.SessionEvent);
-        yield return new WaitUntil(()=>loadTask.compleated);
+        var loadTask = EventManager.instance.Register<SessionEventArg>(this, EventName.SessionEvent);
+        yield return new WaitUntil(() => loadTask.compleated);
         task.compleated = true;
     }
 
@@ -75,7 +78,7 @@ public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>
 
     void OnDisable()
     {
-        EventManager.instance.Disregister(this,EventName.SessionEvent);
+        EventManager.instance.Disregister<SessionEventArg>(this, EventName.SessionEvent);
     }
 
 }

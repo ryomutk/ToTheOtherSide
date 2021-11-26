@@ -3,52 +3,50 @@ using UnityEngine.AddressableAssets;
 using System.Collections;
 using System.Collections.Generic;
 
-public class SessionDataSaver : MonoBehaviour, IEventListener<SessionEventArg>
+public class SessionDataSaver : MonoBehaviour, IEventListener<SessionEventArg>, IEventListener<SystemEventArg>
 {
-    [SerializeField] AssetLabelReference L_sessionEv;
     [SerializeField] AssetLabelReference L_nowSessionData;
     [SerializeField] SerializableDictionary<SessionState, List<AssetLabelReference>> permanentDataLabels;
-    SalvageEvent<SessionEventArg> sessionEvent;
 
     void Start()
     {
-        GameManager.instance.OnSystemEvent += (x) =>
-        {
-            if (x == GameState.SystemInitialize)
-            {
-                var task = new SmallTask();
-                StartCoroutine(DataLoadRoutine(task));
-                return task;
-            }
-
-            return SmallTask.nullTask;
-        };
+        EventManager.instance.Register<SystemEventArg>(this, EventName.SystemEvent);
     }
 
     IEnumerator DataLoadRoutine(SmallTask task)
     {
-        var loadTask = DataManager.LoadDataAsync(L_sessionEv);
+        var loadTask = EventManager.instance.Register<SessionEventArg>(this, EventName.SessionEvent);
         yield return new WaitUntil(() => loadTask.compleated);
-
-        sessionEvent = loadTask.result as SalvageEvent<SessionEventArg>;
         task.compleated = true;
     }
 
-    public bool OnNotice(SessionEventArg arg)
+    public ITask OnNotice(SystemEventArg arg)
+    {
+        if (arg.state == GameState.SystemInitialize)
+        {
+            var task = new SmallTask();
+            StartCoroutine(DataLoadRoutine(task));
+            EventManager.instance.Disregister<SystemEventArg>(this, EventName.SystemEvent);
+            return task;
+        }
+
+        return SmallTask.nullTask;
+    }
+
+    public ITask OnNotice(SessionEventArg arg)
     {
         if (permanentDataLabels.ContainsKey(arg.state))
         {
             StartCoroutine(SaveDataRoutine(arg.state));
-            return true;
         }
 
-        return false;
+        return SmallTask.nullTask;
     }
 
     IEnumerator SaveDataRoutine(SessionState state)
     {
         var sDataLoadTask = DataManager.LoadDataAsync(L_nowSessionData);
-        yield return new WaitUntil(()=>sDataLoadTask.compleated);
+        yield return new WaitUntil(() => sDataLoadTask.compleated);
 
         if (permanentDataLabels.TryGetItem(state, out var labels))
         {
@@ -58,7 +56,7 @@ public class SessionDataSaver : MonoBehaviour, IEventListener<SessionEventArg>
 
                 yield return new WaitUntil(() => pLoadTask.compleated);
 
-                ((IPermanentData)pLoadTask.result).UpdateData(sDataLoadTask.result);
+                ((IPermanentData)pLoadTask.result).UpdateData(sDataLoadTask.result as SessionData);
 
                 DataManager.ReleaseData(pLoadTask.result);
             }
@@ -70,11 +68,7 @@ public class SessionDataSaver : MonoBehaviour, IEventListener<SessionEventArg>
 
     void OnDisable()
     {
-        //
-        if (sessionEvent != null)
-        {
-            DataManager.ReleaseData(sessionEvent);
-        }
+        EventManager.instance.Disregister<SessionEventArg>(this, EventName.SessionEvent);
     }
 
 }

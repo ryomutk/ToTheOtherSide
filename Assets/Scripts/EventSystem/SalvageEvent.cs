@@ -3,9 +3,9 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class SalvageEvent : ScriptableObject, ISalvageData,IEvent
+public class SalvageEvent : ScriptableObject, ISalvageData, IEvent
 {
-    public virtual int listeners{get{return registrations.Count;}}
+    public virtual int listeners { get { return registrations.Count; } }
     List<IEventListener> registrations = new List<IEventListener>();
     public void Register(IEventListener fukidashi)
     {
@@ -24,16 +24,41 @@ public class SalvageEvent : ScriptableObject, ISalvageData,IEvent
     /// <returns>true count</returns>
     public virtual ITask Notice()
     {
-        var count = 0;
+        List<ITask> tasks = null;
         for (int i = 0; i < registrations.Count; i++)
         {
-            if(registrations[i].OnNotice())
+            var task = registrations[i].OnNotice();
+            //待つ必要のあるものだけ待つ
+            if (task.compleated != true)
             {
-                count++;
+                if (tasks != null)
+                {
+                    tasks = new List<ITask>();
+                }
+
+                tasks.Add(task);
             }
         }
 
-        return SmallTask.nullTask;
+        if (tasks != null)
+        {
+            return SmallTask.nullTask;
+        }
+        else
+        {
+            return new TaskBase(() =>
+            {
+                for (int i = 0; i < tasks.Count; i++)
+                {
+                    if (!tasks[i].compleated)
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            });
+        }
     }
 
     void OnDisable()
@@ -43,11 +68,11 @@ public class SalvageEvent : ScriptableObject, ISalvageData,IEvent
 
 }
 
-public class SalvageEvent<T> : SalvageEvent, ISalvageData,IEvent<T>
-where T:SalvageEventArg
+public class SalvageEvent<T> : SalvageEvent, ISalvageData, IEvent<T>
+where T : SalvageEventArg
 {
-    public override int listeners{get{return base.listeners + registrations.Count;}}
-    [ShowInInspector,ReadOnly]List<IEventListener<T>> registrations = new List<IEventListener<T>>();
+    public override int listeners { get { return base.listeners + registrations.Count; } }
+    [ShowInInspector, ReadOnly] List<IEventListener<T>> registrations = new List<IEventListener<T>>();
     public void Register(IEventListener<T> fukidashi)
     {
         registrations.Add(fukidashi);
@@ -65,17 +90,41 @@ where T:SalvageEventArg
     /// <returns>true count,なんかしたらtrueを返す予定</returns>
     public ITask Notice(T arg)
     {
-        base.Notice();
-        var count = 0;
+        var task = base.Notice();
+        List<ITask> tasks = null;
         for (int i = 0; i < registrations.Count; i++)
         {
-            if(registrations[i].OnNotice(arg))
+            var noticeTask = registrations[i].OnNotice(arg);
+
+            if (!noticeTask.compleated)
             {
-                count++;
+                if (tasks == null)
+                {
+                    tasks = new List<ITask>();
+                }
+                tasks.Add(noticeTask);
             }
         }
 
-        return SmallTask.nullTask;
+        if (tasks == null)
+        {
+            return SmallTask.nullTask;
+        }
+        else
+        {
+            return new TaskBase(() =>
+            {
+                for(int i = 0;i<tasks.Count;i++)
+                {
+                    if(!tasks[i].compleated)
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            });
+        }
     }
 
     //事故防止のために使えなくしちゃう
