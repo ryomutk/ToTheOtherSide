@@ -1,5 +1,7 @@
-public enum SystemState
+public enum GameState
 {
     SystemInitialize,
-    ViewInitialize
+    ViewInitialize,
+    TitleScreen,
+    InGame
 }

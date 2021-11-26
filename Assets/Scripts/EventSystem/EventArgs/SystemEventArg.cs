@@ -1,4 +1,8 @@
 public class SystemEventArg:SalvageEventArg
 {
-    public SystemState state;
+    public GameState state{get;}
+    public SystemEventArg(GameState state)
+    {
+        this.state = state;
+    }
 }

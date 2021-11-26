@@ -24,8 +24,9 @@ public class GameManager : Singleton<GameManager>
     {
         yield return 4;
 
-        var sysEvents = Enum.GetValues(typeof(SystemState)) as SystemState[];
+        var sysEvents = Enum.GetValues(typeof(GameState)) as GameState[];
 
+        /*
         //あぁ～これはいい実装では？
         foreach (var state in sysEvents)
         {
@@ -33,12 +34,17 @@ public class GameManager : Singleton<GameManager>
 
             for(int i =0;i < events.Length;i++)
             {
-                var ev = events[i] as Func<SystemState,SmallTask>;
+                var ev = events[i] as Func<GameState,SmallTask>;
                 var task = ev(state);
                 interaptorQueue.RegisterQueue(task);
             }
             yield return StartCoroutine(HandleInteraptor());
         }
+        */
+        
+        EventManager.instance.Notice(EventName.SystemEvent,new SystemEventArg(GameState.SystemInitialize));
+        
+        EventManager.instance.Notice(EventName.SystemEvent,new SystemEventArg(GameState.ViewInitialize));
     }
 
     IEnumerator HandleInteraptor()
