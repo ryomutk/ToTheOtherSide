@@ -5,9 +5,6 @@ using System.Collections;
 
 public class GameManager : Singleton<GameManager>
 {
-    //RegisterQueueが嫌いになっちゃったので、Taskを返してもらうことにしました
-    //お前がSystemEvent持ってる状況も嫌いになってきたので、近々消える可能性があります
-    public event Func<SystemState,SmallTask> OnSystemEvent;
     InteraptorQueue interaptorQueue;
 
     void Start()

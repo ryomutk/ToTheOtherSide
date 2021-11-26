@@ -6,9 +6,9 @@ public class StepGenerationConfig:SingleScriptableObject<StepGenerationConfig>
     [SerializeField] Vector2 mapSize;
     [SerializeField]  
 
-    [SerializeField] 
-    public SectorStep GenerateStep(Vector2 coordinate)
+    public bool GenerateMap(SectorMap map)
     {
-        throw new System.NotImplementedException();
+        
     }
+
 }

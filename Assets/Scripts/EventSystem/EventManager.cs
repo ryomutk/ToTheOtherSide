@@ -7,7 +7,8 @@ public enum EventName
     none,
     SystemExploreEvent,
     RealtimeExploreEvent,
-    SessionEvent
+    SessionEvent,
+    SystemEvent
 }
 
 public class EventManager : Singleton<EventManager>
@@ -17,30 +18,30 @@ public class EventManager : Singleton<EventManager>
 
     public int Notice(EventName name)
     {
-        if(eventTable.TryGetValue(name,out var eve))
+        if (eventTable.TryGetValue(name, out var eve))
         {
             return eve.Notice();
         }
 
-        #if DEBUG
-        Debug.LogWarning("no one is listening"+name);
-        #endif
+#if DEBUG
+        Debug.LogWarning("no one is listening" + name);
+#endif
 
         return 0;
     }
 
-    public int Notice<T>(EventName name,T arg)
-    where T:ISalvageEventArg
+    public int Notice<T>(EventName name, T arg)
+    where T : ISalvageEventArg
     {
-        if(eventTable.TryGetValue(name,out var eve))
+        if (eventTable.TryGetValue(name, out var eve))
         {
             var teve = eve as SalvageEvent<T>;
             return teve.Notice(arg);
         }
 
-        #if DEBUG
-        Debug.LogWarning("no one is listening"+name);
-        #endif
+#if DEBUG
+        Debug.LogWarning("no one is listening" + name);
+#endif
 
         return 0;
     }
@@ -109,9 +110,9 @@ public class EventManager : Singleton<EventManager>
             }
         }
 
-        #if DEBUG
+#if DEBUG
         Debug.LogWarning("event is null");
-        #endif
+#endif
 
         return false;
     }
@@ -128,10 +129,10 @@ public class EventManager : Singleton<EventManager>
             }
         }
 
-        #if DEBUG
+#if DEBUG
         Debug.LogWarning("event is null");
-        #endif
-        
+#endif
+
         return false;
     }
 
@@ -148,5 +149,18 @@ public class EventManager : Singleton<EventManager>
 
         var loadtask = DataManager.LoadDataAsync(label);
         yield return new WaitUntil(() => loadtask.ready);
+
+        if (eventTable.ContainsKey(name))
+        {
+            //同時に呼ばれてしまった場合。
+            DataManager.ReleaseData(loadtask.result);
+        }
+        else
+        {
+            eventTable[name] = loadtask.result as SalvageEvent;
+        }
+
+
+        task.ready = true;
     }
 }
