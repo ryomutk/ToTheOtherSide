@@ -1,4 +1,4 @@
-public class SessionEventArg:SalvageEventArg
+public class SessionEventArg
 {
     public SessionEventArg(SessionState state,SessionData data)
     {

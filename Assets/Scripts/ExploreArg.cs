@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public abstract class ExploreArg : SalvageEventArg
+public abstract class ExploreArg
 {
     public ArmBotData.Entity from { get; }
     public abstract ExploreObjType type { get; }

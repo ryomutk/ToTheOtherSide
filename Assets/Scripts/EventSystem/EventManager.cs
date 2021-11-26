@@ -31,7 +31,6 @@ public class EventManager : Singleton<EventManager>
     }
 
     public ITask Notice<T>(EventName name, T arg)
-    where T : SalvageEventArg
     {
         if (eventTable.TryGetValue(name, out var eve))
         {
@@ -62,7 +61,6 @@ public class EventManager : Singleton<EventManager>
     }
 
     public ITask Register<T>(IEventListener<T> listener, EventName eventName)
-    where T : SalvageEventArg
     {
         try
         {
@@ -89,7 +87,6 @@ public class EventManager : Singleton<EventManager>
 
 
     public bool Disregister<T>(IEventListener<T> listener, EventName name)
-    where T : SalvageEventArg
     {
         var eve = eventTable[name] as IEvent<T>;
         if (eve != null)
@@ -143,7 +140,6 @@ public class EventManager : Singleton<EventManager>
     }
     
     IEnumerator RegisterRoutine<T>(SmallTask task, EventName name, IEventListener<T> listener)
-    where T : SalvageEventArg
     {
         yield return StartCoroutine(LoadEvent(name));
         var eve = eventTable[name] as IEvent<T>;
