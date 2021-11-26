@@ -31,7 +31,7 @@ public class EventManager : Singleton<EventManager>
     }
 
     public int Notice<T>(EventName name, T arg)
-    where T : ISalvageEventArg
+    where T : SalvageEventArg
     {
         if (eventTable.TryGetValue(name, out var eve))
         {
@@ -67,7 +67,7 @@ public class EventManager : Singleton<EventManager>
     }
 
     public SmallTask Register<T>(IEventListener<T> listener, EventName eventName)
-    where T : ISalvageEventArg
+    where T : SalvageEventArg
     {
         try
         {
@@ -98,7 +98,7 @@ public class EventManager : Singleton<EventManager>
     }
 
     public bool Disregister<T>(IEventListener<T> listener, EventName name)
-    where T : ISalvageEventArg
+    where T : SalvageEventArg
     {
         var eve = eventTable[name] as SalvageEvent<T>;
         if (eve != null)

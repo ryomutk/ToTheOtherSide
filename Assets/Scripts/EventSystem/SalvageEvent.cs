@@ -44,7 +44,7 @@ public class SalvageEvent : ScriptableObject, ISalvageData
 }
 
 public class SalvageEvent<T> : SalvageEvent, ISalvageData
-where T:ISalvageEventArg
+where T:SalvageEventArg
 {
     public override int listeners{get{return base.listeners + registrations.Count;}}
     [ShowInInspector,ReadOnly]List<IEventListener<T>> registrations = new List<IEventListener<T>>();

@@ -1,4 +1,4 @@
-public interface ISalvageEventArg:ISalvageData
+public class SalvageEventArg:ISalvageData
 {
 
 }
