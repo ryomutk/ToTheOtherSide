@@ -4,13 +4,20 @@ using System.Collections.ObjectModel;
 
 public class SectorMap
 {
-    Dictionary<Vector2Int, SectorStep> _mapData;
+    Dictionary<Vector2Int, SectorStep> _mapData = new Dictionary<Vector2Int, SectorStep>();
     public Dictionary<Vector2Int, SectorStep> mapData { get { return _mapData; } }
+    public int[,] miasmaMap{get;private set;}
 
-    public bool TryAddStep(Vector2Int coordinate, SectorStep step)
+    public void SetMiasma(int[,] miasmaMap)
     {
-        if(!CheckCoordinate(coordinate,step.radius))
+        this.miasmaMap = miasmaMap;
+    }
+
+    public bool TryAddStep(int x,int y, SectorStep step)
+    {
+        if(!CheckCoordinate(x,y,step.radius))
         {
+            var coordinate = new Vector2Int(x,y);
             _mapData[coordinate] = step;
         }
         return false;
@@ -23,12 +30,15 @@ public class SectorMap
     /// <param name="coordinate"></param>
     /// <param name="range"></param>
     /// <returns></returns>
-    public bool CheckCoordinate(Vector2Int coordinate, float range = 0)
+    public bool CheckCoordinate(int x,int y,float range = 0)
     {
         float sqrDistance;
         foreach (var stepCoordPair in _mapData)
         {
-            sqrDistance = Vector2.Distance(stepCoordPair.Key, coordinate);
+            var xdir = stepCoordPair.Key.x - x;
+            var ydir = stepCoordPair.Key.y - y;
+            sqrDistance = Mathf.Pow(xdir,2)+Mathf.Pow(ydir,2);
+
             if (sqrDistance < range)
             {
                 return true;
