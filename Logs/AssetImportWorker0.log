@@ -88,3 +88,11 @@ Received Import Request.
 Start importing Assets/Scripts/ExploreArg.cs using Guid(b05b8df4dd16b9542a5f4eb17192a6c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b1cc461b32fe9d579066dc693de842d') in 0.055298 seconds
   Import took 0.070570 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 10842.275504 seconds.
+  path: Assets/Scripts/ArmBot
+  artifactKey: Guid(b627b3cc7c9f0884689f25c2a8e16e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ArmBot using Guid(b627b3cc7c9f0884689f25c2a8e16e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fb2c36b67cadf8337ef47f286d41031') in 0.149465 seconds
+  Import took 0.232895 seconds .
+

@@ -1,4 +1,4 @@
- public enum StatusType
+public enum StatusType
 {
     hp,
     speed,

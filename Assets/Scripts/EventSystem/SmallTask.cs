@@ -24,7 +24,6 @@ where T : class
 public class SmallTask
 {
     static SmallTask _nullTask = new SmallTask();
-    public event Action onReady;
     public static SmallTask nullTask
     {
         get
@@ -37,16 +36,11 @@ public class SmallTask
         }
     }
     bool _ready;
-    public bool ready
+    public virtual bool ready
     {
         get { return _ready; }
         set
         {
-            if (value&&onReady!=null)
-            {
-                onReady();
-                onReady = null;
-            }
             _ready = value;
         }
     }

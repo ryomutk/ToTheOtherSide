@@ -55,13 +55,8 @@ public class EventManager : Singleton<EventManager>
         }
 
         var task = new SmallTask();
-        task.onReady += () =>
-        {
-            var eve = eventTable[eventName];
-            eve.Register(listener);
-        };
 
-        StartCoroutine(LoadEvent(task, eventName));
+        StartCoroutine(RegisterRoutine(task, eventName, listener));
 
         return task;
     }
@@ -79,13 +74,8 @@ public class EventManager : Singleton<EventManager>
             }
 
             var task = new SmallTask();
-            task.onReady += () =>
-            {
-                var eve = eventTable[eventName] as SalvageEvent<T>;
-                eve.Register(listener);
-            };
 
-            StartCoroutine(LoadEvent(task, eventName));
+            StartCoroutine(RegisterRoutine(task, eventName, listener));
 
             return task;
         }
@@ -96,6 +86,7 @@ public class EventManager : Singleton<EventManager>
             throw new System.Exception(ev + " is not salvageEvent of type " + typeof(T));
         }
     }
+
 
     public bool Disregister<T>(IEventListener<T> listener, EventName name)
     where T : SalvageEventArg
@@ -143,7 +134,25 @@ public class EventManager : Singleton<EventManager>
         eventTable.Remove(name);
     }
 
-    IEnumerator LoadEvent(SmallTask task, EventName name)
+    IEnumerator RegisterRoutine(SmallTask task, EventName name, IEventListener listener)
+    {
+        yield return StartCoroutine(LoadEvent(name));
+        var eve = eventTable[name] as SalvageEvent;
+        eve.Register(listener);
+        task.ready = true;
+    }
+    
+    IEnumerator RegisterRoutine<T>(SmallTask task, EventName name, IEventListener<T> listener)
+    where T : SalvageEventArg
+    {
+        yield return StartCoroutine(LoadEvent(name));
+        var eve = eventTable[name] as SalvageEvent<T>;
+        eve.Register(listener);
+        task.ready = true;
+    }
+
+
+    IEnumerator LoadEvent(EventName name)
     {
         var label = eventLabelTable[name];
 
@@ -159,8 +168,5 @@ public class EventManager : Singleton<EventManager>
         {
             eventTable[name] = loadtask.result as SalvageEvent;
         }
-
-
-        task.ready = true;
     }
 }
