@@ -22,7 +22,7 @@ public class SalvageEvent : ScriptableObject, ISalvageData,IEvent
     /// Notice event to listeners
     /// </summary>
     /// <returns>true count</returns>
-    public virtual SmallTask Notice()
+    public virtual ITask Notice()
     {
         var count = 0;
         for (int i = 0; i < registrations.Count; i++)
@@ -63,7 +63,7 @@ where T:SalvageEventArg
     /// </summary>
     /// <param name="arg">あーぎゅめんと</param>
     /// <returns>true count,なんかしたらtrueを返す予定</returns>
-    public SmallTask Notice(T arg)
+    public ITask Notice(T arg)
     {
         base.Notice();
         var count = 0;
@@ -79,7 +79,7 @@ where T:SalvageEventArg
     }
 
     //事故防止のために使えなくしちゃう
-    public override SmallTask Notice()
+    public override ITask Notice()
     {
         throw new System.Exception("This is Generic Event. Use Notice<T> otherwise");
     }

@@ -11,7 +11,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 /// <typeparam name="T"></typeparam>
 public static class DataManager
 {
-    public static SmallTask<DataIndexer> LoadDatasAsync(AssetLabelReference label)
+    public static ITask<DataIndexer> LoadDatasAsync(AssetLabelReference label)
     {
 
         var loadTask = Addressables.LoadAssetsAsync<ISalvageData>(label.labelString, (x) => { });
@@ -26,7 +26,7 @@ public static class DataManager
         return task;
     }
 
-    public static SmallTask<ISalvageData> LoadDataAsync(AssetLabelReference label)
+    public static ITask<ISalvageData> LoadDataAsync(AssetLabelReference label)
     {
         var loadTask = Addressables.LoadAssetAsync<ISalvageData>(label.labelString);
 

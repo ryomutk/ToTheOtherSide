@@ -1,10 +1,10 @@
 public interface IEventTask
 {
-    SmallTask OnNotice();
+    ITask OnNotice();
 }
 
 public interface IEventTask<T>
 {
-    SmallTask OnNotice(T arg);
+    ITask OnNotice(T arg);
 }
 

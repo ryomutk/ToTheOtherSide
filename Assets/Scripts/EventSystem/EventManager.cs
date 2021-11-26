@@ -16,7 +16,7 @@ public class EventManager : Singleton<EventManager>
     [SerializeField] SerializableDictionary<EventName, AssetLabelReference> eventLabelTable = new SerializableDictionary<EventName, AssetLabelReference>();
     Dictionary<EventName, SalvageEvent> eventTable = new Dictionary<EventName, SalvageEvent>();
 
-    public SmallTask Notice(EventName name)
+    public ITask Notice(EventName name)
     {
         if (eventTable.TryGetValue(name, out var eve))
         {
@@ -30,7 +30,7 @@ public class EventManager : Singleton<EventManager>
         return SmallTask.nullTask;
     }
 
-    public SmallTask Notice<T>(EventName name, T arg)
+    public ITask Notice<T>(EventName name, T arg)
     where T : SalvageEventArg
     {
         if (eventTable.TryGetValue(name, out var eve))
@@ -46,7 +46,7 @@ public class EventManager : Singleton<EventManager>
         return SmallTask.nullTask;
     }
 
-    public SmallTask Register(IEventListener listener, EventName eventName)
+    public ITask Register(IEventListener listener, EventName eventName)
     {
         if (eventTable.TryGetValue(eventName, out SalvageEvent ev))
         {
@@ -61,7 +61,7 @@ public class EventManager : Singleton<EventManager>
         return task;
     }
 
-    public SmallTask Register<T>(IEventListener<T> listener, EventName eventName)
+    public ITask Register<T>(IEventListener<T> listener, EventName eventName)
     where T : SalvageEventArg
     {
         try

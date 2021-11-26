@@ -23,7 +23,7 @@ public class AsyncEvent : ScriptableObject
     /// <returns>true count</returns>
     public virtual ITask Notice()
     {
-        var tasks = new List<SmallTask>();
+        var tasks = new List<ITask>();
 
         for (int i = 0; i < registrations.Count; i++)
         {
@@ -79,7 +79,7 @@ public class AsyncEvent<T> : AsyncEvent, ISalvageData
     {
         var baseTask = base.Notice();
 
-        var tasks = new List<SmallTask>();
+        var tasks = new List<ITask>();
 
         for (int i = 0; i < registrations.Count; i++)
         {

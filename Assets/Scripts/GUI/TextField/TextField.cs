@@ -21,7 +21,7 @@ public abstract class TextField : MonoBehaviour
     protected StateFlag flag { get { return (StateFlag)bitFlag; } }
 
 
-    public SmallTask PlayMessage(string message)
+    public ITask PlayMessage(string message)
     {
         if (!flag.HasFlag(StateFlag.playing))
         {
