@@ -35,7 +35,7 @@ public class EventManager : Singleton<EventManager>
     {
         if (eventTable.TryGetValue(name, out var eve))
         {
-            var teve = eve as SalvageEvent<T>;
+            var teve = eve as IEvent<T>;
             return teve.Notice(arg);
         }
 
@@ -68,7 +68,7 @@ public class EventManager : Singleton<EventManager>
         {
             if (eventTable.TryGetValue(eventName, out IEvent ev))
             {
-                var tev = ev as SalvageEvent<T>;
+                var tev = ev as IEvent<T>;
                 tev.Register(listener);
                 return SmallTask.nullTask;
             }
@@ -83,7 +83,7 @@ public class EventManager : Singleton<EventManager>
         {
             var ev = eventTable[eventName];
 
-            throw new System.Exception(ev + " is not salvageEvent of type " + typeof(T));
+            throw new System.Exception(ev + " is not Event of type " + typeof(T));
         }
     }
 
@@ -91,7 +91,7 @@ public class EventManager : Singleton<EventManager>
     public bool Disregister<T>(IEventListener<T> listener, EventName name)
     where T : SalvageEventArg
     {
-        var eve = eventTable[name] as SalvageEvent<T>;
+        var eve = eventTable[name] as IEvent<T>;
         if (eve != null)
         {
             var result = eve.DisRegister(listener);
@@ -137,7 +137,7 @@ public class EventManager : Singleton<EventManager>
     IEnumerator RegisterRoutine(SmallTask task, EventName name, IEventListener listener)
     {
         yield return StartCoroutine(LoadEvent(name));
-        var eve = eventTable[name] as SalvageEvent;
+        var eve = eventTable[name] as IEvent;
         eve.Register(listener);
         task.compleated = true;
     }
@@ -146,7 +146,7 @@ public class EventManager : Singleton<EventManager>
     where T : SalvageEventArg
     {
         yield return StartCoroutine(LoadEvent(name));
-        var eve = eventTable[name] as SalvageEvent<T>;
+        var eve = eventTable[name] as IEvent<T>;
         eve.Register(listener);
         task.compleated = true;
     }
@@ -166,7 +166,7 @@ public class EventManager : Singleton<EventManager>
         }
         else
         {
-            eventTable[name] = loadtask.result as SalvageEvent;
+            eventTable[name] = loadtask.result as IEvent;
         }
     }
 }
