@@ -24,7 +24,7 @@ public class SessionManager : MonoBehaviour
         ISessionSequencer sequencer = new SessionSequencerOnTheCliff();
 
         var eventRegister = EventManager.instance.Register(summaryData, EventName.SystemExploreEvent);
-        yield return new WaitUntil(() => eventRegister.ready);
+        yield return new WaitUntil(() => eventRegister.compleated);
         //処理開始
         sequencer.BuildSession();
 
@@ -83,7 +83,7 @@ public class SessionManager : MonoBehaviour
 
         //結果を報告
         var resEvent = DataManager.LoadDataAsync(L_sessionEvent);
-        yield return new WaitUntil(() => resEvent.ready);
+        yield return new WaitUntil(() => resEvent.compleated);
 
         throw new System.NotImplementedException();
         //var sessionArg = new SessionEventArg(SessionState.compleate,SessionData);

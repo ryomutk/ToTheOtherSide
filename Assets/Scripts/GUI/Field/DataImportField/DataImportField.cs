@@ -13,7 +13,7 @@ public abstract class DataImportField : MonoBehaviour,IInformationField
     protected DataIndexer entity;
 
     //LoadDataをオーバーライドして択の変数を読み込む
-    public SmallTask LoadDataAsync()
+    public ITask LoadDataAsync()
     {
         var task = new SmallTask();
         StartCoroutine(LoadRoutine(task));
@@ -25,10 +25,10 @@ public abstract class DataImportField : MonoBehaviour,IInformationField
     protected virtual IEnumerator LoadRoutine(SmallTask task)
     {
         var loadTask = DataManager.LoadDatasAsync(loadKey);
-        yield return new WaitUntil(()=>loadTask.ready);
+        yield return new WaitUntil(()=>loadTask.compleated);
 
         entity = loadTask.result;
-        task.ready = true;
+        task.compleated = true;
 
         SetField();
     }

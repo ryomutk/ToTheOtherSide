@@ -14,7 +14,7 @@ public class SessionDataSaver : MonoBehaviour, IEventListener<SessionEventArg>
     {
         GameManager.instance.OnSystemEvent += (x) =>
         {
-            if (x == SystemState.SystemInitialize)
+            if (x == GameState.SystemInitialize)
             {
                 var task = new SmallTask();
                 StartCoroutine(DataLoadRoutine(task));
@@ -28,10 +28,10 @@ public class SessionDataSaver : MonoBehaviour, IEventListener<SessionEventArg>
     IEnumerator DataLoadRoutine(SmallTask task)
     {
         var loadTask = DataManager.LoadDataAsync(L_sessionEv);
-        yield return new WaitUntil(() => loadTask.ready);
+        yield return new WaitUntil(() => loadTask.compleated);
 
         sessionEvent = loadTask.result as SalvageEvent<SessionEventArg>;
-        task.ready = true;
+        task.compleated = true;
     }
 
     public bool OnNotice(SessionEventArg arg)
@@ -48,7 +48,7 @@ public class SessionDataSaver : MonoBehaviour, IEventListener<SessionEventArg>
     IEnumerator SaveDataRoutine(SessionState state)
     {
         var sDataLoadTask = DataManager.LoadDataAsync(L_nowSessionData);
-        yield return new WaitUntil(()=>sDataLoadTask.ready);
+        yield return new WaitUntil(()=>sDataLoadTask.compleated);
 
         if (permanentDataLabels.TryGetItem(state, out var labels))
         {
@@ -56,7 +56,7 @@ public class SessionDataSaver : MonoBehaviour, IEventListener<SessionEventArg>
             {
                 var pLoadTask = DataManager.LoadDataAsync(label);
 
-                yield return new WaitUntil(() => pLoadTask.ready);
+                yield return new WaitUntil(() => pLoadTask.compleated);
 
                 ((IPermanentData)pLoadTask.result).UpdateData(sDataLoadTask.result);
 

@@ -48,7 +48,7 @@ public abstract class GUIPanel : MonoBehaviour
         if (field != null)
         {
             var task = field.LoadDataAsync();
-            yield return new WaitUntil(() => task.ready);
+            yield return new WaitUntil(() => task.compleated);
         }
     }
 }

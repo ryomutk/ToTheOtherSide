@@ -43,7 +43,7 @@ public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>
             var newSession = new SessionData(arg.data.master);
             ongoingSessions.Add(newSession);
             var realtimeLoad = EventManager.instance.Register(newSession,EventName.RealtimeExploreEvent);
-            yield return new WaitUntil(() => realtimeLoad.ready);
+            yield return new WaitUntil(() => realtimeLoad.compleated);
         }
         else if (arg.state == SessionState.compleate)
         {
@@ -66,8 +66,8 @@ public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>
         */
 
         var loadTask = EventManager.instance.Register(this,EventName.SessionEvent);
-        yield return new WaitUntil(()=>loadTask.ready);
-        task.ready = true;
+        yield return new WaitUntil(()=>loadTask.compleated);
+        task.compleated = true;
     }
 
 

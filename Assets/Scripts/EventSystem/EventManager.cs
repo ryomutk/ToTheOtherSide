@@ -139,7 +139,7 @@ public class EventManager : Singleton<EventManager>
         yield return StartCoroutine(LoadEvent(name));
         var eve = eventTable[name] as SalvageEvent;
         eve.Register(listener);
-        task.ready = true;
+        task.compleated = true;
     }
     
     IEnumerator RegisterRoutine<T>(SmallTask task, EventName name, IEventListener<T> listener)
@@ -148,7 +148,7 @@ public class EventManager : Singleton<EventManager>
         yield return StartCoroutine(LoadEvent(name));
         var eve = eventTable[name] as SalvageEvent<T>;
         eve.Register(listener);
-        task.ready = true;
+        task.compleated = true;
     }
 
 
@@ -157,7 +157,7 @@ public class EventManager : Singleton<EventManager>
         var label = eventLabelTable[name];
 
         var loadtask = DataManager.LoadDataAsync(label);
-        yield return new WaitUntil(() => loadtask.ready);
+        yield return new WaitUntil(() => loadtask.compleated);
 
         if (eventTable.ContainsKey(name))
         {

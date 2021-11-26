@@ -21,14 +21,14 @@ public class AsyncEvent : ScriptableObject
     /// Notice event to listeners
     /// </summary>
     /// <returns>true count</returns>
-    public virtual SmallTask Notice()
+    public virtual ITask Notice()
     {
         var tasks = new List<SmallTask>();
 
         for (int i = 0; i < registrations.Count; i++)
         {
             var task = registrations[i].OnNotice();
-            if (!task.ready)
+            if (!task.compleated)
             {
                 tasks.Add(task);
             }
@@ -39,7 +39,7 @@ public class AsyncEvent : ScriptableObject
             {
                 for (int i = 0; i < tasks.Count; i++)
                 {
-                    if (!tasks[i].ready)
+                    if (!tasks[i].compleated)
                     {
                         return false;
                     }
@@ -75,7 +75,7 @@ public class AsyncEvent<T> : AsyncEvent, ISalvageData
     /// </summary>
     /// <param name="arg">あーぎゅめんと</param>
     /// <returns>true count,なんかしたらtrueを返す予定</returns>
-    public SmallTask Notice(T arg)
+    public ITask Notice(T arg)
     {
         var baseTask = base.Notice();
 
@@ -84,7 +84,7 @@ public class AsyncEvent<T> : AsyncEvent, ISalvageData
         for (int i = 0; i < registrations.Count; i++)
         {
             var task = registrations[i].OnNotice(arg);
-            if (!task.ready)
+            if (!task.compleated)
             {
                 tasks.Add(task);
             }
@@ -93,14 +93,14 @@ public class AsyncEvent<T> : AsyncEvent, ISalvageData
         return new TaskBase(
             () =>
             {
-                if(!baseTask.ready)
+                if(!baseTask.compleated)
                 {
                     return false;
                 }
 
                 for (int i = 0; i < tasks.Count; i++)
                 {
-                    if (!tasks[i].ready)
+                    if (!tasks[i].compleated)
                     {
                         return false;
                     }
@@ -112,7 +112,7 @@ public class AsyncEvent<T> : AsyncEvent, ISalvageData
     }
 
     //事故防止のために使えなくしちゃう
-    public override SmallTask Notice()
+    public override ITask Notice()
     {
         throw new System.Exception("This is Generic Event. Use Notice<T> otherwise");
     }

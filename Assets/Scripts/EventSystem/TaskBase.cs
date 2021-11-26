@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-public class TaskBase : SmallTask
+public class TaskBase : ITask
 {
-    public override bool ready
+    public bool compleated
     {
         get {return endChecker();}
         set {Debug.LogWarning("This is not small task");}

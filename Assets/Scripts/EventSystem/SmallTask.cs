@@ -1,9 +1,9 @@
 using System;
 
-public class SmallTask<T>
+public class SmallTask<T>:ITask<T>
 where T : class
 {
-    public bool ready { get { return conditionGetter(); } }
+    public bool compleated { get { return conditionGetter(); } }
     Func<bool> conditionGetter;
     public T result { get { return resultGetter(); } }
 
@@ -21,22 +21,22 @@ where T : class
     }
 }
 
-public class SmallTask
+public class SmallTask:ITask
 {
     static SmallTask _nullTask = new SmallTask();
     public static SmallTask nullTask
     {
         get
         {
-            if (!_nullTask.ready)
+            if (!_nullTask.compleated)
             {
-                _nullTask.ready = true;
+                _nullTask.compleated = true;
             }
             return _nullTask;
         }
     }
     bool _ready;
-    public virtual bool ready
+    public virtual bool compleated
     {
         get { return _ready; }
         set
@@ -46,6 +46,6 @@ public class SmallTask
     }
     public SmallTask()
     {
-        ready = false;
+        compleated = false;
     }
 }

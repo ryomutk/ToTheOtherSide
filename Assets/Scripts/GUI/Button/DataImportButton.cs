@@ -31,8 +31,8 @@ public class DataImportButton : MonoBehaviour
         var fromTask = DataManager.LoadDatasAsync(fromRef);
         var toTask = DataManager.LoadDatasAsync(toRef);
 
-        yield return new WaitUntil(() => fromTask.ready);
-        yield return new WaitUntil(() => toTask.ready);
+        yield return new WaitUntil(() => fromTask.compleated);
+        yield return new WaitUntil(() => toTask.compleated);
 
         fromData = fromTask.result;
         toData = toTask.result;

@@ -5,11 +5,9 @@ using System.Collections;
 
 public class GameManager : Singleton<GameManager>
 {
-    InteraptorQueue interaptorQueue;
 
     void Start()
     {
-        interaptorQueue = new InteraptorQueue(this);
         StartCoroutine(SystemInitialize());
     }
 
@@ -46,15 +44,5 @@ public class GameManager : Singleton<GameManager>
         
         EventManager.instance.Notice(EventName.SystemEvent,new SystemEventArg(GameState.ViewInitialize));
     }
-
-    IEnumerator HandleInteraptor()
-    {
-        interaptorQueue.SolveQueue();
-        while (interaptorQueue.working)
-        {
-            yield return null;
-        }
-    }
-
 
 }

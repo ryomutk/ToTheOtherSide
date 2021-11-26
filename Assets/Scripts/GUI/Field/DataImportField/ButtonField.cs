@@ -25,7 +25,7 @@ public class ButtonField : DataImportField
     {
         GameManager.instance.OnSystemEvent += (x) =>
         {
-            if (x == SystemState.ViewInitialize)
+            if (x == GameState.ViewInitialize)
             {
                 buttonPool = new InstantPool<GUIControllButton>(buttonPlace);
                 buttonPool.CreatePool(buttonPref, prepareNum, false);
@@ -53,7 +53,7 @@ public class ButtonField : DataImportField
     {
         var loadTask = DataManager.LoadDatasAsync(selectedKey);
 
-        yield return new WaitUntil(() => loadTask.ready);
+        yield return new WaitUntil(() => loadTask.compleated);
         selected = loadTask.result;
 
         StartCoroutine(base.LoadRoutine(task));

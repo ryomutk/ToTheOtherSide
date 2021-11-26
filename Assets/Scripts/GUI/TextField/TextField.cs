@@ -58,7 +58,7 @@ public abstract class TextField : MonoBehaviour
 
         yield return StartCoroutine(MessageMotion(message));
 
-        task.ready = true;
+        task.compleated = true;
 
         bitFlag -= (int)StateFlag.playing;
     }

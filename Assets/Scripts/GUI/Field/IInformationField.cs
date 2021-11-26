@@ -2,6 +2,6 @@ using System.Collections;
 
 public interface IInformationField
 {
-    SmallTask LoadDataAsync();
+    ITask LoadDataAsync();
     void UnloadData();
 }
