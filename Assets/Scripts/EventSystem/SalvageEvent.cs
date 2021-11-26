@@ -3,7 +3,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class SalvageEvent : ScriptableObject, ISalvageData
+public class SalvageEvent : ScriptableObject, ISalvageData,IEvent
 {
     public virtual int listeners{get{return registrations.Count;}}
     List<IEventListener> registrations = new List<IEventListener>();
@@ -22,7 +22,7 @@ public class SalvageEvent : ScriptableObject, ISalvageData
     /// Notice event to listeners
     /// </summary>
     /// <returns>true count</returns>
-    public virtual int Notice()
+    public virtual SmallTask Notice()
     {
         var count = 0;
         for (int i = 0; i < registrations.Count; i++)
@@ -33,7 +33,7 @@ public class SalvageEvent : ScriptableObject, ISalvageData
             }
         }
 
-        return count;
+        return SmallTask.nullTask;
     }
 
     void OnDisable()
@@ -43,7 +43,7 @@ public class SalvageEvent : ScriptableObject, ISalvageData
 
 }
 
-public class SalvageEvent<T> : SalvageEvent, ISalvageData
+public class SalvageEvent<T> : SalvageEvent, ISalvageData,IEvent<T>
 where T:SalvageEventArg
 {
     public override int listeners{get{return base.listeners + registrations.Count;}}
@@ -63,7 +63,7 @@ where T:SalvageEventArg
     /// </summary>
     /// <param name="arg">あーぎゅめんと</param>
     /// <returns>true count,なんかしたらtrueを返す予定</returns>
-    public int Notice(T arg)
+    public SmallTask Notice(T arg)
     {
         base.Notice();
         var count = 0;
@@ -75,11 +75,11 @@ where T:SalvageEventArg
             }
         }
 
-        return count;
+        return SmallTask.nullTask;
     }
 
     //事故防止のために使えなくしちゃう
-    public override int Notice()
+    public override SmallTask Notice()
     {
         throw new System.Exception("This is Generic Event. Use Notice<T> otherwise");
     }

@@ -1,11 +1,12 @@
 using System;
+using UnityEngine;
 
 public class TaskBase : SmallTask
 {
     public override bool ready
     {
         get {return endChecker();}
-        set => base.ready = value;
+        set {Debug.LogWarning("This is not small task");}
     }
 
     Func<bool> endChecker;
