@@ -14,7 +14,7 @@ public enum EventName
 public class EventManager : Singleton<EventManager>
 {
     [SerializeField] SerializableDictionary<EventName, AssetLabelReference> eventLabelTable = new SerializableDictionary<EventName, AssetLabelReference>();
-    Dictionary<EventName, SalvageEvent> eventTable = new Dictionary<EventName, SalvageEvent>();
+    Dictionary<EventName, IEvent> eventTable = new Dictionary<EventName, IEvent>();
 
     public ITask Notice(EventName name)
     {
@@ -48,7 +48,7 @@ public class EventManager : Singleton<EventManager>
 
     public ITask Register(IEventListener listener, EventName eventName)
     {
-        if (eventTable.TryGetValue(eventName, out SalvageEvent ev))
+        if (eventTable.TryGetValue(eventName, out IEvent ev))
         {
             ev.Register(listener);
             return SmallTask.nullTask;
@@ -66,7 +66,7 @@ public class EventManager : Singleton<EventManager>
     {
         try
         {
-            if (eventTable.TryGetValue(eventName, out SalvageEvent ev))
+            if (eventTable.TryGetValue(eventName, out IEvent ev))
             {
                 var tev = ev as SalvageEvent<T>;
                 tev.Register(listener);

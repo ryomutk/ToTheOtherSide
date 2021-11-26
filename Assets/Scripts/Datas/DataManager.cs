@@ -26,11 +26,11 @@ public static class DataManager
         return task;
     }
 
-    public static ITask<ISalvageData> LoadDataAsync(AssetLabelReference label)
+    public static ITask<object> LoadDataAsync(AssetLabelReference label)
     {
         var loadTask = Addressables.LoadAssetAsync<ISalvageData>(label.labelString);
 
-        var task = new SmallTask<ISalvageData>(
+        var task = new SmallTask<object>(
             () => loadTask.IsDone,
             () =>
             {
@@ -66,9 +66,9 @@ public static class DataManager
         datas = null;
     }
 
-    static public void ReleaseData(ISalvageData data)
+    static public void ReleaseData(object data)
     {
-        Addressables.Release<ISalvageData>(data);
+        Addressables.Release<object>(data);
         data = null;
     }
 }
