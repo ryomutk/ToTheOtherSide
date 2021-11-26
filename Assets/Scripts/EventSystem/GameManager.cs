@@ -22,6 +22,8 @@ public class GameManager : Singleton<GameManager>
     {
         yield return 4;
 
+        var sysEvents = Enum.GetValues(typeof(GameState)) as GameState[];
+
         /*
         //あぁ～これはいい実装では？
         foreach (var state in sysEvents)
@@ -39,8 +41,7 @@ public class GameManager : Singleton<GameManager>
         */
         
         EventManager.instance.Notice(EventName.SystemEvent,new SystemEventArg(GameState.SystemInitialize));
-
-
+        
         EventManager.instance.Notice(EventName.SystemEvent,new SystemEventArg(GameState.ViewInitialize));
     }
 
