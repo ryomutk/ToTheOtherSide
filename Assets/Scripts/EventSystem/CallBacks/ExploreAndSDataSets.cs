@@ -39,7 +39,7 @@ where T : ISalvageData
             dataSetList = datas;
         }
 
-        public bool OnNotice(ExploreArg arg)
+        public ITask OnNotice(ExploreArg arg)
         {
             if (results.Count > 0)
             {
@@ -49,7 +49,7 @@ where T : ISalvageData
                 }
             }
 
-            return results.Count > 0;
+            return SmallTask.nullTask;
         }
 
         int TriggerAll(ExploreArg arg)
