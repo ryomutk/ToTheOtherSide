@@ -105,7 +105,8 @@ where T : SalvageEventArg
                 tasks.Add(noticeTask);
             }
         }
-
+        
+        //実質的なTaskが一つもなければListも生成しない新設設計
         if (tasks == null)
         {
             return SmallTask.nullTask;

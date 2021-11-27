@@ -5,16 +5,22 @@ public class SessionSequencerOnTheCliff : ISessionSequencer
     //このセッションを主導するEntity
     ArmBotData.Entity entity;
     SectorMap map;
+    Vector2Int startPosition;
 
-    public void BuildSession(SectorMap map, ArmBotData.Entity entity, Vector2Int startCords)
+    public SessionSequencerOnTheCliff(SectorMap map, ArmBotData.Entity entity, Vector2Int startCords)
     {
         this.entity = entity;
         this.map = map;
-        throw new System.NotImplementedException();
+        this.startPosition = startCords;
+    }
+
+    public void BuildSession()
+    {
+        StepRoutine(startPosition);
     }
 
 
-    public void StepRoutine(Vector2Int startCoords)
+    void StepRoutine(Vector2Int startCoords)
     {
         Vector2 nowCoords = startCoords;
 
@@ -22,10 +28,10 @@ public class SessionSequencerOnTheCliff : ISessionSequencer
         {
             //ここもしかしたら処理重すぎかも
             //Speedはほぼこれが連続的であるとみなせる位の値に設定してください
-            var delta = entity.facingDirection * entity.GetStatus(StatusType.speed)*SessionConfig.instance.speedMultiplier;
-            
+            var delta = entity.facingDirection * entity.GetStatus(StatusType.speed) * SessionConfig.instance.speedMultiplier;
+
             nowCoords += delta;
-            EventManager.instance.Notice(EventName.SystemExploreEvent, new TravelExArg(entity,nowCoords,delta));
+            EventManager.instance.Notice(EventName.SystemExploreEvent, new TravelExArg(entity, nowCoords, delta));
         }
 
     }

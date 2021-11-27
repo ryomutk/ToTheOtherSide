@@ -56,21 +56,21 @@ public class SectorMap
     /// <param name="range">範囲円の半径</param>
     /// <param name="result">結果を入れるやつ</param>
     /// <param name="refreshResult">結果を都度Clearするか</param>
-    /// <returns></returns>
-    public bool TryFindRange(Vector2Int coordinate, float range, ref List<SectorStep> result, bool refreshResult = false)
+    /// <returns>見つけた島の数</returns>
+    public int TryFindRange(Vector2 coordinate, float range, ref List<SectorStep> result, bool refreshResult = false)
     {
         float sqrDistance;
-        bool ifFound = false;
+        int foundCount = 0;
         foreach (var stepCoordPair in _mapData)
         {
             sqrDistance = Vector2.Distance(stepCoordPair.Key, coordinate);
             if (sqrDistance < Mathf.Pow(range, 2))
             {
                 result.Add(stepCoordPair.Value);
-                ifFound = true;
+                foundCount++;
             }
         }
 
-        return ifFound;
+        return foundCount;
     }
 }

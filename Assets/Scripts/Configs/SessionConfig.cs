@@ -10,7 +10,6 @@ public class SessionConfig : SingleScriptableObject<SessionConfig>
     [SerializeField] float _durationPerStep = 30;
     [SerializeField] SerializableDictionary<ExploreArg, float> durationTable;
     [SerializeField] float _speedMultiplier = 0.1f;
-    public float durationPerStep { get { return _durationPerStep; } }
 
     //スピードに対して、一つのステップで動く距離
     public int speedMultiplier{get;}

@@ -18,7 +18,6 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
     [SerializeField] public BotType type { get; }
 
     [SerializeField] EquipmentHolder _equipment;
-    [SerializeField] protected SalvageEvent<ExploreArg> exploreEvent;
 
     //これはセッション中のアイテムがストックされる場所なので、いらない。
     //最初に持たせるものはすべてEquipmentHodlerへ。
@@ -61,11 +60,10 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
         [SerializeField] EquipmentHolder equipment;
         [SerializeField] InventoryData inventory;
         public BotType type { get; }
-        Action<ExploreArg> noticer;
 
         public Vector2 facingDirection { get; private set; }
 
-        BotStatusList nowStatus;
+        protected BotStatusList nowStatus;
         public int hp
         {
             get { return nowStatus.GetValue(StatusType.hp); }
@@ -78,11 +76,9 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             nowStatus = data.status.CopySelf();
             equipment = data._equipment;
             inventory = new InventoryData();
-            noticer = (x) => data.exploreEvent.Notice(x);
-
         }
 
-        public abstract bool OnInteract(SectorMap map);
+        public abstract bool OnInteract(SectorMap map,Vector2 coordinate);
         //終了条件はbotによって違う
         public abstract bool CheckIfEnd();
 
@@ -115,7 +111,7 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             inventory.Add(item);
 
             var arg = new ItemExArg(this, item, ItemActionType.get);
-            noticer(arg);
+            EventManager.instance.Notice(EventName.SystemExploreEvent,arg);
 
             return inventory.items.Count;
         }
@@ -123,9 +119,5 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
 
     protected List<ArmBotData> datas = new List<ArmBotData>();
 
-    protected abstract Entity CreateInstance(Vector2 faceDirection);
-    static public Entity CreateInstance(BotType type, Vector2 faceDirection)
-    {
-        return variantInstances.Find(x => x.type == type).CreateInstance(faceDirection);
-    }
+    public abstract Entity CreateInstance(Vector2 faceDirection);
 }

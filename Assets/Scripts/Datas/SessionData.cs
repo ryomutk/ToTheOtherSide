@@ -33,7 +33,7 @@ public class SessionData : ISalvageData, IEventListener<ExploreArg>
     }
 
 
-    public bool OnNotice(ExploreArg arg)
+    public ITask OnNotice(ExploreArg arg)
     {
         if (arg.from == master)
         {
@@ -60,11 +60,9 @@ public class SessionData : ISalvageData, IEventListener<ExploreArg>
             {
                 onUpdate();
             }
-
-            return true;
         }
 
-        return false;
+        return SmallTask.nullTask;
     }
 
     public SessionData(ArmBotData.Entity wingMan)
@@ -79,7 +77,5 @@ public class SessionData : ISalvageData, IEventListener<ExploreArg>
     {
         nowState = SessionState.compleated;
         onUpdate = null;
-        //master = null;
-        //場合によっては
     }
 }

@@ -1,27 +1,49 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.AddressableAssets;
 using System.Collections;
 using Sirenix.OdinInspector;
+using System;
 using System.Text;
 
 public class SessionManager : MonoBehaviour
 {
     ISessionSequencer sequencer = null;
+    SessionTracker tracker = new SessionTracker();
+    
 
-
-
-    public void SummarizeSession(ArmBotData.Entity entity)
+    void Start()
     {
-        StartCoroutine(SummaryRoutine(entity));
+        EventManager.instance.Register(tracker, EventName.SessionEvent);
     }
 
-    IEnumerator SummaryRoutine(ArmBotData.Entity sessionMaster)
+    //Taskに持たせるやつ。
+    class DataContainer
+    {
+        public bool result { get { return data != null; } }
+        public SessionData data = null;
+    }
+
+    public ITask<SessionData> SummarizeSession(ArmBotData.Entity entity,Vector2Int startCords)
+    {
+        DataContainer container = new DataContainer();
+
+        var task = new SmallTask<SessionData>(
+            () => container.result, () => container.data
+        );
+
+        StartCoroutine(SummaryRoutine(entity, container,startCords));
+
+        return task;
+    }
+
+
+    IEnumerator SummaryRoutine(ArmBotData.Entity sessionMaster, DataContainer container,Vector2Int startCords)
     {
 
         var summaryData = new SessionData(sessionMaster);
+
         //EvBuilderとSequencerを準備
-        ISessionSequencer sequencer = new SessionSequencerOnTheCliff();
+        ISessionSequencer sequencer = new SessionSequencerOnTheCliff(,sessionMaster,startCords);
 
         var eventRegister = EventManager.instance.Register(summaryData, EventName.SystemExploreEvent);
         yield return new WaitUntil(() => eventRegister.compleated);
@@ -49,49 +71,47 @@ public class SessionManager : MonoBehaviour
         //サマリーを通知
         EventManager.instance.Notice(EventName.SessionEvent, new SessionEventArg(SessionState.summary, summaryData));
 
-        summarizedData = summaryData;
+        container.data = summaryData;
     }
 
-    SessionData summarizedData = null;
-    public void StartSummarizedSession()
+    public void ExecuteSession(SessionData sessionData)
     {
-        if (summarizedData != null)
-        {
-            var session = EventManager.instance.Notice(EventName.SessionEvent, new SessionEventArg(SessionState.start, summarizedData));
-
-            StartCoroutine(RealtimeSessionRoutine(summarizedData));
-            summarizedData = null;
-        }
-        else
-        {
-            Debug.LogWarning("Something went wrong");
-        }
+        StartCoroutine(RealtimeSessionRoutine(sessionData));
     }
 
     //本作のメインコンテンツ
     IEnumerator RealtimeSessionRoutine(SessionData sessionData)
     {
+        var started = EventManager.instance.Notice(EventName.SessionEvent, new SessionEventArg(SessionState.start, sessionData));
+        yield return new WaitUntil(()=>started.compleated);
+
+
         var stepClock = 0;
 
-        foreach (var events in sessionData.eventsOccoured)
+        foreach (var exArg in sessionData.eventsOccoured)
         {
-            throw new System.NotImplementedException();
+            var duration = SessionConfig.instance.GetDuration(exArg);
+            yield return new WaitForSeconds(duration);
+            var stepTask = EventManager.instance.Notice(EventName.RealtimeExploreEvent, exArg);
 
-            yield return new WaitForSeconds(SessionConfig.instance.durationPerStep);
+
+            //処理おおきにつき、ちゃんと確認
+            if (!stepTask.compleated)
+            {
+                yield return new WaitUntil(() => stepTask.compleated);
+            }
+
             stepClock++;
         }
 
-        //結果を報告
-        var resEvent = DataManager.LoadDataAsync(L_sessionEvent);
-        yield return new WaitUntil(() => resEvent.compleated);
-
-        throw new System.NotImplementedException();
-        //var sessionArg = new SessionEventArg(SessionState.compleate,SessionData);
-
-        //(resEvent.result as SalvageEvent<SessionEventArg>).Notice(sessionArg);
-
-        DataManager.ReleaseData(resEvent.result);
+        //終了を報告
+        EventManager.instance.Notice(EventName.SessionEvent, new SessionEventArg(SessionState.compleate,sessionData));
     }
 
+
+    void OnDisable()
+    {
+        EventManager.instance.Disregister(tracker, EventName.SessionEvent);
+    }
 
 }

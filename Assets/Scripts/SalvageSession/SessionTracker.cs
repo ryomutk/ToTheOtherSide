@@ -7,37 +7,21 @@ using Sirenix.OdinInspector;
 /// <summary>
 /// 実行中のセッションを追跡し、記録する人
 /// </summary>
-public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>, IEventListener<SystemEventArg>
+public class SessionTracker :IEventListener<SessionEventArg>
 {
     List<SessionData> ongoingSessions = new List<SessionData>();
 
 
 
-    void Start()
-    {
-        EventManager.instance.Register<SystemEventArg>(this,EventName.SystemEvent);
-    }
-
-    public ITask OnNotice(SystemEventArg arg)
-    {
-        var task = new SmallTask();
-        StartCoroutine(InitEvents(task));
-        EventManager.instance.Disregister<SystemEventArg>(this,EventName.SystemEvent);
-
-        return task;
-    }
-
-
     //StartEv か EndEvが発行されたとき
     public ITask OnNotice(SessionEventArg arg)
     {
-        StartCoroutine(TransitionProcess(arg));
-        return SmallTask.nullTask;
+        return TransitionProcess(arg);
     }
 
     //状態遷移プロセス。
     //要するに出口または入り口の処理
-    IEnumerator TransitionProcess(SessionEventArg arg)
+    ITask TransitionProcess(SessionEventArg arg)
     {
 
         //Sessionが動いていないとき
@@ -46,7 +30,7 @@ public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>, IE
             var newSession = new SessionData(arg.data.master);
             ongoingSessions.Add(newSession);
             var realtimeLoad = EventManager.instance.Register(newSession, EventName.RealtimeExploreEvent);
-            yield return new WaitUntil(() => realtimeLoad.compleated);
+            return realtimeLoad;
         }
         else if (arg.state == SessionState.compleate)
         {
@@ -56,29 +40,6 @@ public class SessionTracker : MonoBehaviour, IEventListener<SessionEventArg>, IE
             EventManager.instance.Disregister(targetSession, EventName.RealtimeExploreEvent);
         }
 
+        return SmallTask.nullTask;
     }
-
-
-    //初期化
-    IEnumerator InitEvents(SmallTask task)
-    {
-        /*
-        var LSTask = DataManager.LoadDataAsync(L_LastSessionDataVar);
-        yield return new WaitUntil(() => LSTask.ready);
-        lastSessionDataVar = LSTask.result as SalvageValuable<ISalvageData>;
-        */
-
-        var loadTask = EventManager.instance.Register<SessionEventArg>(this, EventName.SessionEvent);
-        yield return new WaitUntil(() => loadTask.compleated);
-        task.compleated = true;
-    }
-
-
-
-
-    void OnDisable()
-    {
-        EventManager.instance.Disregister<SessionEventArg>(this, EventName.SessionEvent);
-    }
-
 }
