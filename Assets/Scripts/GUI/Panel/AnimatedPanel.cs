@@ -1,16 +1,16 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(UIAnimator))]
 public class AnimatedPanel : GUIPanel
 {
-    Animator animator;
-
+    UIAnimator uiAnimator;
     protected override void Start()
     {
         base.Start();
-        animator = GetComponent<Animator>();
+        uiAnimator = GetComponent<UIAnimator>();
     }
+
     public override bool Show()
     {
         if (!isActive)
@@ -26,7 +26,10 @@ public class AnimatedPanel : GUIPanel
     protected override IEnumerator ShowField()
     {
         yield return StartCoroutine(base.ShowField());
-        animator.SetTrigger("Enter");
+        
+        var task = uiAnimator.Show();
+
+        yield return new WaitUntil(()=>task.compleated);
     }
 
     public override bool Hide()
@@ -34,7 +37,7 @@ public class AnimatedPanel : GUIPanel
         if (isActive)
         {
             base.Hide();
-            animator.SetTrigger("Exit");
+            uiAnimator.Hide();
             
             return true;
         }
