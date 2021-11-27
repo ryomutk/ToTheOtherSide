@@ -9,12 +9,13 @@ public class SessionConfig : SingleScriptableObject<SessionConfig>
 
     [SerializeField] float _durationPerStep = 30;
     [SerializeField] SerializableDictionary<ExploreArg, float> durationTable;
+    [SerializeField] float _speedMultiplier = 0.1f;
     public float durationPerStep { get { return _durationPerStep; } }
-    public float depthPerDurability = 0.1f;
-    public float GetMultiplier(StepState state)
-    {
-        return _multipliers.Find(x => x.state == state).multiplier;
-    }
+
+    //スピードに対して、一つのステップで動く距離
+    public int speedMultiplier{get;}
+
+
 
     public float GetDuration(ExploreArg exploreArg)
     {

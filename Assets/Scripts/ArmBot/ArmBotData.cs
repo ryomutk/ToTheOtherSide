@@ -50,15 +50,10 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
         return false;
     }
 
-    //
-    protected abstract bool OnInteract(Entity entity,SectorStep step);
-    //終了条件はbotによって違う
-    protected abstract bool CheckIfEnd(Entity entity);
-
 
     //セッションで使うInstanceを取得
     [Serializable]
-    public class Entity
+    public abstract class Entity
     {
         //変更されてはたまったものじゃないので公開しない
         //session中、jsonで保存するためにSerializeする
@@ -67,10 +62,8 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
         [SerializeField] InventoryData inventory;
         public BotType type { get; }
         Action<ExploreArg> noticer;
-        Func<bool> endStatusCheck;
-        Func<SectorStep,bool> interactAction;
 
-        public Vector2 facingDirection{get;private set;}
+        public Vector2 facingDirection { get; private set; }
 
         BotStatusList nowStatus;
         public int hp
@@ -79,7 +72,7 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             set { nowStatus.SetValue(StatusType.hp, value); }
         }
 
-        public Entity(ArmBotData data)
+        public Entity(ArmBotData data, Vector2 faceDirection)
         {
             defaultStatus = data.status;
             nowStatus = data.status.CopySelf();
@@ -87,25 +80,25 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             inventory = new InventoryData();
             noticer = (x) => data.exploreEvent.Notice(x);
 
-            interactAction = (x) => data.OnInteract(this,x);
-            endStatusCheck = () => data.CheckIfEnd(this);
         }
 
+        public abstract bool OnInteract(SectorMap map);
+        //終了条件はbotによって違う
+        public abstract bool CheckIfEnd();
+
+        public int GetStatus(StatusType type)
+        {
+            return nowStatus.GetValue(type);
+        }
+
+
+        //とりあえず外から方向を指定できるのは初期化の時だけにする
+        /*
         public void SetFaceDirection(Vector2 direction)
         {
             facingDirection = direction;
         }
-
-        public bool CheckMovility()
-        {
-            return endStatusCheck();
-        }
-        
-        public bool OnInteract(SectorStep step)
-        {
-            return interactAction(step);
-        }
-
+        */
 
         public bool HasEquip(ItemID id)
         {
@@ -121,7 +114,7 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
         {
             inventory.Add(item);
 
-            var arg = new ItemExArg(this,item, ItemActionType.get);
+            var arg = new ItemExArg(this, item, ItemActionType.get);
             noticer(arg);
 
             return inventory.items.Count;
@@ -130,13 +123,9 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
 
     protected List<ArmBotData> datas = new List<ArmBotData>();
 
-    protected Entity CreateInstance()
+    protected abstract Entity CreateInstance(Vector2 faceDirection);
+    static public Entity CreateInstance(BotType type, Vector2 faceDirection)
     {
-        return new Entity(this);
-    }
-
-    static public Entity CreateInstance(BotType type)
-    {
-        return variantInstances.Find(x => x.type == type).CreateInstance();
+        return variantInstances.Find(x => x.type == type).CreateInstance(faceDirection);
     }
 }
