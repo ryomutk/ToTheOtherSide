@@ -8,7 +8,7 @@ public class SessionDataField : MonoDataField<SessionData>
 {
     //Updateの時のやつ
     Action drawFieldMethod;
-    [SerializeField] TMP_Text depthField = null;
+    [SerializeField] TMP_Text placeField = null;
     [SerializeField] TMP_Text placeNameField = null;
 
     protected override IEnumerator LoadRoutine(SmallTask task)
@@ -44,9 +44,9 @@ public class SessionDataField : MonoDataField<SessionData>
             return;
         }
 
-        if (depthField != null)
+        if (placeField != null)
         {
-            depthField.text = Mathf.Floor(data.nowDepth).ToString();
+            placeField.text = Mathf.Floor(data.nowPlace).ToString();
         }
 
         if (placeNameField != null)

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 //島をならべしもの。
 //常駐にするつもりなので消したりするアレはない
-public class IslandScreen : MonoBehaviour, IInformationField
+public class IslandRenderer : MonoBehaviour, IUIRenderer
 {
     [SerializeField] InstantPool<SectorStepObject> stepPool;
     [SerializeField] SectorStepObject islandPref;
@@ -15,11 +15,19 @@ public class IslandScreen : MonoBehaviour, IInformationField
     List<SectorStepObject> stepObjects;
 
 
-    public ITask LoadDataAsync()
+    public ITask Show()
     {
         var map = DataProvider.nowGameData.map;
         var task = new SmallTask();
         StartCoroutine(DrawMap(task,map));
+
+        return task;
+    }
+
+    public ITask Hide()
+    {
+        var task = new SmallTask();
+        StartCoroutine(HideMap(task));
 
         return task;
     }
@@ -49,7 +57,18 @@ public class IslandScreen : MonoBehaviour, IInformationField
         task.compleated = true;
     }
 
-    public void UnloadData()
+    IEnumerator HideMap(SmallTask task)
+    {
+        foreach(var step in stepObjects)
+        {
+            var hideTask = step.Hide();
+            yield return new WaitUntil(()=>hideTask.compleated);
+        }
+
+        task.compleated = true;
+    }
+
+    void UnloadData()
     {
         stepObjects = null;
         stepPool = null;
