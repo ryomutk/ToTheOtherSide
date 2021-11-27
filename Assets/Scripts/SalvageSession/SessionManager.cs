@@ -9,7 +9,7 @@ public class SessionManager : MonoBehaviour
 {
     ISessionSequencer sequencer = null;
     SessionTracker tracker = new SessionTracker();
-    
+
 
     void Start()
     {
@@ -43,7 +43,7 @@ public class SessionManager : MonoBehaviour
         var summaryData = new SessionData(sessionMaster);
 
         //EvBuilderとSequencerを準備
-        ISessionSequencer sequencer = new SessionSequencerOnTheCliff(,sessionMaster,startCords);
+        ISessionSequencer sequencer = new SessionSequencerOnTheCliff(DataProvider.nowGameData.map ,sessionMaster,startCords);
 
         var eventRegister = EventManager.instance.Register(summaryData, EventName.SystemExploreEvent);
         yield return new WaitUntil(() => eventRegister.compleated);

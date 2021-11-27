@@ -2,10 +2,12 @@ using UnityEngine.AddressableAssets;
 using UnityEngine;
 
 
-public class GameInitializer:MonoBehaviour,IEventListener<SystemEventArg>
+public class DataProvider:Singleton<DataProvider>,IEventListener<SystemEventArg>
 {
     SalvageValuable<ISalvageData> gameData;
     [SerializeField] AssetLabelReference l_gameDataLabel;
+
+    public static GameSessionData nowGameData{get{return instance.gameData.value as GameSessionData;}}
 
     void Start()
     {
@@ -23,6 +25,11 @@ public class GameInitializer:MonoBehaviour,IEventListener<SystemEventArg>
         }
 
         return SmallTask.nullTask;
+    }
+
+    void OnDisable()
+    {
+        DataManager.ReleaseData(gameData);
     }
 
 }
