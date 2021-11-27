@@ -17,6 +17,8 @@ public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
 
     //0～その場所のMiasmaにこれをかけたものがランダムで足される
     [SerializeField] int resRandMultiplier = 1;
+    public Vector2 originCoords{get{return origin;}}
+    public Vector2 goalCoords{get{return goal;}}
 
     Vector2Int origin = new Vector2Int(50, 0);
     Vector2Int goal = new Vector2Int(50, 99);

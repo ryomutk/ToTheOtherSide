@@ -2,6 +2,5 @@
 public interface IUIRenderer
 {
     ITask Show();
-
     ITask Hide();
 }
