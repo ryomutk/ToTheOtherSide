@@ -17,13 +17,21 @@ public class SessionManager : MonoBehaviour
     }
 
     //Taskに持たせるやつ。
+    //このクラス内だけで書き換えれるようにするためにこうした。
     class DataContainer
     {
         public bool result { get { return data != null; } }
         public SessionData data = null;
     }
 
-    public ITask<SessionData> SummarizeSession(ArmBotData.Entity entity,Vector2Int startCords)
+
+    /// <summary>
+    /// 使うEntity,発射場所、方向を投げると、Sessionサマリーを構築する。
+    /// </summary>
+    /// <param name="entity">セッションマスターさん</param>
+    /// <param name="startCords">発射場所</param>
+    /// <returns>構築のタスク</returns>
+    public ITask<SessionData> RequestSummary(ArmBotData.Entity entity,Vector2Int startCords)
     {
         DataContainer container = new DataContainer();
 
@@ -36,7 +44,8 @@ public class SessionManager : MonoBehaviour
         return task;
     }
 
-
+    //システムSessionEventを発行してくれるサマリーシーケンス。
+    //これの結果はSessionDataに書き込まれ,タスクを介してリクエスト元に返される.
     IEnumerator SummaryRoutine(ArmBotData.Entity sessionMaster, DataContainer container,Vector2Int startCords)
     {
 
@@ -51,7 +60,8 @@ public class SessionManager : MonoBehaviour
         sequencer.BuildSession();
 
 
-
+//今後EventManagerで諸Event のログをつけてもらうようにする
+/*
         //ログを全部書く
 #if UNITY_EDITOR
         var stringBuilder = new StringBuilder();
@@ -64,6 +74,7 @@ public class SessionManager : MonoBehaviour
 
         Utility.LogWriter.Log(stringBuilder.ToString(), "EventLog", false);
 #endif
+*/
 
         summaryData.Compleated();
         EventManager.instance.Disregister(summaryData, EventName.SystemExploreEvent);
@@ -74,12 +85,15 @@ public class SessionManager : MonoBehaviour
         container.data = summaryData;
     }
 
+    //リアルタイム探索セッションを開始する。
+    //現在、Summaryで作ったやつを投げて、実行することを前提としているが、SessionDataさえ残しておけば、
+    //リプレイなども実装できる。べんり～
     public void ExecuteSession(SessionData sessionData)
     {
         StartCoroutine(RealtimeSessionRoutine(sessionData));
     }
 
-    //本作のメインコンテンツ
+    //本作のメインコンテンツ。RealtimeExploreEventを発行するシーケンスを作る。
     IEnumerator RealtimeSessionRoutine(SessionData sessionData)
     {
         var started = EventManager.instance.Notice(EventName.SessionEvent, new SessionEventArg(SessionState.start, sessionData));
