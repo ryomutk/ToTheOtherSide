@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Events/Explore")]
 public class ExploreEvent:SalvageEvent<ExploreArg>
 {
 

@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 
 //島をならべしもの。
-//常駐にするつもりなので消したりするアレはない
 public class IslandRenderer : MonoBehaviour, IUIRenderer
 {
     [SerializeField] InstantPool<SectorStepObject> stepPool;

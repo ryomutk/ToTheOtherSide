@@ -1,27 +1,30 @@
 using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Configs/Session")]
 public class SessionConfig : SingleScriptableObject<SessionConfig>
 {
-    [SerializeField] List<MultiplierData> _multipliers;
+//    [SerializeField,HideInInspector] SerializableDictionary<ExploreArg, float> durationTable;
+//とりあえず手打ちしときますねー
 
-    [SerializeField] float _durationPerStep = 30;
-    [SerializeField] SerializableDictionary<ExploreArg, float> durationTable;
-    [SerializeField] float _speedMultiplier = 0.1f;
+    [SerializeField] float _speedMultiplier = 1;
 
     //スピードに対して、一つのステップで動く距離
-    public int speedMultiplier{get;}
-
+    public float speedMultiplier{get{return _speedMultiplier;}}
+    //最も短い時間の単位
+    [SerializeField] float tickDuration = 0.5f;
 
 
     public float GetDuration(ExploreArg exploreArg)
     {
-        if (durationTable.TryGetItem(exploreArg, out float duration))
+        //今はとりあえず動くのだけ実装
+        if(exploreArg.type == ExploreObjType.Travel)
         {
-            return duration;
+            return tickDuration;
         }
+
         return 0;
     }
 

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "Configs/StepGeneration")]
 public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
 {
     [SerializeField] float maxMiasma = 200;

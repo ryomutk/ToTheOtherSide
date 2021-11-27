@@ -23,8 +23,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - VSelected
     - V_Selected
-    m_MainAsset: {fileID: 11400000, guid: fa5464f45a4e1434f9bb0127512483d5, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: fa5464f45a4e1434f9bb0127512483d5, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: b68bd2c3932a2434e9d9223a7f6e4e2d
     m_Address: Assets/Addressables/Scriptables/Events/ScreenTouchEvent.asset
     m_ReadOnly: 0
@@ -37,22 +37,22 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - ExploreData
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 11400000, guid: f03cd3536cec5ca43bcb43117452ad55, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: f03cd3536cec5ca43bcb43117452ad55, type: 2}
   - m_GUID: 07bef0714095c014d9d055afff14bc43
     m_Address: Assets/Addressables/Scriptables/ExEvent/ExploreEvent.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Ev_Explore
-    m_MainAsset: {fileID: 11400000, guid: 07bef0714095c014d9d055afff14bc43, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 07bef0714095c014d9d055afff14bc43, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 355d4eacfb74ec7478e87eabe8334f34
     m_Address: Assets/Addressables/Scriptables/ExEvent/RealtimeExEvent.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Ev_ExRealtime
-    m_MainAsset: {fileID: 11400000, guid: 355d4eacfb74ec7478e87eabe8334f34, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 355d4eacfb74ec7478e87eabe8334f34, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 14c9412ea1aefe34197564f16cc2b442
     m_Address: Assets/Addressables/Scriptables/DataSets/LogDatasets.asset
     m_ReadOnly: 0
@@ -60,11 +60,25 @@ MonoBehaviour:
     - Li_ExLogDataSets
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 21d99b7404ef3184f8a3700295c7c772
-    m_Address: Assets/Addressables/Scriptables/SessionData/NowSessionData.asset
+  - m_GUID: f450f03783a0e0149a93e4691d06637e
+    m_Address: Assets/Addressables/Scriptables/Events/SessionEvent.asset
     m_ReadOnly: 0
     m_SerializedLabels:
-    - V_NowSession
+    - Ev_SalvageSession
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d822e825d7b25fa4fb77a1d8961f7fe0
+    m_Address: Assets/Addressables/Scriptables/Events/SystemEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Ev_System
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 1ea2ff33ba63d474f873237c37a8db1f
+    m_Address: Assets/Addressables/Scriptables/Valuables/GameData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - V_GameData
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
