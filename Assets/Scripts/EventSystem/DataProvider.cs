@@ -1,7 +1,7 @@
 using UnityEngine.AddressableAssets;
 using UnityEngine;
 
-
+//DataLabelをなるべく使わないようにする目的で作られた。
 public class DataProvider:Singleton<DataProvider>,IEventListener<SystemEventArg>
 {
     SalvageValuable<ISalvageData> gameData;
