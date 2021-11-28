@@ -1,6 +1,7 @@
 using UnityEngine;
 
 //Animatorで表示するタイプに使う
+[RequireComponent(typeof(Animator))]
 public class UIAnimator : MonoBehaviour, IUIRenderer
 {
     const string showKey = "Enter";
@@ -8,7 +9,7 @@ public class UIAnimator : MonoBehaviour, IUIRenderer
 
     Animator animator;
 
-    void Start()
+    void Awake()
     {
         animator = GetComponent<Animator>();
     }
@@ -21,6 +22,7 @@ public class UIAnimator : MonoBehaviour, IUIRenderer
             prevHash = target.GetCurrentAnimatorStateInfo(0).fullPathHash;
             targetHash = target.GetCurrentAnimatorStateInfo(0).fullPathHash;
             this.target = target;
+            target.SetTrigger(trigger);
         }
         Animator target;
         int prevHash;

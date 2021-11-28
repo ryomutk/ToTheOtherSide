@@ -39,7 +39,7 @@ public class SectorMap
             var ydir = stepCoordPair.Key.y - y;
             sqrDistance = Mathf.Pow(xdir,2)+Mathf.Pow(ydir,2);
 
-            if (sqrDistance < range)
+            if (sqrDistance < Mathf.Pow(range*2,2))
             {
                 return true;
             }
@@ -64,7 +64,7 @@ public class SectorMap
         foreach (var stepCoordPair in _mapData)
         {
             sqrDistance = Vector2.Distance(stepCoordPair.Key, coordinate);
-            if (sqrDistance < Mathf.Pow(range, 2))
+            if (sqrDistance < Mathf.Pow(range*2, 2))
             {
                 result.Add(stepCoordPair.Value);
                 foundCount++;

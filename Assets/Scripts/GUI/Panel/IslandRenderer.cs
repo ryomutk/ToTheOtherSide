@@ -9,11 +9,11 @@ public class IslandRenderer : MonoBehaviour, IUIRenderer
     [SerializeField] SectorStepObject islandPref;
     [SerializeField] int initNum = 50;
     //1グリッド = ?
-    [SerializeField] float coordinateGap = 0.1f;
+    [SerializeField] float coordinateGap{get{return StepGenerationConfig.instance.gridToCanvasrate;}}
     [SerializeField] Transform islandOrigin;
     List<SectorStepObject> stepObjects;
 
-
+    [Sirenix.OdinInspector.Button]
     public ITask Show()
     {
         var map = DataProvider.nowGameData.map;
@@ -37,13 +37,21 @@ public class IslandRenderer : MonoBehaviour, IUIRenderer
         stepPool.CreatePool(islandPref, initNum, false);
 
         var originCoords = StepGenerationConfig.instance.originCoords;
-        
+
+        stepObjects = new List<SectorStepObject>();
+        var maxMiasma = StepGenerationConfig.instance.maxMiasma;
 
         foreach (var step in map.mapData)
         {
             var obj = stepPool.GetObj();
             var localCoords = step.Key - originCoords;
-            obj.transform.localPosition =  (Vector2)islandOrigin.localPosition  + localCoords*coordinateGap;
+            obj.transform.localPosition =  localCoords*coordinateGap;
+
+            obj.UpdateData(step.Value);
+            
+            var miasma = map.miasmaMap[step.Key.x,step.Key.y];
+            obj.islandImage.color = Color.red * miasma/maxMiasma;
+            stepObjects.Add(obj);
         }
 
         for(int i = 0;i < stepObjects.Count;i++)

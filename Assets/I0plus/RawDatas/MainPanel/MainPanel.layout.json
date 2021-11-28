@@ -1008,17 +1008,229 @@
             }
           },
           {
-            "type": "Image",
-            "name": "楕円形 1",
-            "guid": "077844b4-3590-4d31-860e-4a0ca87db31b",
+            "type": "Group",
+            "name": "コンポーネント 26 – 1",
+            "elements": [
+              {
+                "type": "Image",
+                "name": "楕円形 1",
+                "guid": "077844b4-3590-4d31-860e-4a0ca87db31b",
+                "active": true,
+                "global_draw_bounds": {
+                  "x": 424,
+                  "y": 213,
+                  "width": 973,
+                  "height": 654,
+                  "ex": 1397,
+                  "ey": 867
+                },
+                "rect_transform": {
+                  "fix": {
+                    "left": true,
+                    "right": true,
+                    "top": true,
+                    "bottom": true,
+                    "width": false,
+                    "height": false
+                  },
+                  "pivot": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "anchor_min": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "anchor_max": {
+                    "x": 1,
+                    "y": 1
+                  },
+                  "offset_min": {
+                    "x": 0,
+                    "y": 56.00042724609375
+                  },
+                  "offset_max": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                "layer": "UI",
+                "parsed_names": [
+                  "___1"
+                ],
+                "opacity": 100,
+                "image": {
+                  "source_image": "楕円形 1+07784"
+                }
+              },
+              {
+                "type": "Image",
+                "name": "前面オブジェクトで型抜き 1",
+                "guid": "fcb5d05c-f933-4d57-b128-b11a6142d86c",
+                "active": true,
+                "global_draw_bounds": {
+                  "x": 424.2973327636719,
+                  "y": 539.9998779296875,
+                  "width": 972.40625,
+                  "height": 383.00054931640625,
+                  "ex": 1396.7035827636719,
+                  "ey": 923.0004272460938
+                },
+                "rect_transform": {
+                  "fix": {
+                    "left": true,
+                    "right": true,
+                    "top": 0.4605629312055975,
+                    "bottom": true,
+                    "width": false,
+                    "height": true
+                  },
+                  "pivot": {
+                    "x": 0.5,
+                    "y": 0
+                  },
+                  "anchor_min": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "anchor_max": {
+                    "x": 1,
+                    "y": 0
+                  },
+                  "offset_min": {
+                    "x": 0.297332763671875,
+                    "y": 0
+                  },
+                  "offset_max": {
+                    "x": -0.296417236328125,
+                    "y": 383.00054931640625
+                  }
+                },
+                "layer": "UI",
+                "parsed_names": [
+                  "____________1"
+                ],
+                "opacity": 100,
+                "image": {
+                  "source_image": "前面オブジェクトで型抜き 1+fcb5d"
+                },
+                "elements": [
+                  {
+                    "type": "Image",
+                    "name": "長方形 2",
+                    "guid": "994e33ad-66a4-4948-943c-bb35c1c2ff50",
+                    "active": true,
+                    "global_draw_bounds": {
+                      "x": 329,
+                      "y": 116,
+                      "width": 1263,
+                      "height": 424,
+                      "ex": 1592,
+                      "ey": 540
+                    },
+                    "rect_transform": {
+                      "fix": {
+                        "left": -0.09800156340384678,
+                        "right": -0.20083829905076003,
+                        "top": -1.1070477018543665,
+                        "bottom": 0.9999996812790146,
+                        "width": false,
+                        "height": false
+                      },
+                      "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "anchor_min": {
+                        "x": -0.09800156340384678,
+                        "y": 0.9999996812790146
+                      },
+                      "anchor_max": {
+                        "x": 1.20083829905076,
+                        "y": 2.1070477018543663
+                      },
+                      "offset_min": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "offset_max": {
+                        "x": 0,
+                        "y": 0
+                      }
+                    },
+                    "layer": "UI",
+                    "parsed_names": [
+                      "___2"
+                    ],
+                    "opacity": 100,
+                    "image": {
+                      "source_image": "長方形 2+994e3"
+                    }
+                  },
+                  {
+                    "type": "Image",
+                    "name": "楕円形 2",
+                    "guid": "5fe1b2ac-468e-47ae-83f3-71723d857eaf",
+                    "active": true,
+                    "global_draw_bounds": {
+                      "x": 424,
+                      "y": 129,
+                      "width": 973,
+                      "height": 794,
+                      "ex": 1397,
+                      "ey": 923
+                    },
+                    "rect_transform": {
+                      "fix": {
+                        "left": -0.0003057701075778513,
+                        "right": -0.00030482860052382944,
+                        "top": -1.0731051917895562,
+                        "bottom": 0.0000011155234490200207,
+                        "width": false,
+                        "height": false
+                      },
+                      "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "anchor_min": {
+                        "x": -0.0003057701075778513,
+                        "y": 0.0000011155234490200207
+                      },
+                      "anchor_max": {
+                        "x": 1.0003048286005238,
+                        "y": 2.073105191789556
+                      },
+                      "offset_min": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "offset_max": {
+                        "x": 0,
+                        "y": 0
+                      }
+                    },
+                    "layer": "UI",
+                    "parsed_names": [
+                      "___2"
+                    ],
+                    "opacity": 100,
+                    "image": {
+                      "source_image": "楕円形 2+5fe1b"
+                    }
+                  }
+                ]
+              }
+            ],
+            "guid": "6060f3cc-7869-47b1-9ab7-06a23183013e",
             "active": true,
             "global_draw_bounds": {
               "x": 424,
               "y": 213,
               "width": 973,
-              "height": 654,
+              "height": 710.0004272460938,
               "ex": 1397,
-              "ey": 867
+              "ey": 923.0004272460938
             },
             "rect_transform": {
               "fix": {
@@ -1043,7 +1255,7 @@
               },
               "offset_min": {
                 "x": 0,
-                "y": 56.00042724609375
+                "y": 0
               },
               "offset_max": {
                 "x": 0,
@@ -1052,169 +1264,7 @@
             },
             "layer": "UI",
             "parsed_names": [
-              "___1"
-            ],
-            "opacity": 100,
-            "image": {
-              "source_image": "楕円形 1+07784"
-            }
-          },
-          {
-            "type": "Image",
-            "name": "前面オブジェクトで型抜き 1",
-            "guid": "fcb5d05c-f933-4d57-b128-b11a6142d86c",
-            "active": true,
-            "global_draw_bounds": {
-              "x": 424.2973327636719,
-              "y": 539.9998779296875,
-              "width": 972.40625,
-              "height": 383.00054931640625,
-              "ex": 1396.7035827636719,
-              "ey": 923.0004272460938
-            },
-            "rect_transform": {
-              "fix": {
-                "left": true,
-                "right": true,
-                "top": 0.4605629312055975,
-                "bottom": true,
-                "width": false,
-                "height": true
-              },
-              "pivot": {
-                "x": 0.5,
-                "y": 0
-              },
-              "anchor_min": {
-                "x": 0,
-                "y": 0
-              },
-              "anchor_max": {
-                "x": 1,
-                "y": 0
-              },
-              "offset_min": {
-                "x": 0.297332763671875,
-                "y": 0
-              },
-              "offset_max": {
-                "x": -0.296417236328125,
-                "y": 383.00054931640625
-              }
-            },
-            "layer": "UI",
-            "parsed_names": [
-              "____________1"
-            ],
-            "opacity": 100,
-            "image": {
-              "source_image": "前面オブジェクトで型抜き 1+fcb5d"
-            },
-            "elements": [
-              {
-                "type": "Image",
-                "name": "長方形 2",
-                "guid": "994e33ad-66a4-4948-943c-bb35c1c2ff50",
-                "active": true,
-                "global_draw_bounds": {
-                  "x": 329,
-                  "y": 116,
-                  "width": 1263,
-                  "height": 424,
-                  "ex": 1592,
-                  "ey": 540
-                },
-                "rect_transform": {
-                  "fix": {
-                    "left": -0.09800156340384678,
-                    "right": -0.20083829905076003,
-                    "top": -1.1070477018543665,
-                    "bottom": 0.9999996812790146,
-                    "width": false,
-                    "height": false
-                  },
-                  "pivot": {
-                    "x": 0.5,
-                    "y": 0.5
-                  },
-                  "anchor_min": {
-                    "x": -0.09800156340384678,
-                    "y": 0.9999996812790146
-                  },
-                  "anchor_max": {
-                    "x": 1.20083829905076,
-                    "y": 2.1070477018543663
-                  },
-                  "offset_min": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "offset_max": {
-                    "x": 0,
-                    "y": 0
-                  }
-                },
-                "layer": "UI",
-                "parsed_names": [
-                  "___2"
-                ],
-                "opacity": 100,
-                "image": {
-                  "source_image": "長方形 2+994e3"
-                }
-              },
-              {
-                "type": "Image",
-                "name": "楕円形 2",
-                "guid": "5fe1b2ac-468e-47ae-83f3-71723d857eaf",
-                "active": true,
-                "global_draw_bounds": {
-                  "x": 424,
-                  "y": 129,
-                  "width": 973,
-                  "height": 794,
-                  "ex": 1397,
-                  "ey": 923
-                },
-                "rect_transform": {
-                  "fix": {
-                    "left": -0.0003057701075778513,
-                    "right": -0.00030482860052382944,
-                    "top": -1.0731051917895562,
-                    "bottom": 0.0000011155234490200207,
-                    "width": false,
-                    "height": false
-                  },
-                  "pivot": {
-                    "x": 0.5,
-                    "y": 0.5
-                  },
-                  "anchor_min": {
-                    "x": -0.0003057701075778513,
-                    "y": 0.0000011155234490200207
-                  },
-                  "anchor_max": {
-                    "x": 1.0003048286005238,
-                    "y": 2.073105191789556
-                  },
-                  "offset_min": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "offset_max": {
-                    "x": 0,
-                    "y": 0
-                  }
-                },
-                "layer": "UI",
-                "parsed_names": [
-                  "___2"
-                ],
-                "opacity": 100,
-                "image": {
-                  "source_image": "楕円形 2+5fe1b"
-                }
-              }
+              "_______26_1"
             ]
           }
         ],
