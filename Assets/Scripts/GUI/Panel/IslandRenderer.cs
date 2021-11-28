@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 
 //島をならべしもの。
 public class IslandRenderer : MonoBehaviour, IUIRenderer
@@ -50,7 +51,9 @@ public class IslandRenderer : MonoBehaviour, IUIRenderer
             obj.UpdateData(step.Value);
             
             var miasma = map.miasmaMap[step.Key.x,step.Key.y];
-            obj.islandImage.color = Color.red * miasma/maxMiasma;
+            var colorNorm = miasma/maxMiasma;
+            obj.islandImage.color = new Color(colorNorm,1-colorNorm,1-colorNorm,1);
+            step.Value.name = obj.name;
             stepObjects.Add(obj);
         }
 
@@ -59,6 +62,36 @@ public class IslandRenderer : MonoBehaviour, IUIRenderer
            var renderTask = stepObjects[i].Show();
            yield return new WaitUntil(()=>renderTask.compleated);
         }
+
+        #if DEBUG
+        var logString = new StringBuilder();
+        
+        var count = 0;
+        foreach(var step in map.mapData)
+        {
+            var obj = stepObjects[count];
+            logString.Append("----Name:");
+            logString.AppendLine(step.Value.name);
+
+            logString.Append("localPosition");
+            logString.AppendLine(obj.transform.localPosition.ToString());
+
+            logString.Append("Position");
+            logString.AppendLine(obj.transform.position.ToString());
+            
+            logString.Append("Coordinate:");
+            logString.AppendLine(step.Key.ToString());
+
+            logString.Append("Resource:");
+            logString.AppendLine(step.Value.resourceLv.ToString());
+
+            logString.Append("Miasma:");
+            logString.AppendLine(map.miasmaMap[step.Key.x,step.Key.y].ToString());
+            logString.Append("\n\n\n");
+        }
+
+        Utility.LogWriter.Log(logString.ToString(),"IslandLog",false);
+        #endif
 
 
         task.compleated = true;

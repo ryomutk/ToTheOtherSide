@@ -8,17 +8,42 @@ public class SectorMap
     public Dictionary<Vector2Int, SectorStep> mapData { get { return _mapData; } }
     public int[,] miasmaMap{get;private set;}
 
+    public bool RemoveIsland(SectorStep remove)
+    {
+        foreach(var step in mapData)
+        {
+            if(step.Value == remove)
+            {
+                mapData.Remove(step.Key);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public void SetMiasma(int[,] miasmaMap)
     {
         this.miasmaMap = miasmaMap;
     }
 
-    public bool TryAddStep(int x,int y, SectorStep step)
+
+    /// <summary>
+    /// 可能なら島を加えたい人向け。
+    /// </summary>
+    /// <param name="x">座標</param>
+    /// <param name="y">座標</param>
+    /// <param name="step">加えるやつ</param>
+    /// <param name="safeRange">不可侵領域</param>
+    /// <returns></returns>
+    public bool TryAddStep(int x,int y, SectorStep step,float safeRange=0)
     {
-        if(!CheckCoordinate(x,y,step.radius))
+        if(!CheckCoordinate(x,y,step.radius+safeRange))
         {
             var coordinate = new Vector2Int(x,y);
             _mapData[coordinate] = step;
+
+            return true;
         }
         return false;
     }

@@ -3,6 +3,7 @@ using System;
 
 public class SectorStep
 {
+    public string name{get;set;}
     public int id{get;set;}
     public int resourceLv{get;set;}
     public int radius{get;set;}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [CreateAssetMenu(menuName = "Configs/StepGeneration")]
 public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
@@ -6,7 +7,7 @@ public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
     [SerializeField] float _gridToCanvasRate = 20f;
 
 
-    public float maxMiasma{get{return _maxMiasma;}}
+    public float maxMiasma { get { return _maxMiasma; } }
     [SerializeField] float _maxMiasma = 200;
     [SerializeField] Vector2Int mapSize = new Vector2Int(100, 100);
     [SerializeField] int originTilling = 2;
@@ -58,8 +59,6 @@ public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
 
         map.SetMiasma(new int[mapSize.x, mapSize.y]);
 
-        SetIsland((int)originCoords.x, (int)originCoords.y, map);
-        SetIsland((int)goalCoords.x, (int)goalCoords.y, map);
 
         for (int x = 0; x < mapSize.x; x++)
         {
@@ -69,9 +68,13 @@ public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
             }
         }
 
-        for (int x = 0; x < mapSize.x; x++)
+        SetIsland((int)originCoords.x, (int)originCoords.y, map,true);
+        SetIsland((int)goalCoords.x, (int)goalCoords.y, map,true);
+
+
+        for (int y = 0; y < mapSize.y; y++)
         {
-            for (int y = 0; y < mapSize.y; y++)
+            for (int x = 0; x < mapSize.x; x++)
             {
                 if (y > originTilling && y < mapSize.y - goalTilling)
                 {
@@ -90,29 +93,52 @@ public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
     int GetMiasmaLv(int x, int y)
     {
         var max = Mathf.Sqrt(_maxMiasma);
-        var normalizedVal = y / (float)mapSize.y;
+        var normalizedVal = y * max / (float)mapSize.y;
 
         return (int)Mathf.Pow(normalizedVal, 2);
     }
 
     //島を配置
     //とりあえずMiasmaが高いところ程生成されづらい、とだけして、Xは指標にしない
-    SectorMap SetIsland(int x, int y, SectorMap map)
+    SectorMap SetIsland(int x, int y, SectorMap map, bool forceMake = false)
     {
-        var possibility = islandPossibility - maxPossibilityDiscount * map.miasmaMap[x, y] / _maxMiasma;
-        var dice = Random.Range(0, 100);
-        if (dice < possibility)
+        if (forceMake)
         {
+            var target = new Vector2(x, y);
             var step = new SectorStep();
-            //疑似的に最小のgapを足した数で配置
-            step.radius = islandSize + minGap;
-            map.TryAddStep(x, y, step);
+            step.radius = islandSize;
 
-            //その後引く
-            step.radius -= minGap;
+            if (!map.TryAddStep(x, y, step, minGap))
+            {
+                var result = new List<SectorStep>();
+                if (map.TryFindRange(target, islandSize + minGap, ref result) != 0)
+                {
+                    for (int i = 0; i < result.Count; i++)
+                    {
+                        map.RemoveIsland(result[i]);
+                    }
+                }
+                var res = map.TryAddStep(x, y, step, minGap);
+                if (!res) { Debug.LogWarning("Something went wrong"); }
+            }
+
+            return map;
         }
+        else
+        {
+            var possibility = islandPossibility - maxPossibilityDiscount * map.miasmaMap[x, y] / _maxMiasma;
+            var dice = Random.Range(0, 100);
+            if (dice < possibility)
+            {
+                var step = new SectorStep();
 
-        return map;
+                step.radius = islandSize;
+                map.TryAddStep(x, y, step, minGap);
+            }
+
+            return map;
+
+        }
     }
 
     //配置した島の情報を設定。
@@ -127,10 +153,11 @@ public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
             var baseVol = map.miasmaMap[cords.x, cords.y] * resMiaMultiplier;
 
             var stepVec = step.Key - origin;
-            var angle = Vector2.SignedAngle(stepVec, origin);
-            angle = Mathf.Abs(angle);
+            var angle = Vector2.SignedAngle(routeVector,stepVec);
+            angle = Mathf.Deg2Rad*angle;
 
             var distance = stepVec.magnitude * Mathf.Sin(angle);
+            distance = Mathf.Abs(distance);
             baseVol += (int)distance * resDisMultiplier;
             baseVol += Random.Range(0, resRandMultiplier * map.miasmaMap[cords.x, cords.y]);
 
