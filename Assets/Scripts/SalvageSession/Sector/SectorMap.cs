@@ -27,7 +27,6 @@ public class SectorMap
         this.miasmaMap = miasmaMap;
     }
 
-
     /// <summary>
     /// 可能なら島を加えたい人向け。
     /// </summary>

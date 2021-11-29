@@ -27,7 +27,7 @@ public class AnimatedPanel : GUIPanel
     {
         yield return StartCoroutine(base.ShowField());
         
-        var task = uiAnimator.Show();
+        var task = uiAnimator.Draw();
 
         yield return new WaitUntil(()=>task.compleated);
     }

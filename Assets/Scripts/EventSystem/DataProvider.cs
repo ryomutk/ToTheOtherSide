@@ -38,6 +38,7 @@ public class DataProvider : Singleton<DataProvider>, IEventListener<SystemEventA
         gameData.value = newGameDat;
 
         InitMap();
+        nowGameData.currentMOTHERCoordinate = StepGenerationConfig.instance.originCoords;
 
         task.compleated = true;
     }

@@ -119,5 +119,19 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
 
     protected List<ArmBotData> datas = new List<ArmBotData>();
 
-    public abstract Entity CreateInstance(Vector2 faceDirection);
+    protected abstract Entity CreateInstance(Vector2 faceDirection);
+
+    public static Entity CreateInstance(BotType type,Vector2 faceDirection)
+    {
+        for(int i = 0;i < variantInstances.Count;i++)
+        {
+            if(variantInstances[i].type == type)
+            {
+                return variantInstances[i].CreateInstance(faceDirection);
+            }
+        }
+
+        Debug.LogError("Bot of type:"+type+" not found");
+        return null;
+    } 
 }

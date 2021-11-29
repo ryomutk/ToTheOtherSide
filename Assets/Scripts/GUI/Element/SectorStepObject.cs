@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(IUIRenderer))]
-public class SectorStepObject : MonoBehaviour, IUIRenderer
+public class SectorStepObject : MonoBehaviour
 {
     IUIRenderer uiRenderer;
 
@@ -24,7 +24,7 @@ public class SectorStepObject : MonoBehaviour, IUIRenderer
 
     public ITask Show()
     {
-        return uiRenderer.Show();
+        return uiRenderer.Draw();
     }
 
     public ITask Hide()

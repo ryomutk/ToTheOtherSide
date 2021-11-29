@@ -5,7 +5,7 @@ using Sirenix.OdinInspector;
 using System;
 using System.Text;
 
-public class SessionManager : MonoBehaviour
+public class SessionManager : Singleton<SessionManager>
 {
     ISessionSequencer sequencer = null;
     SessionTracker tracker = new SessionTracker();

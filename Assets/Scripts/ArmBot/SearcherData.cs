@@ -4,7 +4,7 @@ public class SearcherData : ArmBotData
 {
     BotStatusList statusList = new BotStatusList(StatusType.hp, StatusType.speed, StatusType.search);
     protected override BotStatusList status { get { return statusList; } }
-    public override Entity CreateInstance(Vector2 faceDirection)
+    protected override Entity CreateInstance(Vector2 faceDirection)
     {
         return new SearcherEntity(this,faceDirection);
     }

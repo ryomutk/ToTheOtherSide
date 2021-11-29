@@ -52,7 +52,7 @@ public class UIAnimator : MonoBehaviour, IUIRenderer
     }
 
 
-    public ITask Show()
+    public ITask Draw()
     {
         var player = new AnimationTriggerHandler(animator,showKey);
 
