@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Text;
 
 //島をならべしもの。
-public class IslandRenderer : MonoBehaviour, IUIRenderer
+//
+public class IslandController : MonoBehaviour
 {
     [SerializeField] InstantPool<SectorStepObject> stepPool;
     [SerializeField] SectorStepObject islandPref;

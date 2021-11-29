@@ -9,6 +9,12 @@ public enum ShowType
     swap        //出てるもの全部隠してshow
 } 
 
+public enum PanelAction
+{
+    show,
+    hide
+}
+
 public class UIManager:Singleton<UIManager>
 {
     List<GUIPanel> panels = new List<GUIPanel>();
