@@ -66,20 +66,13 @@ MonoBehaviour:
     - V_GameData
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: a17149e11f71ca345835b7e9eeb814a2
-    m_Address: Assets/Addressables/Scriptables/ExEvent/ScreenTouchEvent.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Ev_ScreenTouch
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: d45dcdc8aef99f1479fd8f783a112304
     m_Address: Assets/Addressables/Scriptables/Events/SelectableEvent.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Ev_Selected
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 11400000, guid: d45dcdc8aef99f1479fd8f783a112304, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: d45dcdc8aef99f1479fd8f783a112304, type: 2}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5f02200a1319907409168417aafe4d26, type: 2}
   m_SchemaSet:

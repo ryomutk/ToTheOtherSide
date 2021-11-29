@@ -322,8 +322,6 @@ MonoBehaviour:
   islandPref: {fileID: 7244816392088256459, guid: b0ea69a786fd3be47b97bb5f864027e2, type: 3}
   initNum: 50
   islandOrigin: {fileID: 1542248455}
-  stepTable: []
-  showing: 0
 --- !u!114 &1429799545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,9 +487,6 @@ MonoBehaviour:
     - _key: 3
       _value:
         m_LabelString: Ev_SalvageSession
-    - _key: 5
-      _value:
-        m_LabelString: Ev_ScreenTouch
     - _key: 6
       _value:
         m_LabelString: Ev_Selected
