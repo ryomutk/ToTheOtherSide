@@ -5,7 +5,7 @@ using System.Text;
 
 //島をならべしもの。
 //
-public class IslandController : MonoBehaviour
+public class IslandUIController : MonoBehaviour
 {
     [SerializeField] InstantPool<SectorStepObject> stepPool;
     [SerializeField] SectorStepObject islandPref;

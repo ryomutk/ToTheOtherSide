@@ -316,12 +316,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1429799542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ac378c52260b6546b64757cf3d64ffc, type: 3}
+  m_Script: {fileID: 11500000, guid: 5028db89347e8f04a80dd63dafc929c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   islandPref: {fileID: 7244816392088256459, guid: b0ea69a786fd3be47b97bb5f864027e2, type: 3}
   initNum: 50
   islandOrigin: {fileID: 1542248455}
+  stepTable: []
+  showing: 0
 --- !u!114 &1429799545
 MonoBehaviour:
   m_ObjectHideFlags: 0
