@@ -93,18 +93,22 @@ public class EventManager : Singleton<EventManager>
     public bool Disregister<T>(IEventListener<T> listener, EventName name)
     where T : SalvageEventArg
     {
-        var eve = eventTable[name] as IEvent<T>;
-        if (eve != null)
+        var res = eventTable.TryGetValue(name, out IEvent ev);
+
+        if (res)
         {
+            var eve = ev as IEvent<T>;
             var result = eve.DisRegister(listener);
             if (eve.listeners == 0)
             {
                 ReleaseEvent(name);
             }
+
+            return result;
         }
 
 #if DEBUG
-        Debug.LogWarning("event is null");
+        Debug.LogWarning("event not registered");
 #endif
 
         return false;
@@ -112,7 +116,7 @@ public class EventManager : Singleton<EventManager>
 
     public bool Disregister(IEventListener listener, EventName name)
     {
-        var eve = eventTable[name];
+        eventTable.TryGetValue(name,out var eve);
         if (eve != null)
         {
             var result = eve.DisRegister(listener);
@@ -120,6 +124,8 @@ public class EventManager : Singleton<EventManager>
             {
                 ReleaseEvent(name);
             }
+
+            return result;
         }
 
 #if DEBUG
@@ -143,7 +149,7 @@ public class EventManager : Singleton<EventManager>
         eve.Register(listener);
         task.compleated = true;
     }
-    
+
     IEnumerator RegisterRoutine<T>(SmallTask task, EventName name, IEventListener<T> listener)
     where T : SalvageEventArg
     {

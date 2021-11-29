@@ -5,10 +5,8 @@ using System.Linq;
 
 public class IslandTouchPanel : TouchPanel
 {
+    
     [SerializeField] RectTransform targetTransform;
-
-    [SerializeField] GameState[] targetStates;
-
     //入力を受けるためのList
     List<Island> sectorlist = new List<Island>();
     StringBuilder logString = new StringBuilder();

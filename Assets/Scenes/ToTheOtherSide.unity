@@ -350,6 +350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 1542248455}
   targetStates: 01000000
+  targetTransform: {fileID: 1542248455}
 --- !u!1 &1542248454
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,6 +491,9 @@ MonoBehaviour:
     - _key: 5
       _value:
         m_LabelString: Ev_ScreenTouch
+    - _key: 6
+      _value:
+        m_LabelString: Ev_Selected
 --- !u!114 &1776790545
 MonoBehaviour:
   m_ObjectHideFlags: 0

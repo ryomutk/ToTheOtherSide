@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 public abstract class TouchPanel : MonoBehaviour, IEventListener<ScreenTouchArg>, IEventListener<SystemEventArg>
 {
-    [SerializeField] RectTransform targetTransform;
     [SerializeField] GameState[] targetStates;
 
     protected virtual void Start()
@@ -29,7 +28,7 @@ public abstract class TouchPanel : MonoBehaviour, IEventListener<ScreenTouchArg>
     {
         //開いたままDisableすると残っちゃうので、それを防ぐため
         EventManager.instance.Disregister<ScreenTouchArg>(this,EventName.ScreenTouchEvent);
-        
+
         EventManager.instance.Disregister<SystemEventArg>(this, EventName.SystemEvent);
     }
 
