@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-public class IslandTouchPanel : MonoBehaviour, IEventListener<ScreenTouchArg>, IEventListener<SystemEventArg>
+public class IslandTouchPanel : TouchPanel
 {
     [SerializeField] RectTransform targetTransform;
 
@@ -13,25 +13,9 @@ public class IslandTouchPanel : MonoBehaviour, IEventListener<ScreenTouchArg>, I
     List<Island> sectorlist = new List<Island>();
     StringBuilder logString = new StringBuilder();
 
-    void Start()
-    {
-        EventManager.instance.Register<SystemEventArg>(this,EventName.SystemEvent);
-    }
 
-    public ITask OnNotice(SystemEventArg arg)
-    {
-        if (targetStates.Contains(arg.state))
-        {
-            return EventManager.instance.Register<ScreenTouchArg>(this,EventName.ScreenTouchEvent);
-        }
-        else
-        {
-            EventManager.instance.Disregister<ScreenTouchArg>(this,EventName.ScreenTouchEvent);
-            return SmallTask.nullTask;
-        }
-    }
 
-    public ITask OnNotice(ScreenTouchArg arg)
+    public override ITask OnNotice(ScreenTouchArg arg)
     {
         var localPosition = targetTransform.InverseTransformPoint(arg.worldPosition);
 
