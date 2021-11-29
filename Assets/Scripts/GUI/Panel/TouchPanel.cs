@@ -27,6 +27,9 @@ public abstract class TouchPanel : MonoBehaviour, IEventListener<ScreenTouchArg>
 
     protected virtual void OnDisable()
     {
+        //開いたままDisableすると残っちゃうので、それを防ぐため
+        EventManager.instance.Disregister<ScreenTouchArg>(this,EventName.ScreenTouchEvent);
+        
         EventManager.instance.Disregister<SystemEventArg>(this, EventName.SystemEvent);
     }
 
