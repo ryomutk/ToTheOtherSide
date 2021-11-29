@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 
 //島をならべしもの。
-public class IslandRenderer : MonoBehaviour, IUIRenderer, IEventListener<ScreenTouchArg>
+public class IslandRenderer : MonoBehaviour, IUIRenderer
 {
     [SerializeField] InstantPool<SectorStepObject> stepPool;
     [SerializeField] SectorStepObject islandPref;
@@ -13,61 +13,11 @@ public class IslandRenderer : MonoBehaviour, IUIRenderer, IEventListener<ScreenT
     List<SectorStepObject> stepTable = new List<SectorStepObject>();
     bool showing = false;
 
-    //入力を受けるためのList
-    List<Island> sectorlist = new List<Island>();
+
 
     //Logをとるためのビルダ
     StringBuilder logString = new StringBuilder();
 
-    void Start()
-    {
-        EventManager.instance.Register(this, EventName.ScreenTouchEvent);
-    }
-
-    public ITask OnNotice(ScreenTouchArg arg)
-    {
-        if (showing)
-        {
-            logString.Clear();
-
-            //IslandMapごと動かしたり拡大縮小しても、結果が壊れない。便利ですねぇ～
-            var localPosition = islandOrigin.InverseTransformPoint(arg.worldPosition);
-
-            Vector2 coordinate = localPosition / StepGenerationConfig.instance.gridToCanvasrate;
-            coordinate += StepGenerationConfig.instance.originCoords;
-            var res = DataProvider.nowGameData.map.TryFindRange(coordinate, 0, ref sectorlist, true);
-
-            logString.AppendLine("====TOUCH:ISLAND====");
-            logString.Append("WorldPos:");
-            logString.AppendLine(arg.worldPosition.ToString());
-            logString.Append("LocalPosition:");
-            logString.AppendLine(localPosition.ToString());
-            logString.Append("   coordinate:");
-            logString.AppendLine(coordinate.ToString());
-
-            if (res == 1)
-            {
-                var step = sectorlist[0];
-                Debug.Log(step.name);
-
-                logString.AppendLine("Step Found");
-            }
-            else if (res > 1)
-            {
-                Debug.LogWarning("Why too many");
-                logString.AppendLine("Too many Error");
-            }
-            else
-            {
-                logString.AppendLine("Step not found");
-            }
-
-            logString.AppendLine("\n\n\n");
-            Utility.LogWriter.Log(logString.ToString(), "EventLog", true);
-        }
-
-        return SmallTask.nullTask;
-    }
 
     [Sirenix.OdinInspector.Button]
     public ITask Draw()

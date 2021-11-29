@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 
-public class Island
+public class Island:ISalvageData
 {
     public string name{get;set;}
     public int id{get;set;}

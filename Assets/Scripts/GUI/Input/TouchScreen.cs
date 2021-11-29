@@ -17,7 +17,6 @@ public class TouchScreen : MonoBehaviour
         #if UNITY_WEBGL || UNITY_STANDALONE || UNITY_EDITOR
         if(Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Click");
             var arg = new ScreenTouchArg(Camera.main.ScreenToWorldPoint(Input.mousePosition));
             EventManager.instance.Notice(EventName.ScreenTouchEvent,arg);
         }

@@ -9,7 +9,8 @@ public enum EventName
     RealtimeExploreEvent,
     SessionEvent,
     SystemEvent,
-    ScreenTouchEvent
+    ScreenTouchEvent,
+    SelectableEvent
 }
 
 public class EventManager : Singleton<EventManager>
