@@ -16,7 +16,7 @@ public class SectorStepObject : MonoBehaviour
         uiRenderer = GetComponent<IUIRenderer>();
     }
 
-    public ITask UpdateData(SectorStep data)
+    public ITask UpdateData(Island data)
     {
         sourceIndicator.text = data.resourceLv.ToString();
         return SmallTask.nullTask;

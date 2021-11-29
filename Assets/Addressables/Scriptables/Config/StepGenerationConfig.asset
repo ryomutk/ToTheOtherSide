@@ -12,12 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186ee6291a197cf449a4e300d2c286be, type: 3}
   m_Name: StepGenerationConfig
   m_EditorClassIdentifier: 
-  maxMiasma: 200
+  _gridToWorld: 0.5
+  rawIslandPref: {fileID: 7244816392088256459, guid: b0ea69a786fd3be47b97bb5f864027e2, type: 3}
+  _maxMiasma: 200
   mapSize: {x: 100, y: 100}
-  islandSize: 1
+  originTilling: 2
+  goalTilling: 2
+  rawIslandSize: 1
+  minGap: 3
   islandPossibility: 0.1
   maxPossibilityDiscount: 0.03
   randomizeGoal: 0
   resMiaMultiplier: 10
   resDisMultiplier: 20
   resRandMultiplier: 1
+  origin: {x: 50, y: 0}
+  goal: {x: 50, y: 99}

@@ -1,19 +1,37 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 
 [CreateAssetMenu(menuName = "Configs/StepGeneration")]
 public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
 {
-    [SerializeField] float _gridToCanvasRate = 20f;
+    [SerializeField] float _gridToWorld = 0.2f;
+    [SerializeField] SectorStepObject rawIslandPref;
+    public float islandScale{get;private set;}
 
+    void OnValidate()
+    {
+        var size = (rawIslandPref.transform as RectTransform).sizeDelta;
+        Debug.Log(size);
+
+        //シマのPrefのワールド座標上での長辺
+        var nowWorldChohen = Mathf.Max(size.x,size.y);
+
+        //この大きさにしたい(直径)
+        var targetSizeWorld = _gridToWorld*rawIslandSize*2;
+
+        islandScale = targetSizeWorld/nowWorldChohen;
+    }
 
     public float maxMiasma { get { return _maxMiasma; } }
     [SerializeField] float _maxMiasma = 200;
     [SerializeField] Vector2Int mapSize = new Vector2Int(100, 100);
     [SerializeField] int originTilling = 2;
     [SerializeField] int goalTilling = 2;
-    public float gridToCanvasrate { get { return _gridToCanvasRate; } }
-    [SerializeField] int islandSize = 1;
+    public float gridToCanvasrate { get { return _gridToWorld; } }
+
+    //プレファブの島の半径の大きさ
+    [SerializeField] int rawIslandSize = 1;
     [SerializeField] int minGap = 3;
 
 
@@ -105,13 +123,13 @@ public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
         if (forceMake)
         {
             var target = new Vector2(x, y);
-            var step = new SectorStep();
-            step.radius = islandSize;
+            var step = new Island();
+            step.radius = rawIslandSize;
 
             if (!map.TryAddStep(x, y, step, minGap))
             {
-                var result = new List<SectorStep>();
-                if (map.TryFindRange(target, islandSize + minGap, ref result) != 0)
+                var result = new List<Island>();
+                if (map.TryFindRange(target, rawIslandSize + minGap, ref result) != 0)
                 {
                     for (int i = 0; i < result.Count; i++)
                     {
@@ -130,9 +148,9 @@ public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
             var dice = Random.Range(0, 100);
             if (dice < possibility)
             {
-                var step = new SectorStep();
+                var step = new Island();
 
-                step.radius = islandSize;
+                step.radius = rawIslandSize;
                 map.TryAddStep(x, y, step, minGap);
             }
 
@@ -165,6 +183,20 @@ public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
         }
 
         return map;
+    }
+
+    public SectorStepObject InitializeStepObj(Island data,Vector2 coordinate,SectorStepObject instance)
+    {
+
+        instance.transform.localScale = new Vector2(islandScale,islandScale)*(data.radius/rawIslandSize);
+
+
+        var localCoords = coordinate - originCoords;
+        instance.transform.localPosition = localCoords*gridToCanvasrate;
+        instance.UpdateData(data);
+        data.name = instance.name;
+
+        return instance;
     }
 
 }

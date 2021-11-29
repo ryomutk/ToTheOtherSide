@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 
-public class SectorStep
+public class Island
 {
     public string name{get;set;}
     public int id{get;set;}

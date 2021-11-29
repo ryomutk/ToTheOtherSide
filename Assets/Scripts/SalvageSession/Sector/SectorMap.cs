@@ -4,11 +4,11 @@ using System.Collections.ObjectModel;
 
 public class SectorMap
 {
-    Dictionary<Vector2Int, SectorStep> _mapData = new Dictionary<Vector2Int, SectorStep>();
-    public Dictionary<Vector2Int, SectorStep> mapData { get { return _mapData; } }
+    Dictionary<Vector2Int, Island> _mapData = new Dictionary<Vector2Int, Island>();
+    public Dictionary<Vector2Int, Island> mapData { get { return _mapData; } }
     public int[,] miasmaMap{get;private set;}
 
-    public bool RemoveIsland(SectorStep remove)
+    public bool RemoveIsland(Island remove)
     {
         foreach(var step in mapData)
         {
@@ -35,7 +35,7 @@ public class SectorMap
     /// <param name="step">加えるやつ</param>
     /// <param name="safeRange">不可侵領域</param>
     /// <returns></returns>
-    public bool TryAddStep(int x,int y, SectorStep step,float safeRange=0)
+    public bool TryAddStep(int x,int y, Island step,float safeRange=0)
     {
         if(!CheckCoordinate(x,y,step.radius+safeRange))
         {
@@ -63,7 +63,7 @@ public class SectorMap
             var ydir = stepCoordPair.Key.y - y;
             sqrDistance = Mathf.Pow(xdir,2)+Mathf.Pow(ydir,2);
 
-            if (sqrDistance < Mathf.Pow(range*2,2))
+            if (sqrDistance < Mathf.Pow(range+stepCoordPair.Value.radius,2))
             {
                 return true;
             }
@@ -81,14 +81,19 @@ public class SectorMap
     /// <param name="result">結果を入れるやつ</param>
     /// <param name="refreshResult">結果を都度Clearするか</param>
     /// <returns>見つけた島の数</returns>
-    public int TryFindRange(Vector2 coordinate, float range, ref List<SectorStep> result, bool refreshResult = false)
+    public int TryFindRange(Vector2 coordinate, float range, ref List<Island> result, bool refreshResult = false)
     {
+        if(refreshResult)
+        {
+            result.Clear();
+        }
+
         float sqrDistance;
         int foundCount = 0;
         foreach (var stepCoordPair in _mapData)
         {
             sqrDistance = Vector2.Distance(stepCoordPair.Key, coordinate);
-            if (sqrDistance < Mathf.Pow(range*2, 2))
+            if (sqrDistance < Mathf.Pow(range+stepCoordPair.Value.radius, 2))
             {
                 result.Add(stepCoordPair.Value);
                 foundCount++;

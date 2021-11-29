@@ -14,8 +14,8 @@ public class SearcherData : ArmBotData
         public SearcherEntity(ArmBotData data, Vector2 direction) : base(data, direction)
         { }
 
-        List<SectorStep> _foundSteps = new List<SectorStep>();
-        public List<SectorStep> foundSteps { get { return _foundSteps; } private set { _foundSteps = value; } }
+        List<Island> _foundSteps = new List<Island>();
+        public List<Island> foundSteps { get { return _foundSteps; } private set { _foundSteps = value; } }
 
         public override bool OnInteract(SectorMap map, Vector2 coordinate)
         {

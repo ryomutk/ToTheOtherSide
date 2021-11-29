@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbedb94839e17814099578eb3ab5f479, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d4d9631d4d6fa545bcc9da8eb0c3c36, type: 3}
   m_Name: ScreenTouchEvent
   m_EditorClassIdentifier: 
