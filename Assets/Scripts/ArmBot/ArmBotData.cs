@@ -59,9 +59,10 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
         [SerializeField] BotStatusList defaultStatus;
         [SerializeField] EquipmentHolder equipment;
         [SerializeField] InventoryData inventory;
+        public StatusType[] statusTypes{get{return nowStatus.types;}}
+        public string id{get;}
         public BotType type { get; }
-
-        public Vector2 facingDirection { get; private set; }
+        public Vector2 facingDirection { get; set; }
 
         protected BotStatusList nowStatus;
         public int hp
@@ -70,12 +71,18 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             set { nowStatus.SetValue(StatusType.hp, value); }
         }
 
-        public Entity(ArmBotData data, Vector2 faceDirection,BotType type)
+        public float normalizedHp
+        {
+            get{return nowStatus.GetValue(StatusType.hp)/defaultStatus.GetValue(StatusType.hp);}
+        }
+
+        public Entity(ArmBotData data,BotType type)
         {
             defaultStatus = data.status;
             nowStatus = data.status.CopySelf();
             equipment = data._equipment;
             inventory = new InventoryData();
+            this.id = DateTime.Now.ToString("yyyyMMddHHmmss");
         }
 
         public abstract bool OnInteract(SectorMap map,Vector2 coordinate);
@@ -121,16 +128,16 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
 
     protected List<ArmBotData> datas = new List<ArmBotData>();
 
-    protected abstract Entity CreateInstance(Vector2 faceDirection);
+    protected abstract Entity CreateInstance();
     
 
-    public static Entity CreateInstance(BotType type,Vector2 faceDirection)
+    public static Entity CreateInstance(BotType type)
     {
         for(int i = 0;i < variantInstances.Count;i++)
         {
             if(variantInstances[i].type == type)
             {
-                return variantInstances[i].CreateInstance(faceDirection);
+                return variantInstances[i].CreateInstance();
             }
         }
 

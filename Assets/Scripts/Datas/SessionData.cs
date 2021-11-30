@@ -23,6 +23,7 @@ public class SessionData : ISalvageData, IEventListener<ExploreArg>
     //exArgは投げない。変更に対応しずらくなるので。
     public event Action onUpdate;
     public Vector2 nowCoordinate{get;private set;}
+    public Vector2 startCoordinate{get;}
 
     SessionState nowState;
     enum SessionState
@@ -65,9 +66,11 @@ public class SessionData : ISalvageData, IEventListener<ExploreArg>
         return SmallTask.nullTask;
     }
 
-    public SessionData(ArmBotData.Entity wingMan)
+    public SessionData(ArmBotData.Entity wingMan,Vector2 startCoordinate)
     {
         this.master = wingMan;
+        this.nowCoordinate = startCoordinate;
+        this.startCoordinate = startCoordinate;
         visitedPlace = new List<int>();
         eventsOccoured = new List<SerializableExArg>();
         nowState = SessionState.onGoing;

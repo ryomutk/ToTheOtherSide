@@ -10,6 +10,7 @@ public class BotStatusList:ISalvageData
 {
     public BotStatusList(params StatusType[] states)
     {
+        this.types = states;
         foreach(var state in states)
         {
             var data = new LabeledData<StatusType,int>();
@@ -20,7 +21,7 @@ public class BotStatusList:ISalvageData
 
     [SerializeField,ListDrawerSettings(HideAddButton = true,HideRemoveButton = true)]
     List<LabeledData<StatusType,int>> values = new List<LabeledData<StatusType, int>>();
-
+    public StatusType[] types;
     public void SetValue(StatusType type,int value)
     {
         for(int i = 0;i < values.Count;i++)

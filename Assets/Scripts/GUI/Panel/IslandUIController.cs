@@ -77,7 +77,7 @@ public class IslandUIController : MonoBehaviour
         for (int i = 0; i < stepTable.Count; i++)
         {
             var obj = stepTable[i];
-            var showTask = obj.Show();
+            var showTask = obj.renderer.Draw();
             yield return new WaitUntil(() => showTask.compleated);
         }
 
@@ -122,7 +122,7 @@ public class IslandUIController : MonoBehaviour
     {
         foreach (var step in stepTable)
         {
-            var hideTask = step.Hide();
+            var hideTask = step.renderer.Hide();
             yield return new WaitUntil(() => hideTask.compleated);
         }
 

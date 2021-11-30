@@ -32,6 +32,9 @@ public class DataProvider : Singleton<DataProvider>, IEventListener<SystemEventA
     {
         var loadTask = DataManager.LoadDataAsync(l_gameDataLabel);
         yield return new WaitUntil(() => loadTask.compleated);
+
+        gameData.value = new GameSessionData();
+
         gameData = loadTask.result as SalvageValuable<ISalvageData>;
 
         var newGameDat = new GameSessionData();
@@ -39,6 +42,11 @@ public class DataProvider : Singleton<DataProvider>, IEventListener<SystemEventA
 
         InitMap();
         nowGameData.currentMOTHERCoordinate = StepGenerationConfig.instance.originCoords;
+
+        nowGameData.resourceTable[ItemID.resource] = 0;
+        nowGameData.resourceTable[ItemID.cristal] = 0;
+
+        
 
         task.compleated = true;
     }

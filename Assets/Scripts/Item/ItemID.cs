@@ -4,10 +4,6 @@
 public enum ItemID
 {
     none,
-    book_TheReason,
-    res_kanban,
-    eq_drill,
-    eq_glasses,
-    imp_seriumPomp,
-    res
+    resource,
+    cristal
 }

@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(IUIRenderer))]
-public class SectorStepObject : MonoBehaviour
+public class SectorStepObject : MonoBehaviour,IUIElement
 {
-    IUIRenderer uiRenderer;
+    new public IUIRenderer renderer{get;private set;}
 
     //Debugのみのやつ
     [SerializeField] TMPro.TMP_Text sourceIndicator;
@@ -13,22 +13,12 @@ public class SectorStepObject : MonoBehaviour
 
     void Awake()
     {
-        uiRenderer = GetComponent<IUIRenderer>();
+        renderer = GetComponent<IUIRenderer>();
     }
 
     public ITask UpdateData(Island data)
     {
         sourceIndicator.text = data.resourceLv.ToString();
         return SmallTask.nullTask;
-    }
-
-    public ITask Show()
-    {
-        return uiRenderer.Draw();
-    }
-
-    public ITask Hide()
-    {
-        return uiRenderer.Hide();
     }
 }

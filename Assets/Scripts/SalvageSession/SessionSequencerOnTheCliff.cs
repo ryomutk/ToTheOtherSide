@@ -5,9 +5,9 @@ public class SessionSequencerOnTheCliff : ISessionSequencer
     //このセッションを主導するEntity
     ArmBotData.Entity entity;
     SectorMap map;
-    Vector2Int startPosition;
+    Vector2 startPosition;
 
-    public SessionSequencerOnTheCliff(SectorMap map, ArmBotData.Entity entity, Vector2Int startCords)
+    public SessionSequencerOnTheCliff(SectorMap map, ArmBotData.Entity entity, Vector2 startCords)
     {
         this.entity = entity;
         this.map = map;
@@ -20,7 +20,7 @@ public class SessionSequencerOnTheCliff : ISessionSequencer
     }
 
 
-    void StepRoutine(Vector2Int startCoords)
+    void StepRoutine(Vector2 startCoords)
     {
         Vector2 nowCoords = startCoords;
 

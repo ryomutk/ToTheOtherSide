@@ -6,14 +6,14 @@ public class SearcherData : ArmBotData
 {
     [SerializeField]BotStatusList statusList = new BotStatusList(StatusType.hp, StatusType.speed, StatusType.search);
     protected override BotStatusList status { get { return statusList; } }
-    protected override Entity CreateInstance(Vector2 faceDirection)
+    protected override Entity CreateInstance()
     {
-        return new SearcherEntity(this,faceDirection);
+        return new SearcherEntity(this);
     }
 
     public class SearcherEntity : Entity
     {
-        public SearcherEntity(ArmBotData data, Vector2 direction) : base(data, direction,BotType.searcher)
+        public SearcherEntity(ArmBotData data) : base(data,BotType.searcher)
         { }
 
         List<Island> _foundSteps = new List<Island>();

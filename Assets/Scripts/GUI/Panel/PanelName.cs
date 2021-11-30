@@ -2,5 +2,6 @@ using System;
 
 public enum PanelName
 {
-    BackButtonPanel
+    BackButtonPanel,
+    StockPanel
 }

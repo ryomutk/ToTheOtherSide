@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Inochi/MOTHER")]
 public class MOTHERData : ArmBotData
 {
-    protected override Entity CreateInstance(Vector2 faceDirection)
+    protected override Entity CreateInstance()
     {
         throw new System.NotImplementedException();
     }
@@ -14,7 +14,7 @@ public class MOTHERData : ArmBotData
 
     public class MotherEntity:Entity
     {
-        public MotherEntity(ArmBotData data,Vector2 faceDirection):base(data,faceDirection,BotType.MOTHER)
+        public MotherEntity(ArmBotData data):base(data,BotType.MOTHER)
         {
 
         }

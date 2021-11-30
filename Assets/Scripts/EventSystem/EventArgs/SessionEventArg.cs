@@ -15,8 +15,9 @@ public class SessionEventArg:SalvageEventArg
 
 public enum SessionState
 {
-    request,
+    requestSummary,
     summary,
+    requestSession,
     start,
     compleate
 }
