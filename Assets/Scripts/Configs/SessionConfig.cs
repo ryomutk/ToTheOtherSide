@@ -16,6 +16,8 @@ public class SessionConfig : SingleScriptableObject<SessionConfig>
     //最も短い時間の単位
     [SerializeField] float tickDuration = 0.5f;
 
+    [ShowInInspector] public float sourceSieldMultiplier{get{return _sourceSheldMultiplier;} private set{_sourceSheldMultiplier = value;}}
+    [SerializeField,HideInInspector]float _sourceSheldMultiplier = 0.1f;
 
     public float GetDuration(ExploreArg exploreArg)
     {

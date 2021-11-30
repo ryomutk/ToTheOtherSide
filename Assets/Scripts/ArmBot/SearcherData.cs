@@ -1,8 +1,10 @@
 using UnityEngine;
 using System.Collections.Generic;
+
+[CreateAssetMenu(menuName = "Inochi/Searcher")]
 public class SearcherData : ArmBotData
 {
-    BotStatusList statusList = new BotStatusList(StatusType.hp, StatusType.speed, StatusType.search);
+    [SerializeField]BotStatusList statusList = new BotStatusList(StatusType.hp, StatusType.speed, StatusType.search);
     protected override BotStatusList status { get { return statusList; } }
     protected override Entity CreateInstance(Vector2 faceDirection)
     {
@@ -11,7 +13,7 @@ public class SearcherData : ArmBotData
 
     public class SearcherEntity : Entity
     {
-        public SearcherEntity(ArmBotData data, Vector2 direction) : base(data, direction)
+        public SearcherEntity(ArmBotData data, Vector2 direction) : base(data, direction,BotType.searcher)
         { }
 
         List<Island> _foundSteps = new List<Island>();
@@ -44,6 +46,11 @@ public class SearcherData : ArmBotData
             }
 
             return false;
+        }
+
+        public override BotStatusList Evolution(int resourceNum,bool distructive)
+        {
+            throw new System.NotImplementedException();
         }
     }
 

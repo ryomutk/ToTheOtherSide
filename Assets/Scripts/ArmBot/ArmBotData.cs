@@ -70,7 +70,7 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             set { nowStatus.SetValue(StatusType.hp, value); }
         }
 
-        public Entity(ArmBotData data, Vector2 faceDirection)
+        public Entity(ArmBotData data, Vector2 faceDirection,BotType type)
         {
             defaultStatus = data.status;
             nowStatus = data.status.CopySelf();
@@ -115,11 +115,14 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
 
             return inventory.items.Count;
         }
+
+        public abstract BotStatusList Evolution(int resourceNum,bool distructive = false);
     }
 
     protected List<ArmBotData> datas = new List<ArmBotData>();
 
     protected abstract Entity CreateInstance(Vector2 faceDirection);
+    
 
     public static Entity CreateInstance(BotType type,Vector2 faceDirection)
     {
