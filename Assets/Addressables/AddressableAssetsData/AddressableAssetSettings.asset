@@ -79,7 +79,6 @@ MonoBehaviour:
     - Equipments
     - Resource
     - Item
-    - Ev_ScreenTouch
     - ExploreData
     - Ev_Explore
     - Ev_ExRealtime

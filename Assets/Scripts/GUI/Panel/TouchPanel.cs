@@ -1,35 +1,30 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
-public abstract class TouchPanel : MonoBehaviour, IEventListener<ScreenTouchArg>, IEventListener<SystemEventArg>
+using UnityEngine.UI;
+
+[RequireComponent(typeof(Button))]
+public abstract class TouchPanel : MonoBehaviour
 {
-    [SerializeField] GameState[] targetStates;
+        Button entityButton;    
 
     protected virtual void Start()
     {
-        EventManager.instance.Register<SystemEventArg>(this, EventName.SystemEvent);
-    }
+        entityButton = GetComponent<Button>();
 
-    public abstract ITask OnNotice(ScreenTouchArg arg);
-    public ITask OnNotice(SystemEventArg arg)
-    {
-        if (targetStates.Contains(arg.state))
+        entityButton.onClick.AddListener(()=>
         {
-            return EventManager.instance.Register<ScreenTouchArg>(this, EventName.ScreenTouchEvent);
-        }
-        else
-        {
-            EventManager.instance.Disregister<ScreenTouchArg>(this, EventName.ScreenTouchEvent);
-            return SmallTask.nullTask;
-        }
+            ScreenTouchArg arg;
+            #if UNITY_EDITOR || UNITY_STANDALONE
+            arg = new ScreenTouchArg(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            #endif
+            #if UNITY_IPHONE || UNITY_ANDROID
+            arg = new ScreenTouchArg(Camera.main.ScreenToWorldPoint(Input.touches[0].position))
+            #endif
+
+            OnClick(arg);
+        });
     }
 
-    protected virtual void OnDisable()
-    {
-        //開いたままDisableすると残っちゃうので、それを防ぐため
-        EventManager.instance.Disregister<ScreenTouchArg>(this,EventName.ScreenTouchEvent);
-
-        EventManager.instance.Disregister<SystemEventArg>(this, EventName.SystemEvent);
-    }
-
+    public abstract void OnClick(ScreenTouchArg arg);
 }

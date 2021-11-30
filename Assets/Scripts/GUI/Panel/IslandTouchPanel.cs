@@ -13,7 +13,7 @@ public class IslandTouchPanel : TouchPanel
 
 
 
-    public override ITask OnNotice(ScreenTouchArg arg)
+    public override void OnClick(ScreenTouchArg arg)
     {
         var localPosition = targetTransform.InverseTransformPoint(arg.worldPosition);
 
@@ -25,7 +25,7 @@ public class IslandTouchPanel : TouchPanel
         {
             var step = sectorlist[0];
             var selectableArg = new SelectableArg(step);
-            return EventManager.instance.Notice(EventName.SelectableEvent,selectableArg);
+            EventManager.instance.Notice(EventName.SelectableEvent,selectableArg);
         }
 
 #if DEBUG
@@ -55,6 +55,6 @@ public class IslandTouchPanel : TouchPanel
 #endif
 
 
-        return SmallTask.nullTask;
+        return;
     }
 }
