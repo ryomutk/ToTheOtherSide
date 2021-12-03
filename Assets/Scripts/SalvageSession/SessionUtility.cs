@@ -4,10 +4,11 @@ using System.Linq;
 
 public static class SessionUtility
 {
-    static int GetCost(BotType type)
+    static Dictionary<BotType, int> botCostTable = new Dictionary<BotType, int>()
     {
-        return InochiConfig.GetPurchaseCost(type);
-    }
+        {BotType.miner,100},
+        {BotType.searcher,50}
+    };
 
     public static bool TryCreateNewInochi(BotType type, out ArmBotData.Entity entity)
     {
@@ -17,17 +18,17 @@ public static class SessionUtility
         {
             return false;
         }
-        else if (GetCost(type) < DataProvider.nowGameData.resourceTable[ItemID.resource])
+        else if (botCostTable[type] < DataProvider.nowGameData.resourceTable[ItemID.resource])
         {
             return false;
         }
-        else if (type == BotType.MOTHER)
+        else if(type == BotType.MOTHER)
         {
             return false;
         }
         else
         {
-            DataProvider.nowGameData.resourceTable[ItemID.resource] -= GetCost(type);
+            DataProvider.nowGameData.resourceTable[ItemID.resource] -= botCostTable[type];
             entity = ArmBotData.CreateInstance(type);
 
             DataProvider.nowGameData.AddStock(entity);
@@ -44,16 +45,16 @@ public static class SessionUtility
     {
         var entity = DataProvider.nowGameData.stocks.First(x => x.id == botId);
         entity.facingDirection = direction;
-        var data = new SessionData(entity, startCoords);
-        var arg = new SessionEventArg(SessionState.requestSummary, data);
+        var data = new SessionData(entity,startCoords);
+        var arg = new SessionEventArg(SessionState.requestSummary,data);
 
-        EventManager.instance.Notice(EventName.SessionEvent, arg);
+        EventManager.instance.Notice(EventName.SessionEvent,arg);
     }
 
     public static bool RequestSession(SessionData data)
     {
-        var arg = new SessionEventArg(SessionState.requestSession, data);
-        EventManager.instance.Notice(EventName.SessionEvent, arg);
+        var arg = new SessionEventArg(SessionState.requestSession,data);
+        EventManager.instance.Notice(EventName.SessionEvent,arg);
         return true;
     }
 }
