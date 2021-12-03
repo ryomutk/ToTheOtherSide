@@ -43,6 +43,7 @@ public class DataProvider : Singleton<DataProvider>, IEventListener<SystemEventA
 
         nowGameData.MOTHER = ArmBotData.CreateInstance(BotType.MOTHER);
 
+
         task.compleated = true;
     }
 

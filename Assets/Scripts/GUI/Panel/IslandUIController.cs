@@ -5,14 +5,14 @@ using System.Text;
 
 //島をならべしもの。
 //
-public class IslandUIController : MonoBehaviour
+public class IslandUIController : UIPanel
 {
+    public override PanelName name { get { return PanelName.IslandPanel; } }
     [SerializeField] InstantPool<SectorStepObject> stepPool;
     [SerializeField] SectorStepObject islandPref;
     [SerializeField] int initNum = 50;
     [SerializeField] RectTransform islandOrigin;
     List<SectorStepObject> stepTable = new List<SectorStepObject>();
-    bool showing = false;
 
 
 
@@ -20,40 +20,35 @@ public class IslandUIController : MonoBehaviour
     StringBuilder logString = new StringBuilder();
 
 
-    [Sirenix.OdinInspector.Button]
-    public ITask Draw()
+    protected override ITask Show()
     {
-        if (!showing)
-        {
-            showing = true;
+        var task = new SmallTask();
 
-            var map = DataProvider.nowGameData.map;
-            var task = new SmallTask();
-            StartCoroutine(DrawMap(task, map));
 
-            return task;
-        }
+        StartCoroutine(DrawMap(task));
 
-        return SmallTask.nullTask;
+        return task;
     }
 
-    public ITask Hide()
+    protected override ITask Hide()
     {
-        if (showing)
-        {
-            showing = false;
 
-            var task = new SmallTask();
-            StartCoroutine(HideMap(task));
+        var task = new SmallTask();
+        StartCoroutine(HideMap(task));
 
-            return task;
-        }
-
-        return SmallTask.nullTask;
+        return task;
     }
 
-    IEnumerator DrawMap(SmallTask task, SectorMap map)
-    {
+    IEnumerator DrawMap(SmallTask task)
+    { 
+        var map = DataProvider.nowGameData.map;
+        var mapTask = new SmallTask();
+
+        var baseDraw = base.Show();
+
+        yield return new WaitUntil(()=>baseDraw.compleated);
+
+        
         stepPool = new InstantPool<SectorStepObject>(islandOrigin);
         stepPool.CreatePool(islandPref, initNum, false);
 
@@ -64,13 +59,13 @@ public class IslandUIController : MonoBehaviour
         {
             var obj = stepPool.GetObj();
 
-            obj = StepGenerationConfig.instance.InitializeStepObj(step.Value,step.Key,obj);
+            obj = StepGenerationConfig.instance.InitializeStepObj(step.Value, step.Key, obj);
 
             //ちょっとした色付け
             var miasma = map.miasmaMap[step.Key.x, step.Key.y];
             var colorNorm = miasma / maxMiasma;
             obj.islandImage.color = new Color(colorNorm, 1 - colorNorm, 1 - colorNorm, 1);
-            
+
             stepTable.Add(obj);
         }
 
@@ -125,6 +120,7 @@ public class IslandUIController : MonoBehaviour
             var hideTask = step.renderer.Hide();
             yield return new WaitUntil(() => hideTask.compleated);
         }
+        UnloadData();
 
         task.compleated = true;
     }

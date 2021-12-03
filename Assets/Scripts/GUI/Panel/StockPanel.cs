@@ -83,8 +83,6 @@ public class StockPanel : UIPanel
     {
         List<ITask> tasks = new List<ITask>();
 
-        var showTask = base.Show();
-        yield return new WaitUntil(() => showTask.compleated);
         buttonPool.ForeachObject(x =>
         {
             if (x.isActiveAndEnabled)
@@ -98,6 +96,9 @@ public class StockPanel : UIPanel
         {
             yield return new WaitUntil(() => tasks[i].compleated);
         }
+
+        var showTask = base.Hide();
+        yield return new WaitUntil(() => showTask.compleated);
 
         buttonPool.ForeachObject(x => x.gameObject.SetActive(false));
         task.compleated = true;

@@ -1,11 +1,10 @@
 using UnityEngine;
 
-[RequireComponent(typeof(IUIRenderer))]
 public abstract class UIPanel : MonoBehaviour, IEventListener<UIEventArg>
 {
     new IUIRenderer renderer;
     new public abstract PanelName name { get; }
-    bool showing = false;
+    protected bool showing{get;private set;}
     [SerializeField] UIPanel[] childrenPanels;
     //Trueの場合,ChildrenPanelの一番上のものをShowで見せる。
     //Falseの場合、すべてHideする

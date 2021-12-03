@@ -14,7 +14,7 @@ public class GameManager : Singleton<GameManager>
 
     IEnumerator SystemInitialize()
     {
-        yield return 4;
+        yield return new WaitForSeconds(1);
 
         var task = EventManager.instance.Notice(EventName.SystemEvent,new SystemEventArg(GameState.SystemInitialize));
         yield return new WaitUntil(()=>task.compleated);

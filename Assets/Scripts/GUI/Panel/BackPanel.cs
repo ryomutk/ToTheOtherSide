@@ -6,6 +6,7 @@ public class BackPanel:UIPanel
 {
     Button button;
     public override PanelName name{get{return PanelName.BackPanel;}}
+    [SerializeField] PanelName ignorePanel;
 
     protected override void Start()
     {
@@ -18,6 +19,7 @@ public class BackPanel:UIPanel
     {
         PanelName allNames = 0;
         allNames = ~allNames;
+        allNames -= ignorePanel;
         var arg = new UIEventArg(allNames,0,PanelAction.hide);
         EventManager.instance.Notice(EventName.UIEvent,arg);
     }

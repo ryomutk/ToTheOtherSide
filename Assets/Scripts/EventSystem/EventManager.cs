@@ -117,7 +117,7 @@ public class EventManager : Singleton<EventManager>
 
     public bool Disregister(IEventListener listener, EventName name)
     {
-        eventTable.TryGetValue(name,out var eve);
+        eventTable.TryGetValue(name, out var eve);
         if (eve != null)
         {
             var result = eve.DisRegister(listener);
@@ -143,6 +143,7 @@ public class EventManager : Singleton<EventManager>
         eventTable.Remove(name);
     }
 
+
     IEnumerator RegisterRoutine(SmallTask task, EventName name, IEventListener listener)
     {
         yield return StartCoroutine(LoadEvent(name));
@@ -160,13 +161,27 @@ public class EventManager : Singleton<EventManager>
         task.compleated = true;
     }
 
+    List<EventName> nowLoading = new List<EventName>();
 
     IEnumerator LoadEvent(EventName name)
     {
+        //すでにロードが始まっている場合
+        if (nowLoading.Contains(name))
+        {
+            //NowLoadingがなくなるまでやる
+            yield return new WaitWhile(() => nowLoading.Contains(name));
+            yield break;
+        }
+        else
+        {
+            nowLoading.Add(name);
+        }
+
         var label = eventLabelTable[name];
 
         var loadtask = DataManager.LoadDataAsync(label);
         yield return new WaitUntil(() => loadtask.compleated);
+        nowLoading.Remove(name);
 
         if (eventTable.ContainsKey(name))
         {

@@ -1,6 +1,7 @@
 using System;
+using UnityEngine;
 
-public class SmallTask<T>:ITask<T>
+public class SmallTask<T> : ITask<T>
 where T : class
 {
     public bool compleated { get { return conditionGetter(); } }
@@ -21,7 +22,7 @@ where T : class
     }
 }
 
-public class SmallTask:ITask
+public class SmallTask : ITask
 {
     static SmallTask _nullTask = new SmallTask();
     public static SmallTask nullTask
@@ -38,7 +39,10 @@ public class SmallTask:ITask
     bool _ready;
     public virtual bool compleated
     {
-        get { return _ready; }
+        get
+        {
+            return _ready;
+        }
         set
         {
             _ready = value;

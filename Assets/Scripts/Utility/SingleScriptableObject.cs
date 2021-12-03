@@ -3,7 +3,8 @@ using UnityEngine;
 public class SingleScriptableObject<T> : ScriptableObject
 where T : SingleScriptableObject<T>
 {
-    static T _instance;        public BotType type{get;}
+    static T _instance;        
+    public BotType type{get;}
 
     public static T instance
     {
@@ -19,7 +20,7 @@ where T : SingleScriptableObject<T>
         {
             _instance = this as T;
         }
-        else
+        else if(_instance !=this&&instance != null)
         {
             Debug.LogError(typeof(T) +"is singleton!!" + "複数作らないでよ～！");
         }
