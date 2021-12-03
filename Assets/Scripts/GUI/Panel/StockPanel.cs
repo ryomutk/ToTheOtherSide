@@ -2,24 +2,30 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
-public class StockPanel : MonoBehaviour, IUIPanel
+[RequireComponent(typeof(IUIRenderer))]
+public class StockPanel : UIPanel
 {
-    new public PanelName name { get { return PanelName.StockPanel; } }
+    public override PanelName name { get { return PanelName.StockPanel; } }
     [SerializeField] TMP_Text nowCount;
     [SerializeField] TMP_Text maxNum;
     [SerializeField] StockInochiButton buttonPref;
     InstantPool<StockInochiButton> buttonPool;
     [SerializeField] int initNum;
-    [SerializeField] Transform buttonArea;
+    [SerializeField] ScrollRect buttonArea;
+    [SerializeField] float buttonGap = 50f;
 
-    void Start()
+    protected override void Start()
     {
-        buttonPool = new InstantPool<StockInochiButton>(buttonArea);
+        base.Start();
+        buttonPool = new InstantPool<StockInochiButton>(buttonArea.content);
         buttonPool.CreatePool(buttonPref, initNum, false);
     }
 
-    public ITask Show()
+
+
+    protected override ITask Show()
     {
         foreach (var stock in DataProvider.nowGameData.stocks)
         {
@@ -28,6 +34,14 @@ public class StockPanel : MonoBehaviour, IUIPanel
         }
         var task = new SmallTask();
 
+        var count = DataProvider.nowGameData.stocks.Count;
+        var size = buttonArea.content.sizeDelta;
+        size.y = ((RectTransform)buttonPref.transform).sizeDelta.y * count + buttonGap * count;
+        buttonArea.content.sizeDelta = size;
+
+        nowCount.text = DataProvider.nowGameData.stocks.Count.ToString();
+        maxNum.text = DataProvider.nowGameData.MOTHER.GetStatus(StatusType.stock).ToString();
+
         StartCoroutine(DrawRoutine(task));
 
         return task;
@@ -35,11 +49,17 @@ public class StockPanel : MonoBehaviour, IUIPanel
 
     IEnumerator DrawRoutine(SmallTask task)
     {
+        var showTask = base.Show();
+        yield return new WaitUntil(() => showTask.compleated);
+
         List<ITask> tasks = new List<ITask>();
         buttonPool.ForeachObject(x =>
         {
-            var task = x.renderer.Draw();
-            tasks.Add(task);
+            if (x.isActiveAndEnabled)
+            {
+                var task = x.renderer.Draw();
+                tasks.Add(task);
+            }
         });
 
         for (int i = 0; i < tasks.Count; i++)
@@ -50,7 +70,7 @@ public class StockPanel : MonoBehaviour, IUIPanel
         task.compleated = true;
     }
 
-    public ITask Hide()
+    protected override ITask Hide()
     {
         var task = new SmallTask();
 
@@ -63,10 +83,15 @@ public class StockPanel : MonoBehaviour, IUIPanel
     {
         List<ITask> tasks = new List<ITask>();
 
+        var showTask = base.Show();
+        yield return new WaitUntil(() => showTask.compleated);
         buttonPool.ForeachObject(x =>
         {
-            var task = x.renderer.Hide();
-            tasks.Add(task);
+            if (x.isActiveAndEnabled)
+            {
+                var task = x.renderer.Hide();
+                tasks.Add(task);
+            }
         });
 
         for (int i = 0; i < tasks.Count; i++)
@@ -74,7 +99,7 @@ public class StockPanel : MonoBehaviour, IUIPanel
             yield return new WaitUntil(() => tasks[i].compleated);
         }
 
-        buttonPool.ForeachObject(x=>x.gameObject.SetActive(false));
+        buttonPool.ForeachObject(x => x.gameObject.SetActive(false));
         task.compleated = true;
     }
 }

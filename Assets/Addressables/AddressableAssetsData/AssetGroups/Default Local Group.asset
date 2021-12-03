@@ -73,6 +73,13 @@ MonoBehaviour:
     - Ev_Selected
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: f5b8ad54d52f1a844b247a69e9c96f41
+    m_Address: Assets/Addressables/Scriptables/Events/UIEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - EV_UI
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 5f02200a1319907409168417aafe4d26, type: 2}
   m_SchemaSet:

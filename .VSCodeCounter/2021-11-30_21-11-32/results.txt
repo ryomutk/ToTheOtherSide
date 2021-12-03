@@ -1,0 +1,522 @@
+Date : 2021-11-30 21:11:32
+Directory : d:\UnityProjects\ToTheOtherSide
+Total : 392 files,  74862 codes, 2402 comments, 5009 blanks, all 82273 lines
+
+Languages
++-----------+------------+------------+------------+------------+------------+
+| language  | files      | code       | comment    | blank      | total      |
++-----------+------------+------------+------------+------------+------------+
+| XML       |         17 |     43,668 |         56 |        403 |     44,127 |
+| C#        |        171 |     10,485 |      2,242 |      2,027 |     14,754 |
+| Log       |         10 |      9,800 |          0 |      1,714 |     11,514 |
+| JSON      |        168 |      7,849 |          0 |          4 |      7,853 |
+| ShaderLab |         17 |      2,338 |         82 |        644 |      3,064 |
+| CSS       |          6 |        429 |         22 |         94 |        545 |
+| HTML      |          2 |        291 |          0 |        122 |        413 |
+| Markdown  |          1 |          2 |          0 |          1 |          3 |
++-----------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                  | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                     |        392 |     74,862 |      2,402 |      5,009 |     82,273 |
+| Assets                                                                                                                                |        371 |     58,441 |      2,346 |      3,284 |     64,071 |
+| Assets\Aevus                                                                                                                          |          2 |        120 |         18 |         25 |        163 |
+| Assets\Aevus\EmergencyExit                                                                                                            |          2 |        120 |         18 |         25 |        163 |
+| Assets\I0plus                                                                                                                         |        197 |     10,957 |        656 |        681 |     12,294 |
+| Assets\I0plus\RawDatas                                                                                                                |        101 |      7,135 |          0 |          0 |      7,135 |
+| Assets\I0plus\RawDatas\CharacterMod                                                                                                   |         25 |      1,902 |          0 |          0 |      1,902 |
+| Assets\I0plus\RawDatas\IslandInfoPanel                                                                                                |         27 |      1,828 |          0 |          0 |      1,828 |
+| Assets\I0plus\RawDatas\MainPanel                                                                                                      |         24 |      1,589 |          0 |          0 |      1,589 |
+| Assets\I0plus\RawDatas\StockPanel                                                                                                     |         25 |      1,816 |          0 |          0 |      1,816 |
+| Assets\I0plus\XuidUnity                                                                                                               |         96 |      3,822 |        656 |        681 |      5,159 |
+| Assets\I0plus\XuidUnity\CreatedSprites                                                                                                |          8 |          8 |          0 |          0 |          8 |
+| Assets\I0plus\XuidUnity\CreatedSprites\CharacterMod                                                                                   |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\CreatedSprites\IslandInfoPanel                                                                                |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\CreatedSprites\MainPanel                                                                                      |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\CreatedSprites\StockPanel                                                                                     |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Importer                                                                                                      |         26 |      3,385 |        621 |        613 |      4,619 |
+| Assets\I0plus\XuidUnity\Importer\Scripts                                                                                              |         26 |      3,385 |        621 |        613 |      4,619 |
+| Assets\I0plus\XuidUnity\Importer\Scripts\Editor                                                                                       |         26 |      3,385 |        621 |        613 |      4,619 |
+| Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements                                                                              |         15 |      1,522 |        202 |        260 |      1,984 |
+| Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Libraries                                                                             |          2 |        584 |         96 |        106 |        786 |
+| Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Libraries\MiniJSON                                                                    |          1 |        400 |         96 |         76 |        572 |
+| Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Libraries\OnionRing                                                                   |          1 |        184 |          0 |         30 |        214 |
+| Assets\I0plus\XuidUnity\Samples                                                                                                       |         56 |         56 |          0 |          0 |         56 |
+| Assets\I0plus\XuidUnity\Samples\Sprites                                                                                               |         56 |         56 |          0 |          0 |         56 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\BarSample                                                                                     |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\ButtonSwapSpriteSample                                                                        |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\ComponentToPrefabSample                                                                       |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\GameSample                                                                                    |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\GridScrollSample                                                                              |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\ImageSample                                                                                   |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\InputFieldSample                                                                              |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\LayoutRepeatGridSample                                                                        |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\Main                                                                                          |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\MaskSample                                                                                    |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\MaskSample2                                                                                   |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\PaddingSample                                                                                 |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\PaddingSample2                                                                                |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\PinnablelScrollGroupsTest                                                                     |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\RadioSample                                                                                   |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\RepeatGridSample                                                                              |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\RepeatGridScrollSample                                                                        |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\ResizableScrollGroupsSample                                                                   |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\ResponsiveSample                                                                              |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\ScrollGroupMaskTest                                                                           |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\ScrollGroupsSample                                                                            |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\ScrollMaskSample                                                                              |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\ScrollMaskSample2                                                                             |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\ToggleSample                                                                                  |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\ToggleSwapSpriteSample                                                                        |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\VerticalHorizontalScrollSample                                                                |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\VerticalStackSample                                                                           |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Samples\Sprites\VerticalStackSample2                                                                          |          2 |          2 |          0 |          0 |          2 |
+| Assets\I0plus\XuidUnity\Scripts                                                                                                       |          6 |        373 |         35 |         68 |        476 |
+| Assets\I0plus\XuidUnity\Scripts\Runtime                                                                                               |          6 |        373 |         35 |         68 |        476 |
+| Assets\Plugins                                                                                                                        |         27 |     40,308 |        763 |        879 |     41,950 |
+| Assets\Plugins\Demigiant                                                                                                              |          8 |      1,321 |        535 |        228 |      2,084 |
+| Assets\Plugins\Demigiant\DOTween                                                                                                      |          8 |      1,321 |        535 |        228 |      2,084 |
+| Assets\Plugins\Demigiant\DOTween\Modules                                                                                              |          8 |      1,321 |        535 |        228 |      2,084 |
+| Assets\Plugins\Sirenix                                                                                                                |         19 |     38,987 |        228 |        651 |     39,866 |
+| Assets\Plugins\Sirenix\Assemblies                                                                                                     |          7 |     37,501 |          0 |        395 |     37,896 |
+| Assets\Plugins\Sirenix\Odin Inspector                                                                                                 |         12 |      1,486 |        228 |        256 |      1,970 |
+| Assets\Plugins\Sirenix\Odin Inspector\Modules                                                                                         |          1 |        744 |         29 |        110 |        883 |
+| Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Mathematics                                                                       |          1 |        744 |         29 |        110 |        883 |
+| Assets\Plugins\Sirenix\Odin Inspector\Scripts                                                                                         |         11 |        742 |        199 |        146 |      1,087 |
+| Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor                                                                                  |          9 |        664 |        151 |        125 |        940 |
+| Assets\Scripts                                                                                                                        |        117 |      3,800 |        805 |        837 |      5,442 |
+| Assets\Scripts\ArmBot                                                                                                                 |         13 |        374 |         33 |         82 |        489 |
+| Assets\Scripts\ArmBot\Modifier                                                                                                        |          2 |         28 |          2 |          4 |         34 |
+| Assets\Scripts\Configs                                                                                                                |          2 |        166 |         18 |         57 |        241 |
+| Assets\Scripts\Datas                                                                                                                  |         18 |        614 |         45 |        116 |        775 |
+| Assets\Scripts\Datas\Sector                                                                                                           |          4 |        197 |          2 |         38 |        237 |
+| Assets\Scripts\Datas\Talkdata                                                                                                         |          4 |         69 |          2 |         12 |         83 |
+| Assets\Scripts\Datas\TreeStructure                                                                                                    |          1 |        116 |          8 |         25 |        149 |
+| Assets\Scripts\EditorScripts                                                                                                          |          6 |        268 |        121 |         78 |        467 |
+| Assets\Scripts\EventSystem                                                                                                            |         24 |        734 |         48 |        152 |        934 |
+| Assets\Scripts\EventSystem\CallBacks                                                                                                  |          3 |        135 |         14 |         31 |        180 |
+| Assets\Scripts\EventSystem\EventArgs                                                                                                  |          5 |         60 |          2 |          9 |         71 |
+| Assets\Scripts\GUI                                                                                                                    |         21 |        699 |         36 |        166 |        901 |
+| Assets\Scripts\GUI\Element                                                                                                            |          4 |        102 |          7 |         22 |        131 |
+| Assets\Scripts\GUI\Input                                                                                                              |          1 |         10 |          2 |          2 |         14 |
+| Assets\Scripts\GUI\Panel                                                                                                              |         12 |        446 |         12 |        103 |        561 |
+| Assets\Scripts\GUI\TextField                                                                                                          |          3 |         78 |          5 |         25 |        108 |
+| Assets\Scripts\Item                                                                                                                   |          8 |        101 |          9 |         12 |        122 |
+| Assets\Scripts\SalvageSession                                                                                                         |          9 |        288 |        440 |         73 |        801 |
+| Assets\Scripts\SalvageSession\Sector                                                                                                  |          2 |         78 |        208 |         16 |        302 |
+| Assets\Scripts\TextLog                                                                                                                |          2 |         17 |          0 |          2 |         19 |
+| Assets\Scripts\Utility                                                                                                                |          7 |        319 |         51 |         66 |        436 |
+| Assets\TextMesh Pro                                                                                                                   |         28 |      3,256 |        104 |        862 |      4,222 |
+| Assets\TextMesh Pro\Fonts                                                                                                             |         10 |        763 |         22 |        216 |      1,001 |
+| Assets\TextMesh Pro\Fonts\numbers                                                                                                     |         10 |        763 |         22 |        216 |      1,001 |
+| Assets\TextMesh Pro\Fonts\numbers\__MACOSX                                                                                            |          5 |          5 |          0 |          0 |          5 |
+| Assets\TextMesh Pro\Fonts\numbers\__MACOSX\numbrs-webfontkit                                                                          |          5 |          5 |          0 |          0 |          5 |
+| Assets\TextMesh Pro\Fonts\numbers\__MACOSX\numbrs-webfontkit\specimen_files                                                           |          2 |          2 |          0 |          0 |          2 |
+| Assets\TextMesh Pro\Fonts\numbers\numbrs-webfontkit                                                                                   |          5 |        758 |         22 |        216 |        996 |
+| Assets\TextMesh Pro\Fonts\numbers\numbrs-webfontkit\specimen_files                                                                    |          2 |        415 |         21 |         90 |        526 |
+| Assets\TextMesh Pro\Shaders                                                                                                           |         17 |      2,338 |         82 |        644 |      3,064 |
+| Assets\TextMesh Pro\Sprites                                                                                                           |          1 |        155 |          0 |          2 |        157 |
+| Logs                                                                                                                                  |         10 |      9,800 |          0 |      1,714 |     11,514 |
+| Packages                                                                                                                              |          2 |        495 |          0 |          2 |        497 |
++---------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------------------------------+-----------+------------+------------+------------+------------+
+| filename                                                                                                                              | language  | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------------+-----------+------------+------------+------------+------------+
+| d:\UnityProjects\ToTheOtherSide\Assembly-CSharp-Editor.csproj                                                                         | XML       |        837 |          7 |          1 |        845 |
+| d:\UnityProjects\ToTheOtherSide\Assembly-CSharp-firstpass.csproj                                                                      | XML       |        791 |          7 |          1 |        799 |
+| d:\UnityProjects\ToTheOtherSide\Assembly-CSharp.csproj                                                                                | XML       |        954 |          7 |          1 |        962 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Aevus\EmergencyExit\CreateInfiniteLoopDemo.cs                                                  | C#        |         23 |          1 |          4 |         28 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Aevus\EmergencyExit\EmergencyExit.cs                                                           | C#        |         97 |         17 |         21 |        135 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\10+505ed.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\15(+5)+b8df8.png.json                                             | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\60+8a823.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\60+f82e5.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Boundary+90972.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\CharacterMod.layout.json                                          | JSON      |      1,830 |          0 |          0 |      1,830 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Hp_+fab54.png.json                                                | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Min_+d1770.png.json                                               | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Name+29b4c.png.json                                               | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Spd_+104b7.png.json                                               | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Thumb+6589b.png.json                                              | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Track+86d14.png.json                                              | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Track+c50be.png.json                                              | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Track+cef55.png.json                                              | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Track+de6d7.png.json                                              | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\↳Color+8d65c.png.json                                             | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\パス 4+2d968.png.json                                               | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\宝石のアイコン1+0f48f.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\長方形 11+859e0.png.json                                             | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\長方形 12+77d6d.png.json                                             | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\長方形 15+d3494.png.json                                             | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\🎨 Color+271f3.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\🎨 Color+43981.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\💡States+ab1dc.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\💡States+b965a.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\19+49462.png.json                                              | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\190+09901.png.json                                             | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\22%+21650.png.json                                             | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\365m+d8d4f.png.json                                            | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\52(71-19)+2c5dd.png.json                                       | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\Barrier_+52fcd.png.json                                        | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\Found+8dead.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\IslandInfoPanel.layout.json                                    | JSON      |      1,750 |          0 |          0 |      1,750 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\Miasma_+56b40.png.json                                         | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\Node_ 123+e5773.png.json                                       | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\Resource_+1e021.png.json                                       | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\_5m12s+64199.png.json                                          | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\前面オブジェクトで型抜き 1+3cc56.png.json                                  | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\合体 3+86506.png.json                                            | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\合体 4+d4bcc.png.json                                            | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\楕円形 1+a01c6.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\楕円形 2+21d9e.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\楕円形 5+f7bb7.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\楕円形 6+ba767.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\現在のシマ(クオータービュー)+e3b2b.png.json                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\生存確率_+0152a.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\線 9+d7384.png.json                                             | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\長方形 2+657aa.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\長方形 4+e1480.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\長方形 5+61f5e.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\長方形 6+ae177.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\長方形 7+43f10.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\MainPanel.layout.json                                                | JSON      |      1,520 |          0 |          0 |      1,520 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\パス 1+50b95.png.json                                                  | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\パス 2+33220.png.json                                                  | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\ミニマップ+1e90d.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\交差 1+4d46d.png.json                                                  | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\交差 2+2840f.png.json                                                  | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\前面オブジェクトで型抜き 1+fcb5d.png.json                                        | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\前面オブジェクトで型抜き 2+58d17.png.json                                        | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\前面オブジェクトで型抜き 3+4730e.png.json                                        | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\合体 2+83391.png.json                                                  | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\楕円形 1+07784.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\楕円形 10+68bdb.png.json                                                | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\楕円形 11+1045e.png.json                                                | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\楕円形 2+5fe1b.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\楕円形 4+6bd64.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\楕円形 8+6ab11.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\楕円形 9+c8125.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\現在のシマ(クオータービュー)+6040c.png.json                                       | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\線 5+e27d6.png.json                                                   | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\線 6+bc281.png.json                                                   | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\線 7+6ccb6.png.json                                                   | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\線 8+4a6c0.png.json                                                   | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\長方形 1+ee10f.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\長方形 2+994e3.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\10+626e5.png.json                                                   | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\10+9e08b.png.json                                                   | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\7+7183a.png.json                                                    | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\Hp_+549b1.png.json                                                  | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\Min_+895dd.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\Name+d1f01.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\RawButton1+1f0dc.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\RawButton1+652fd.png.json                                           | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\Spd_+5a6e8.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\StockPanel.layout.json                                              | JSON      |      1,744 |          0 |          0 |      1,744 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\Stocks+ebc9b.png.json                                               | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\Stocks+f100e.png.json                                               | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\Thumb+c0d5b.png.json                                                | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\パス 3+053b3.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\出撃+57089.png.json                                                   | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\合体 5+f1a29.png.json                                                 | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\多角形 1+437c2.png.json                                                | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\進化+82977.png.json                                                   | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\長方形 10+38100.png.json                                               | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\長方形 11+40da2.png.json                                               | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\長方形 12+17001.png.json                                               | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\長方形 13+9c80c.png.json                                               | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\長方形 13+a8fdc.png.json                                               | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\長方形 14+5c00c.png.json                                               | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\長方形 8+f4a28.png.json                                                | JSON      |          3 |          0 |          0 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\CharacterMod\ImageHashMap-cache.json                           | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\CharacterMod\ImagePathMap-cache.json                           | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\IslandInfoPanel\ImageHashMap-cache.json                        | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\IslandInfoPanel\ImagePathMap-cache.json                        | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\MainPanel\ImageHashMap-cache.json                              | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\MainPanel\ImagePathMap-cache.json                              | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\StockPanel\ImageHashMap-cache.json                             | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\StockPanel\ImagePathMap-cache.json                             | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\EditorUtil.cs                                         | C#        |        168 |         30 |         27 |        225 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\ElementFactory.cs                                     | C#        |         39 |          5 |          5 |         49 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\ButtonElement.cs                             | C#        |         75 |         14 |         14 |        103 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\Element.cs                                   | C#        |         55 |         23 |         13 |         91 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\ElementUtil.cs                               | C#        |        636 |         63 |        106 |        805 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\GroupElement.cs                              | C#        |        110 |          8 |         11 |        129 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\ImageElement.cs                              | C#        |         64 |          7 |         12 |         83 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\InputElement.cs                              | C#        |         35 |          4 |          8 |         47 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\InstanceElement.cs                           | C#        |         56 |         23 |          8 |         87 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\MaskElement.cs                               | C#        |         10 |          4 |          1 |         15 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\RectElement.cs                               | C#        |         19 |          4 |          3 |         26 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\ScrollbarElement.cs                          | C#        |         67 |          7 |         10 |         84 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\SliderElement.cs                             | C#        |         62 |          5 |         10 |         77 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\TextElement.cs                               | C#        |        113 |          7 |         21 |        141 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\TextMeshProElement.cs                        | C#        |         81 |         13 |         17 |        111 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\ToggleElement.cs                             | C#        |         66 |         11 |         13 |         90 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\ViewportElement.cs                           | C#        |         73 |          9 |         13 |         95 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Importer.cs                                           | C#        |        350 |        137 |         76 |        563 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\JsonExtensions.cs                                     | C#        |         55 |          0 |         19 |         74 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Libraries\MiniJSON\MiniJSON.cs                        | C#        |        400 |         96 |         76 |        572 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Libraries\OnionRing\OnionRing.cs                      | C#        |        184 |          0 |         30 |        214 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Postprocessor.cs                                      | C#        |          6 |          0 |          0 |          6 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\PrefabCreator.cs                                      | C#        |         98 |         15 |         16 |        129 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\PreprocessTexture.cs                                  | C#        |         41 |         16 |          4 |         61 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\RenderContext.cs                                      | C#        |        207 |         32 |         39 |        278 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\TextureUtil.cs                                        | C#        |        315 |         88 |         61 |        464 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\BarSample\ImageHashMap-cache.json                             | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\BarSample\ImagePathMap-cache.json                             | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ButtonSwapSpriteSample\ImageHashMap-cache.json                | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ButtonSwapSpriteSample\ImagePathMap-cache.json                | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ComponentToPrefabSample\ImageHashMap-cache.json               | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ComponentToPrefabSample\ImagePathMap-cache.json               | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\GameSample\ImageHashMap-cache.json                            | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\GameSample\ImagePathMap-cache.json                            | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\GridScrollSample\ImageHashMap-cache.json                      | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\GridScrollSample\ImagePathMap-cache.json                      | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ImageSample\ImageHashMap-cache.json                           | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ImageSample\ImagePathMap-cache.json                           | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\InputFieldSample\ImageHashMap-cache.json                      | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\InputFieldSample\ImagePathMap-cache.json                      | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\LayoutRepeatGridSample\ImageHashMap-cache.json                | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\LayoutRepeatGridSample\ImagePathMap-cache.json                | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\Main\ImageHashMap-cache.json                                  | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\Main\ImagePathMap-cache.json                                  | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\MaskSample2\ImageHashMap-cache.json                           | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\MaskSample2\ImagePathMap-cache.json                           | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\MaskSample\ImageHashMap-cache.json                            | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\MaskSample\ImagePathMap-cache.json                            | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\PaddingSample2\ImageHashMap-cache.json                        | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\PaddingSample2\ImagePathMap-cache.json                        | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\PaddingSample\ImageHashMap-cache.json                         | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\PaddingSample\ImagePathMap-cache.json                         | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\PinnablelScrollGroupsTest\ImageHashMap-cache.json             | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\PinnablelScrollGroupsTest\ImagePathMap-cache.json             | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\RadioSample\ImageHashMap-cache.json                           | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\RadioSample\ImagePathMap-cache.json                           | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\RepeatGridSample\ImageHashMap-cache.json                      | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\RepeatGridSample\ImagePathMap-cache.json                      | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\RepeatGridScrollSample\ImageHashMap-cache.json                | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\RepeatGridScrollSample\ImagePathMap-cache.json                | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ResizableScrollGroupsSample\ImageHashMap-cache.json           | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ResizableScrollGroupsSample\ImagePathMap-cache.json           | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ResponsiveSample\ImageHashMap-cache.json                      | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ResponsiveSample\ImagePathMap-cache.json                      | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollGroupMaskTest\ImageHashMap-cache.json                   | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollGroupMaskTest\ImagePathMap-cache.json                   | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollGroupsSample\ImageHashMap-cache.json                    | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollGroupsSample\ImagePathMap-cache.json                    | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollMaskSample2\ImageHashMap-cache.json                     | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollMaskSample2\ImagePathMap-cache.json                     | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollMaskSample\ImageHashMap-cache.json                      | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollMaskSample\ImagePathMap-cache.json                      | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ToggleSample\ImageHashMap-cache.json                          | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ToggleSample\ImagePathMap-cache.json                          | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ToggleSwapSpriteSample\ImageHashMap-cache.json                | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ToggleSwapSpriteSample\ImagePathMap-cache.json                | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\VerticalHorizontalScrollSample\ImageHashMap-cache.json        | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\VerticalHorizontalScrollSample\ImagePathMap-cache.json        | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\VerticalStackSample2\ImageHashMap-cache.json                  | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\VerticalStackSample2\ImagePathMap-cache.json                  | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\VerticalStackSample\ImageHashMap-cache.json                   | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\VerticalStackSample\ImagePathMap-cache.json                   | JSON      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Scripts\Runtime\CoverImage.cs                                                 | C#        |         53 |          0 |          8 |         61 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Scripts\Runtime\DotsScrollbar.cs                                              | C#        |        197 |          8 |         37 |        242 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Scripts\Runtime\ScrollRectEx.cs                                               | C#        |         44 |         12 |          6 |         62 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Scripts\Runtime\ToggleGraphicSwap.cs                                          | C#        |         25 |          3 |          5 |         33 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Scripts\Runtime\ToggleToRadio.cs                                              | C#        |         46 |         12 |         11 |         69 |
+| d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Scripts\Runtime\XdGuid.cs                                                     | C#        |          8 |          0 |          1 |          9 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs                                        | C#        |         98 |         80 |         25 |        203 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs                                   | C#        |        121 |          0 |         22 |        143 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs                                      | C#        |        137 |         60 |         20 |        217 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs                                    | C#        |        125 |         51 |         18 |        194 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs                                       | C#        |         63 |         17 |         14 |         94 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs                                           | C#        |        390 |        201 |         70 |        661 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs                                 | C#        |        264 |         99 |         41 |        404 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs                                        | C#        |        123 |         27 |         18 |        168 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.xml                                | XML       |      5,475 |          0 |        257 |      5,732 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml                                    | XML       |     10,829 |          0 |        112 |     10,941 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.xml                                    | XML       |        202 |          0 |          1 |        203 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.xml                                           | XML       |      9,559 |          0 |          7 |      9,566 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.xml                                        | XML       |      7,775 |          0 |         14 |      7,789 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.xml                                               | XML       |      3,655 |          0 |          4 |      3,659 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Assemblies\link.xml                                                            | XML       |          6 |          0 |          0 |          6 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Mathematics\MathematicsDrawers.cs                 | C#        |        744 |         29 |        110 |        883 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\AssemblyImportSettingsAutomation.cs              | C#        |        105 |          5 |         24 |        134 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\BuildAOTAutomation.cs                            | C#        |         58 |          5 |         16 |         79 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\EnsureOdinInspectorDefine.cs                     | C#        |         40 |         69 |         12 |        121 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\FixBrokenUnityObjectWrapperDrawer.cs             | C#        |        175 |          5 |         28 |        208 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\SyncListDrawer.cs                                | C#        |         66 |         11 |         11 |         88 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\SyncVarAttributeDrawer.cs                        | C#        |         26 |         11 |          5 |         42 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\Vector2IntMinMaxAttributeDrawer.cs               | C#        |         48 |         17 |          8 |         73 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\VectorIntDrawers.cs                              | C#        |        102 |         23 |         16 |        141 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\VectorIntPropertyResolvers.cs                    | C#        |         44 |          5 |          5 |         54 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\SerializedNetworkBehaviour.cs                           | C#        |         40 |         15 |         12 |         67 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\VectorIntFormatters.cs                                  | C#        |         38 |         33 |          9 |         80 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\ArmBotData.cs                                                                   | C#        |         94 |         22 |         31 |        147 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\BodyParts.cs                                                                    | C#        |          8 |          0 |          0 |          8 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\BotStatusList.cs                                                                | C#        |         53 |          2 |          8 |         63 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\BotType.cs                                                                      | C#        |          8 |          0 |          0 |          8 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\EquipmentHolder.cs                                                              | C#        |         63 |          0 |         14 |         77 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\InventoryData.cs                                                                | C#        |         21 |          0 |          3 |         24 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\ItemStorage.cs                                                                  | C#        |          5 |          0 |          1 |          6 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\MOTHERData.cs                                                                   | C#        |         30 |          0 |          9 |         39 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\Modifier\BotModifier.cs                                                         | C#        |          6 |          0 |          1 |          7 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\Modifier\EquipmentBehaviour.cs                                                  | C#        |         22 |          2 |          3 |         27 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\SearcherData.cs                                                                 | C#        |         45 |          3 |         10 |         58 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\StatusType.cs                                                                   | C#        |         12 |          1 |          0 |         13 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\VisualData.cs                                                                   | C#        |          7 |          3 |          2 |         12 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Configs\SessionConfig.cs                                                               | C#        |         27 |          5 |          7 |         39 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Configs\StepGenerationConfig.cs                                                        | C#        |        139 |         13 |         50 |        202 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\DataIndexer.cs                                                                   | C#        |         59 |          0 |          8 |         67 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\DataManager.cs                                                                   | C#        |         41 |         22 |         11 |         74 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\IPermanentData.cs                                                                | C#        |          4 |          2 |          0 |          6 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\ISalvageData.cs                                                                  | C#        |          3 |          1 |          0 |          4 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\LabeledData.cs                                                                   | C#        |         18 |          0 |          3 |         21 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\SDataValuable.cs                                                                 | C#        |          4 |          1 |          1 |          6 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\SalvageValuable.cs                                                               | C#        |         24 |          1 |          2 |         27 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Sector\EnvironmentAttribute.cs                                                   | C#        |          9 |          1 |          1 |         11 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Sector\ExploreData.cs                                                            | C#        |        121 |          1 |         21 |        143 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Sector\SessionDataSaver.cs                                                       | C#        |         58 |          0 |         16 |         74 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Sector\StepState.cs                                                              | C#        |          9 |          0 |          0 |          9 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\SessionAddonData.cs                                                              | C#        |         13 |          0 |          4 |         17 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\SessionData.cs                                                                   | C#        |         66 |          6 |         12 |         84 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Talkdata\CharaResponce.cs                                                        | C#        |          6 |          0 |          0 |          6 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Talkdata\ChatArg.cs                                                              | C#        |         11 |          0 |          2 |         13 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Talkdata\QuestionArg.cs                                                          | C#        |         34 |          0 |          7 |         41 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Talkdata\TalkData.cs                                                             | C#        |         18 |          2 |          3 |         23 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\TreeStructure\TreeStructuredData.cs                                              | C#        |        116 |          8 |         25 |        149 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EditorScripts\ScriptableObjectCreator.cs                                               | C#        |         71 |         15 |         17 |        103 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EditorScripts\ScriptableUtility.cs                                                     | C#        |          2 |         49 |          0 |         51 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EditorScripts\ScriptableViewer.cs                                                      | C#        |         47 |         20 |         13 |         80 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EditorScripts\TalkDataViewer.cs                                                        | C#        |         16 |          1 |          3 |         20 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EditorScripts\TreeBuilder.cs                                                           | C#        |         45 |         16 |         13 |         74 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EditorScripts\TreeStructuredDataEditor.cs                                              | C#        |         87 |         20 |         32 |        139 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\AsyncEvent.cs                                                              | C#        |         96 |         10 |         20 |        126 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\CallBacks\ExploreAndSDataSets.cs                                           | C#        |         60 |         11 |         15 |         86 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\CallBacks\ExploreLogDataSets.cs                                            | C#        |         30 |          0 |          5 |         35 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\CallBacks\LogDataSets.cs                                                   | C#        |         45 |          3 |         11 |         59 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\DataProvider.cs                                                            | C#        |         45 |          1 |         14 |         60 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\EventArgs\ISalvageEventArg.cs                                              | C#        |          3 |          0 |          1 |          4 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\EventArgs\SelectableArg.cs                                                 | C#        |          8 |          0 |          1 |          9 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\EventArgs\SessionEventArg.cs                                               | C#        |         18 |          2 |          3 |         23 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\EventArgs\SystemEventArg.cs                                                | C#        |          8 |          0 |          0 |          8 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\EventArgs\UIEventArg.cs                                                    | C#        |         23 |          0 |          4 |         27 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\EventManager.cs                                                            | C#        |        147 |          1 |         33 |        181 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\GameManager.cs                                                             | C#        |         19 |          0 |          7 |         26 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\IEvent.cs                                                                  | C#        |         14 |          0 |          1 |         15 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\IEventListener.cs                                                          | C#        |          8 |          4 |          1 |         13 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\IEventTask.cs                                                              | C#        |          8 |          0 |          3 |         11 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\ITask.cs                                                                   | C#        |          8 |          0 |          1 |          9 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\SalvageEvent.cs                                                            | C#        |        113 |         12 |         18 |        143 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\SalvageSessionEvent.cs                                                     | C#        |          5 |          0 |          2 |          7 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\SimpleSignal.cs                                                            | C#        |          3 |          0 |          1 |          4 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\SmallTask.cs                                                               | C#        |         42 |          4 |          5 |         51 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\SystemEvent.cs                                                             | C#        |          5 |          0 |          2 |          7 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\SystemState.cs                                                             | C#        |          7 |          0 |          0 |          7 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\TaskBase.cs                                                                | C#        |         15 |          0 |          3 |         18 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\UIEvent.cs                                                                 | C#        |          4 |          0 |          1 |          5 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ExploreArg.cs                                                                          | C#        |        166 |          3 |         26 |        195 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ExploreEvent.cs                                                                        | C#        |          5 |          0 |          2 |          7 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ExploreObjType.cs                                                                      | C#        |          9 |          0 |          0 |          9 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\CustomLayout.cs                                                                    | C#        |         63 |         10 |         14 |         87 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Element\BotObject.cs                                                               | C#        |         27 |          1 |          4 |         32 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Element\IUIRenderer.cs                                                             | C#        |          5 |          1 |          0 |          6 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Element\SectorStepObject.cs                                                        | C#        |         19 |          1 |          4 |         24 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Element\UIAnimator.cs                                                              | C#        |         51 |          4 |         14 |         69 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Input\ScreenTouchArg.cs                                                            | C#        |         10 |          2 |          2 |         14 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\BackPanel.cs                                                                 | C#        |         21 |          0 |          4 |         25 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\BotRenderer.cs                                                               | C#        |         59 |          4 |         11 |         74 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\IUIElement.cs                                                                | C#        |          4 |          0 |          0 |          4 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\IslandTouchPanel.cs                                                          | C#        |         48 |          1 |         11 |         60 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\IslandUIController.cs                                                        | C#        |         98 |          4 |         36 |        138 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\PanelName.cs                                                                 | C#        |          9 |          0 |          0 |          9 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\SimplePanel.cs                                                               | C#        |          8 |          1 |          1 |         10 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\StockInochiButton.cs                                                         | C#        |         35 |          2 |          7 |         44 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\StockPanel.cs                                                                | C#        |         85 |          0 |         20 |        105 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\TouchPanel.cs                                                                | C#        |         25 |          0 |          5 |         30 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\UIPanel.cs                                                                   | C#        |         42 |          0 |          7 |         49 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\UISignalEmitter.cs                                                           | C#        |         12 |          0 |          1 |         13 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\TextField\FukidashiName.cs                                                         | C#        |          5 |          0 |          0 |          5 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\TextField\TalkField.cs                                                             | C#        |         23 |          3 |          8 |         34 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\TextField\TextField.cs                                                             | C#        |         50 |          2 |         17 |         69 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GameSessionData.cs                                                                     | C#        |         22 |          1 |          4 |         27 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ItemActionType.cs                                                                      | C#        |          6 |          0 |          0 |          6 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\BookItemData.cs                                                                   | C#        |         19 |          2 |          3 |         24 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\EquipmentItemData.cs                                                              | C#        |         18 |          4 |          4 |         26 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\ItemAttribute.cs                                                                  | C#        |          8 |          0 |          1 |          9 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\ItemData.cs                                                                       | C#        |         28 |          0 |          2 |         30 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\ItemID.cs                                                                         | C#        |          6 |          3 |          0 |          9 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\ItemType.cs                                                                       | C#        |          6 |          0 |          0 |          6 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\ResourceData.cs                                                                   | C#        |         11 |          0 |          1 |         12 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\ToolData.cs                                                                       | C#        |          5 |          0 |          1 |          6 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\ISessionSequencer.cs                                                    | C#        |          4 |          0 |          0 |          4 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\InteractEvent.cs                                                        | C#        |         18 |          0 |          4 |         22 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\Sector\Island.cs                                                        | C#        |          9 |        186 |          2 |        197 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\Sector\SectorMap.cs                                                     | C#        |         69 |         22 |         14 |        105 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\SessionManager.cs                                                       | C#        |         75 |         32 |         31 |        138 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\SessionSequencerOnTheCliff.cs                                           | C#        |         27 |          3 |          8 |         38 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\SessionSequencerProto.cs                                                | C#        |          4 |        190 |          0 |        194 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\SessionTracker.cs                                                       | C#        |         30 |          7 |          6 |         43 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\SessionUtility.cs                                                       | C#        |         52 |          0 |          8 |         60 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SelectableEvent.cs                                                                     | C#        |          5 |          0 |          1 |          6 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\StepActionType.cs                                                                      | C#        |          7 |          0 |          0 |          7 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\TextLog\LogData.cs                                                                     | C#        |         12 |          0 |          2 |         14 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\TextLog\LogType.cs                                                                     | C#        |          5 |          0 |          0 |          5 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Utility\IInteraptor.cs                                                                 | C#        |          4 |          0 |          0 |          4 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Utility\InstantPool.cs                                                                 | C#        |         87 |         32 |         18 |        137 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Utility\LogWrighter.cs                                                                 | C#        |         63 |         15 |         19 |         97 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Utility\SerializableDictionary.cs                                                      | C#        |         73 |          0 |         12 |         85 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Utility\SingleScriptableObject.cs                                                      | C#        |         38 |          0 |          7 |         45 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Utility\SingleVariantScriptableObject.cs                                               | C#        |         27 |          3 |          5 |         35 |
+| d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Utility\Singleton.cs                                                                   | C#        |         27 |          1 |          5 |         33 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\__MACOSX\numbrs-webfontkit\._numbrs-regular-demo.html               | HTML      |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\__MACOSX\numbrs-webfontkit\._numbrs-regular-webfont.svg             | XML       |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\__MACOSX\numbrs-webfontkit\._stylesheet.css                         | CSS       |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\__MACOSX\numbrs-webfontkit\specimen_files\._grid_12-825-55-15.css   | CSS       |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\__MACOSX\numbrs-webfontkit\specimen_files\._specimen_stylesheet.css | CSS       |          1 |          0 |          0 |          1 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\numbrs-webfontkit\numbrs-regular-demo.html                          | HTML      |        290 |          0 |        122 |        412 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\numbrs-webfontkit\numbrs-regular-webfont.svg                        | XML       |         42 |          0 |          0 |         42 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\numbrs-webfontkit\specimen_files\grid_12-825-55-15.css              | CSS       |         95 |         10 |         24 |        129 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\numbrs-webfontkit\specimen_files\specimen_stylesheet.css            | CSS       |        320 |         11 |         66 |        397 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\numbrs-webfontkit\stylesheet.css                                    | CSS       |         11 |          1 |          4 |         16 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader                                            | ShaderLab |        109 |          2 |         33 |        144 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader                                                  | ShaderLab |        112 |          3 |         31 |        146 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader                                                         | ShaderLab |        109 |          2 |         33 |        144 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader                                                    | ShaderLab |        243 |          4 |         71 |        318 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader                                                        | ShaderLab |        241 |          4 |         66 |        311 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader                                             | ShaderLab |        188 |         10 |         50 |        248 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader                                             | ShaderLab |        183 |          8 |         50 |        241 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader                                                 | ShaderLab |         82 |          4 |         21 |        107 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader                                                     | ShaderLab |        183 |          8 |         50 |        241 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader                                             | ShaderLab |        103 |          8 |         28 |        139 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader                                                    | ShaderLab |        122 |          4 |         33 |        159 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF.shader                                                            | ShaderLab |        243 |          4 |         71 |        318 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_Sprite.shader                                                         | ShaderLab |         97 |          0 |         20 |        117 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMPro.cginc                                                               | ShaderLab |         63 |          2 |         20 |         85 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc                                                        | ShaderLab |        122 |          2 |         34 |        158 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc                                                    | ShaderLab |         62 |         10 |         14 |         86 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc                                                       | ShaderLab |         76 |          7 |         19 |        102 |
+| d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Sprites\EmojiOne.json                                                             | JSON      |        155 |          0 |          2 |        157 |
+| d:\UnityProjects\ToTheOtherSide\Logs\AssetImportWorker0-prev.log                                                                      | Log       |         92 |          0 |          7 |         99 |
+| d:\UnityProjects\ToTheOtherSide\Logs\AssetImportWorker0.log                                                                           | Log       |         53 |          0 |          2 |         55 |
+| d:\UnityProjects\ToTheOtherSide\Logs\AssetImportWorker1.log                                                                           | Log       |      5,031 |          0 |        832 |      5,863 |
+| d:\UnityProjects\ToTheOtherSide\Logs\AssetImportWorker2.log                                                                           | Log       |      4,051 |          0 |        601 |      4,652 |
+| d:\UnityProjects\ToTheOtherSide\Logs\Packages-Update.log                                                                              | Log       |         47 |          0 |          4 |         51 |
+| d:\UnityProjects\ToTheOtherSide\Logs\shadercompiler-AssetImportWorker0.log                                                            | Log       |          4 |          0 |          3 |          7 |
+| d:\UnityProjects\ToTheOtherSide\Logs\shadercompiler-UnityShaderCompiler.exe0.log                                                      | Log       |        512 |          0 |        257 |        769 |
+| d:\UnityProjects\ToTheOtherSide\Logs\shadercompiler-UnityShaderCompiler.exe1.log                                                      | Log       |          4 |          0 |          3 |          7 |
+| d:\UnityProjects\ToTheOtherSide\Logs\shadercompiler-UnityShaderCompiler.exe2.log                                                      | Log       |          2 |          0 |          2 |          4 |
+| d:\UnityProjects\ToTheOtherSide\Logs\shadercompiler-UnityShaderCompiler.exe3.log                                                      | Log       |          4 |          0 |          3 |          7 |
+| d:\UnityProjects\ToTheOtherSide\Packages\manifest.json                                                                                | JSON      |         50 |          0 |          1 |         51 |
+| d:\UnityProjects\ToTheOtherSide\Packages\packages-lock.json                                                                           | JSON      |        445 |          0 |          1 |        446 |
+| d:\UnityProjects\ToTheOtherSide\README.md                                                                                             | Markdown  |          2 |          0 |          1 |          3 |
+| d:\UnityProjects\ToTheOtherSide\Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj                                                | XML       |        714 |          7 |          1 |        722 |
+| d:\UnityProjects\ToTheOtherSide\Sirenix.OdinInspector.CompatibilityLayer.csproj                                                       | XML       |        690 |          7 |          1 |        698 |
+| d:\UnityProjects\ToTheOtherSide\Sirenix.OdinInspector.Modules.UnityMathematics.csproj                                                 | XML       |        705 |          7 |          1 |        713 |
+| d:\UnityProjects\ToTheOtherSide\XuidUnity.Importer.Editor.csproj                                                                      | XML       |        739 |          7 |          1 |        747 |
+| d:\UnityProjects\ToTheOtherSide\XuidUnity.Runtime.csproj                                                                              | XML       |        694 |          7 |          1 |        702 |
+| Total                                                                                                                                 |           |     74,862 |      2,402 |      5,009 |     82,273 |
++---------------------------------------------------------------------------------------------------------------------------------------+-----------+------------+------------+------------+------------+

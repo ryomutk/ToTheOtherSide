@@ -1,0 +1,132 @@
+# Details
+
+Date : 2021-11-30 21:13:53
+
+Directory d:\UnityProjects\ToTheOtherSide\Assets\Scripts
+
+Total : 117 files,  3800 codes, 805 comments, 837 blanks, all 5442 lines
+
+[summary](results.md)
+
+## Files
+| filename | language | code | comment | blank | total |
+| :--- | :--- | ---: | ---: | ---: | ---: |
+| [Assets/Scripts/ArmBot/ArmBotData.cs](/Assets/Scripts/ArmBot/ArmBotData.cs) | C# | 94 | 22 | 31 | 147 |
+| [Assets/Scripts/ArmBot/BodyParts.cs](/Assets/Scripts/ArmBot/BodyParts.cs) | C# | 8 | 0 | 0 | 8 |
+| [Assets/Scripts/ArmBot/BotStatusList.cs](/Assets/Scripts/ArmBot/BotStatusList.cs) | C# | 53 | 2 | 8 | 63 |
+| [Assets/Scripts/ArmBot/BotType.cs](/Assets/Scripts/ArmBot/BotType.cs) | C# | 8 | 0 | 0 | 8 |
+| [Assets/Scripts/ArmBot/EquipmentHolder.cs](/Assets/Scripts/ArmBot/EquipmentHolder.cs) | C# | 63 | 0 | 14 | 77 |
+| [Assets/Scripts/ArmBot/InventoryData.cs](/Assets/Scripts/ArmBot/InventoryData.cs) | C# | 21 | 0 | 3 | 24 |
+| [Assets/Scripts/ArmBot/ItemStorage.cs](/Assets/Scripts/ArmBot/ItemStorage.cs) | C# | 5 | 0 | 1 | 6 |
+| [Assets/Scripts/ArmBot/MOTHERData.cs](/Assets/Scripts/ArmBot/MOTHERData.cs) | C# | 30 | 0 | 9 | 39 |
+| [Assets/Scripts/ArmBot/Modifier/BotModifier.cs](/Assets/Scripts/ArmBot/Modifier/BotModifier.cs) | C# | 6 | 0 | 1 | 7 |
+| [Assets/Scripts/ArmBot/Modifier/EquipmentBehaviour.cs](/Assets/Scripts/ArmBot/Modifier/EquipmentBehaviour.cs) | C# | 22 | 2 | 3 | 27 |
+| [Assets/Scripts/ArmBot/SearcherData.cs](/Assets/Scripts/ArmBot/SearcherData.cs) | C# | 45 | 3 | 10 | 58 |
+| [Assets/Scripts/ArmBot/StatusType.cs](/Assets/Scripts/ArmBot/StatusType.cs) | C# | 12 | 1 | 0 | 13 |
+| [Assets/Scripts/ArmBot/VisualData.cs](/Assets/Scripts/ArmBot/VisualData.cs) | C# | 7 | 3 | 2 | 12 |
+| [Assets/Scripts/Configs/SessionConfig.cs](/Assets/Scripts/Configs/SessionConfig.cs) | C# | 27 | 5 | 7 | 39 |
+| [Assets/Scripts/Configs/StepGenerationConfig.cs](/Assets/Scripts/Configs/StepGenerationConfig.cs) | C# | 139 | 13 | 50 | 202 |
+| [Assets/Scripts/Datas/DataIndexer.cs](/Assets/Scripts/Datas/DataIndexer.cs) | C# | 59 | 0 | 8 | 67 |
+| [Assets/Scripts/Datas/DataManager.cs](/Assets/Scripts/Datas/DataManager.cs) | C# | 41 | 22 | 11 | 74 |
+| [Assets/Scripts/Datas/IPermanentData.cs](/Assets/Scripts/Datas/IPermanentData.cs) | C# | 4 | 2 | 0 | 6 |
+| [Assets/Scripts/Datas/ISalvageData.cs](/Assets/Scripts/Datas/ISalvageData.cs) | C# | 3 | 1 | 0 | 4 |
+| [Assets/Scripts/Datas/LabeledData.cs](/Assets/Scripts/Datas/LabeledData.cs) | C# | 18 | 0 | 3 | 21 |
+| [Assets/Scripts/Datas/SDataValuable.cs](/Assets/Scripts/Datas/SDataValuable.cs) | C# | 4 | 1 | 1 | 6 |
+| [Assets/Scripts/Datas/SalvageValuable.cs](/Assets/Scripts/Datas/SalvageValuable.cs) | C# | 24 | 1 | 2 | 27 |
+| [Assets/Scripts/Datas/Sector/EnvironmentAttribute.cs](/Assets/Scripts/Datas/Sector/EnvironmentAttribute.cs) | C# | 9 | 1 | 1 | 11 |
+| [Assets/Scripts/Datas/Sector/ExploreData.cs](/Assets/Scripts/Datas/Sector/ExploreData.cs) | C# | 121 | 1 | 21 | 143 |
+| [Assets/Scripts/Datas/Sector/SessionDataSaver.cs](/Assets/Scripts/Datas/Sector/SessionDataSaver.cs) | C# | 58 | 0 | 16 | 74 |
+| [Assets/Scripts/Datas/Sector/StepState.cs](/Assets/Scripts/Datas/Sector/StepState.cs) | C# | 9 | 0 | 0 | 9 |
+| [Assets/Scripts/Datas/SessionAddonData.cs](/Assets/Scripts/Datas/SessionAddonData.cs) | C# | 13 | 0 | 4 | 17 |
+| [Assets/Scripts/Datas/SessionData.cs](/Assets/Scripts/Datas/SessionData.cs) | C# | 66 | 6 | 12 | 84 |
+| [Assets/Scripts/Datas/Talkdata/CharaResponce.cs](/Assets/Scripts/Datas/Talkdata/CharaResponce.cs) | C# | 6 | 0 | 0 | 6 |
+| [Assets/Scripts/Datas/Talkdata/ChatArg.cs](/Assets/Scripts/Datas/Talkdata/ChatArg.cs) | C# | 11 | 0 | 2 | 13 |
+| [Assets/Scripts/Datas/Talkdata/QuestionArg.cs](/Assets/Scripts/Datas/Talkdata/QuestionArg.cs) | C# | 34 | 0 | 7 | 41 |
+| [Assets/Scripts/Datas/Talkdata/TalkData.cs](/Assets/Scripts/Datas/Talkdata/TalkData.cs) | C# | 18 | 2 | 3 | 23 |
+| [Assets/Scripts/Datas/TreeStructure/TreeStructuredData.cs](/Assets/Scripts/Datas/TreeStructure/TreeStructuredData.cs) | C# | 116 | 8 | 25 | 149 |
+| [Assets/Scripts/EditorScripts/ScriptableObjectCreator.cs](/Assets/Scripts/EditorScripts/ScriptableObjectCreator.cs) | C# | 71 | 15 | 17 | 103 |
+| [Assets/Scripts/EditorScripts/ScriptableUtility.cs](/Assets/Scripts/EditorScripts/ScriptableUtility.cs) | C# | 2 | 49 | 0 | 51 |
+| [Assets/Scripts/EditorScripts/ScriptableViewer.cs](/Assets/Scripts/EditorScripts/ScriptableViewer.cs) | C# | 47 | 20 | 13 | 80 |
+| [Assets/Scripts/EditorScripts/TalkDataViewer.cs](/Assets/Scripts/EditorScripts/TalkDataViewer.cs) | C# | 16 | 1 | 3 | 20 |
+| [Assets/Scripts/EditorScripts/TreeBuilder.cs](/Assets/Scripts/EditorScripts/TreeBuilder.cs) | C# | 45 | 16 | 13 | 74 |
+| [Assets/Scripts/EditorScripts/TreeStructuredDataEditor.cs](/Assets/Scripts/EditorScripts/TreeStructuredDataEditor.cs) | C# | 87 | 20 | 32 | 139 |
+| [Assets/Scripts/EventSystem/AsyncEvent.cs](/Assets/Scripts/EventSystem/AsyncEvent.cs) | C# | 96 | 10 | 20 | 126 |
+| [Assets/Scripts/EventSystem/CallBacks/ExploreAndSDataSets.cs](/Assets/Scripts/EventSystem/CallBacks/ExploreAndSDataSets.cs) | C# | 60 | 11 | 15 | 86 |
+| [Assets/Scripts/EventSystem/CallBacks/ExploreLogDataSets.cs](/Assets/Scripts/EventSystem/CallBacks/ExploreLogDataSets.cs) | C# | 30 | 0 | 5 | 35 |
+| [Assets/Scripts/EventSystem/CallBacks/LogDataSets.cs](/Assets/Scripts/EventSystem/CallBacks/LogDataSets.cs) | C# | 45 | 3 | 11 | 59 |
+| [Assets/Scripts/EventSystem/DataProvider.cs](/Assets/Scripts/EventSystem/DataProvider.cs) | C# | 45 | 1 | 14 | 60 |
+| [Assets/Scripts/EventSystem/EventArgs/ISalvageEventArg.cs](/Assets/Scripts/EventSystem/EventArgs/ISalvageEventArg.cs) | C# | 3 | 0 | 1 | 4 |
+| [Assets/Scripts/EventSystem/EventArgs/SelectableArg.cs](/Assets/Scripts/EventSystem/EventArgs/SelectableArg.cs) | C# | 8 | 0 | 1 | 9 |
+| [Assets/Scripts/EventSystem/EventArgs/SessionEventArg.cs](/Assets/Scripts/EventSystem/EventArgs/SessionEventArg.cs) | C# | 18 | 2 | 3 | 23 |
+| [Assets/Scripts/EventSystem/EventArgs/SystemEventArg.cs](/Assets/Scripts/EventSystem/EventArgs/SystemEventArg.cs) | C# | 8 | 0 | 0 | 8 |
+| [Assets/Scripts/EventSystem/EventArgs/UIEventArg.cs](/Assets/Scripts/EventSystem/EventArgs/UIEventArg.cs) | C# | 23 | 0 | 4 | 27 |
+| [Assets/Scripts/EventSystem/EventManager.cs](/Assets/Scripts/EventSystem/EventManager.cs) | C# | 147 | 1 | 33 | 181 |
+| [Assets/Scripts/EventSystem/GameManager.cs](/Assets/Scripts/EventSystem/GameManager.cs) | C# | 19 | 0 | 7 | 26 |
+| [Assets/Scripts/EventSystem/IEvent.cs](/Assets/Scripts/EventSystem/IEvent.cs) | C# | 14 | 0 | 1 | 15 |
+| [Assets/Scripts/EventSystem/IEventListener.cs](/Assets/Scripts/EventSystem/IEventListener.cs) | C# | 8 | 4 | 1 | 13 |
+| [Assets/Scripts/EventSystem/IEventTask.cs](/Assets/Scripts/EventSystem/IEventTask.cs) | C# | 8 | 0 | 3 | 11 |
+| [Assets/Scripts/EventSystem/ITask.cs](/Assets/Scripts/EventSystem/ITask.cs) | C# | 8 | 0 | 1 | 9 |
+| [Assets/Scripts/EventSystem/SalvageEvent.cs](/Assets/Scripts/EventSystem/SalvageEvent.cs) | C# | 113 | 12 | 18 | 143 |
+| [Assets/Scripts/EventSystem/SalvageSessionEvent.cs](/Assets/Scripts/EventSystem/SalvageSessionEvent.cs) | C# | 5 | 0 | 2 | 7 |
+| [Assets/Scripts/EventSystem/SimpleSignal.cs](/Assets/Scripts/EventSystem/SimpleSignal.cs) | C# | 3 | 0 | 1 | 4 |
+| [Assets/Scripts/EventSystem/SmallTask.cs](/Assets/Scripts/EventSystem/SmallTask.cs) | C# | 42 | 4 | 5 | 51 |
+| [Assets/Scripts/EventSystem/SystemEvent.cs](/Assets/Scripts/EventSystem/SystemEvent.cs) | C# | 5 | 0 | 2 | 7 |
+| [Assets/Scripts/EventSystem/SystemState.cs](/Assets/Scripts/EventSystem/SystemState.cs) | C# | 7 | 0 | 0 | 7 |
+| [Assets/Scripts/EventSystem/TaskBase.cs](/Assets/Scripts/EventSystem/TaskBase.cs) | C# | 15 | 0 | 3 | 18 |
+| [Assets/Scripts/EventSystem/UIEvent.cs](/Assets/Scripts/EventSystem/UIEvent.cs) | C# | 4 | 0 | 1 | 5 |
+| [Assets/Scripts/ExploreArg.cs](/Assets/Scripts/ExploreArg.cs) | C# | 166 | 3 | 26 | 195 |
+| [Assets/Scripts/ExploreEvent.cs](/Assets/Scripts/ExploreEvent.cs) | C# | 5 | 0 | 2 | 7 |
+| [Assets/Scripts/ExploreObjType.cs](/Assets/Scripts/ExploreObjType.cs) | C# | 9 | 0 | 0 | 9 |
+| [Assets/Scripts/GUI/CustomLayout.cs](/Assets/Scripts/GUI/CustomLayout.cs) | C# | 63 | 10 | 14 | 87 |
+| [Assets/Scripts/GUI/Element/BotObject.cs](/Assets/Scripts/GUI/Element/BotObject.cs) | C# | 27 | 1 | 4 | 32 |
+| [Assets/Scripts/GUI/Element/IUIRenderer.cs](/Assets/Scripts/GUI/Element/IUIRenderer.cs) | C# | 5 | 1 | 0 | 6 |
+| [Assets/Scripts/GUI/Element/SectorStepObject.cs](/Assets/Scripts/GUI/Element/SectorStepObject.cs) | C# | 19 | 1 | 4 | 24 |
+| [Assets/Scripts/GUI/Element/UIAnimator.cs](/Assets/Scripts/GUI/Element/UIAnimator.cs) | C# | 51 | 4 | 14 | 69 |
+| [Assets/Scripts/GUI/Input/ScreenTouchArg.cs](/Assets/Scripts/GUI/Input/ScreenTouchArg.cs) | C# | 10 | 2 | 2 | 14 |
+| [Assets/Scripts/GUI/Panel/BackPanel.cs](/Assets/Scripts/GUI/Panel/BackPanel.cs) | C# | 21 | 0 | 4 | 25 |
+| [Assets/Scripts/GUI/Panel/BotRenderer.cs](/Assets/Scripts/GUI/Panel/BotRenderer.cs) | C# | 59 | 4 | 11 | 74 |
+| [Assets/Scripts/GUI/Panel/IUIElement.cs](/Assets/Scripts/GUI/Panel/IUIElement.cs) | C# | 4 | 0 | 0 | 4 |
+| [Assets/Scripts/GUI/Panel/IslandTouchPanel.cs](/Assets/Scripts/GUI/Panel/IslandTouchPanel.cs) | C# | 48 | 1 | 11 | 60 |
+| [Assets/Scripts/GUI/Panel/IslandUIController.cs](/Assets/Scripts/GUI/Panel/IslandUIController.cs) | C# | 98 | 4 | 36 | 138 |
+| [Assets/Scripts/GUI/Panel/PanelName.cs](/Assets/Scripts/GUI/Panel/PanelName.cs) | C# | 9 | 0 | 0 | 9 |
+| [Assets/Scripts/GUI/Panel/SimplePanel.cs](/Assets/Scripts/GUI/Panel/SimplePanel.cs) | C# | 8 | 1 | 1 | 10 |
+| [Assets/Scripts/GUI/Panel/StockInochiButton.cs](/Assets/Scripts/GUI/Panel/StockInochiButton.cs) | C# | 35 | 2 | 7 | 44 |
+| [Assets/Scripts/GUI/Panel/StockPanel.cs](/Assets/Scripts/GUI/Panel/StockPanel.cs) | C# | 85 | 0 | 20 | 105 |
+| [Assets/Scripts/GUI/Panel/TouchPanel.cs](/Assets/Scripts/GUI/Panel/TouchPanel.cs) | C# | 25 | 0 | 5 | 30 |
+| [Assets/Scripts/GUI/Panel/UIPanel.cs](/Assets/Scripts/GUI/Panel/UIPanel.cs) | C# | 42 | 0 | 7 | 49 |
+| [Assets/Scripts/GUI/Panel/UISignalEmitter.cs](/Assets/Scripts/GUI/Panel/UISignalEmitter.cs) | C# | 12 | 0 | 1 | 13 |
+| [Assets/Scripts/GUI/TextField/FukidashiName.cs](/Assets/Scripts/GUI/TextField/FukidashiName.cs) | C# | 5 | 0 | 0 | 5 |
+| [Assets/Scripts/GUI/TextField/TalkField.cs](/Assets/Scripts/GUI/TextField/TalkField.cs) | C# | 23 | 3 | 8 | 34 |
+| [Assets/Scripts/GUI/TextField/TextField.cs](/Assets/Scripts/GUI/TextField/TextField.cs) | C# | 50 | 2 | 17 | 69 |
+| [Assets/Scripts/GameSessionData.cs](/Assets/Scripts/GameSessionData.cs) | C# | 22 | 1 | 4 | 27 |
+| [Assets/Scripts/ItemActionType.cs](/Assets/Scripts/ItemActionType.cs) | C# | 6 | 0 | 0 | 6 |
+| [Assets/Scripts/Item/BookItemData.cs](/Assets/Scripts/Item/BookItemData.cs) | C# | 19 | 2 | 3 | 24 |
+| [Assets/Scripts/Item/EquipmentItemData.cs](/Assets/Scripts/Item/EquipmentItemData.cs) | C# | 18 | 4 | 4 | 26 |
+| [Assets/Scripts/Item/ItemAttribute.cs](/Assets/Scripts/Item/ItemAttribute.cs) | C# | 8 | 0 | 1 | 9 |
+| [Assets/Scripts/Item/ItemData.cs](/Assets/Scripts/Item/ItemData.cs) | C# | 28 | 0 | 2 | 30 |
+| [Assets/Scripts/Item/ItemID.cs](/Assets/Scripts/Item/ItemID.cs) | C# | 6 | 3 | 0 | 9 |
+| [Assets/Scripts/Item/ItemType.cs](/Assets/Scripts/Item/ItemType.cs) | C# | 6 | 0 | 0 | 6 |
+| [Assets/Scripts/Item/ResourceData.cs](/Assets/Scripts/Item/ResourceData.cs) | C# | 11 | 0 | 1 | 12 |
+| [Assets/Scripts/Item/ToolData.cs](/Assets/Scripts/Item/ToolData.cs) | C# | 5 | 0 | 1 | 6 |
+| [Assets/Scripts/SalvageSession/ISessionSequencer.cs](/Assets/Scripts/SalvageSession/ISessionSequencer.cs) | C# | 4 | 0 | 0 | 4 |
+| [Assets/Scripts/SalvageSession/InteractEvent.cs](/Assets/Scripts/SalvageSession/InteractEvent.cs) | C# | 18 | 0 | 4 | 22 |
+| [Assets/Scripts/SalvageSession/Sector/Island.cs](/Assets/Scripts/SalvageSession/Sector/Island.cs) | C# | 9 | 186 | 2 | 197 |
+| [Assets/Scripts/SalvageSession/Sector/SectorMap.cs](/Assets/Scripts/SalvageSession/Sector/SectorMap.cs) | C# | 69 | 22 | 14 | 105 |
+| [Assets/Scripts/SalvageSession/SessionManager.cs](/Assets/Scripts/SalvageSession/SessionManager.cs) | C# | 75 | 32 | 31 | 138 |
+| [Assets/Scripts/SalvageSession/SessionSequencerOnTheCliff.cs](/Assets/Scripts/SalvageSession/SessionSequencerOnTheCliff.cs) | C# | 27 | 3 | 8 | 38 |
+| [Assets/Scripts/SalvageSession/SessionSequencerProto.cs](/Assets/Scripts/SalvageSession/SessionSequencerProto.cs) | C# | 4 | 190 | 0 | 194 |
+| [Assets/Scripts/SalvageSession/SessionTracker.cs](/Assets/Scripts/SalvageSession/SessionTracker.cs) | C# | 30 | 7 | 6 | 43 |
+| [Assets/Scripts/SalvageSession/SessionUtility.cs](/Assets/Scripts/SalvageSession/SessionUtility.cs) | C# | 52 | 0 | 8 | 60 |
+| [Assets/Scripts/SelectableEvent.cs](/Assets/Scripts/SelectableEvent.cs) | C# | 5 | 0 | 1 | 6 |
+| [Assets/Scripts/StepActionType.cs](/Assets/Scripts/StepActionType.cs) | C# | 7 | 0 | 0 | 7 |
+| [Assets/Scripts/TextLog/LogData.cs](/Assets/Scripts/TextLog/LogData.cs) | C# | 12 | 0 | 2 | 14 |
+| [Assets/Scripts/TextLog/LogType.cs](/Assets/Scripts/TextLog/LogType.cs) | C# | 5 | 0 | 0 | 5 |
+| [Assets/Scripts/Utility/IInteraptor.cs](/Assets/Scripts/Utility/IInteraptor.cs) | C# | 4 | 0 | 0 | 4 |
+| [Assets/Scripts/Utility/InstantPool.cs](/Assets/Scripts/Utility/InstantPool.cs) | C# | 87 | 32 | 18 | 137 |
+| [Assets/Scripts/Utility/LogWrighter.cs](/Assets/Scripts/Utility/LogWrighter.cs) | C# | 63 | 15 | 19 | 97 |
+| [Assets/Scripts/Utility/SerializableDictionary.cs](/Assets/Scripts/Utility/SerializableDictionary.cs) | C# | 73 | 0 | 12 | 85 |
+| [Assets/Scripts/Utility/SingleScriptableObject.cs](/Assets/Scripts/Utility/SingleScriptableObject.cs) | C# | 38 | 0 | 7 | 45 |
+| [Assets/Scripts/Utility/SingleVariantScriptableObject.cs](/Assets/Scripts/Utility/SingleVariantScriptableObject.cs) | C# | 27 | 3 | 5 | 35 |
+| [Assets/Scripts/Utility/Singleton.cs](/Assets/Scripts/Utility/Singleton.cs) | C# | 27 | 1 | 5 | 33 |
+
+[summary](results.md)

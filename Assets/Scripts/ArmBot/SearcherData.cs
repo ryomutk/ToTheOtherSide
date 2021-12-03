@@ -4,7 +4,8 @@ using System.Collections.Generic;
 [CreateAssetMenu(menuName = "Inochi/Searcher")]
 public class SearcherData : ArmBotData
 {
-    [SerializeField]BotStatusList statusList = new BotStatusList(StatusType.hp, StatusType.speed, StatusType.search);
+    public override BotType type{get{return BotType.searcher;}}
+    [SerializeField]BotStatusList statusList = new BotStatusList(StatusType.hp, StatusType.speed, StatusType.search,StatusType.LV);
     protected override BotStatusList status { get { return statusList; } }
     protected override Entity CreateInstance()
     {
@@ -46,11 +47,6 @@ public class SearcherData : ArmBotData
             }
 
             return false;
-        }
-
-        public override BotStatusList Evolution(int resourceNum,bool distructive)
-        {
-            throw new System.NotImplementedException();
         }
     }
 

@@ -2,6 +2,7 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 [CreateAssetMenu]
 public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, ISalvageData
@@ -15,7 +16,7 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
     //public InventoryData inventory { get { return _inventory; } }
 
     protected abstract BotStatusList status { get; }
-    [SerializeField] public BotType type { get; }
+    public abstract BotType type { get; }
 
     [SerializeField] EquipmentHolder _equipment;
 
@@ -53,7 +54,7 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
     //セッションで使うInstanceを取得
     [Serializable]
     public abstract class Entity
-    {
+    {   
         //変更されてはたまったものじゃないので公開しない
         //session中、jsonで保存するためにSerializeする
         [SerializeField] BotStatusList defaultStatus;
@@ -63,17 +64,19 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
         public string id{get;}
         public BotType type { get; }
         public Vector2 facingDirection { get; set; }
+        public List<EntityMod> mods = new List<EntityMod>();
+        
 
         protected BotStatusList nowStatus;
         public int hp
         {
-            get { return nowStatus.GetValue(StatusType.hp); }
+            get { return nowStatus.GetValue(StatusType.hp).Value; }
             set { nowStatus.SetValue(StatusType.hp, value); }
         }
 
         public float normalizedHp
         {
-            get{return nowStatus.GetValue(StatusType.hp)/defaultStatus.GetValue(StatusType.hp);}
+            get{return nowStatus.GetValue(StatusType.hp).Value/defaultStatus.GetValue(StatusType.hp).Value;}
         }
 
         public Entity(ArmBotData data,BotType type)
@@ -85,13 +88,24 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             this.id = DateTime.Now.ToString("yyyyMMddHHmmss");
         }
 
-        public abstract bool OnInteract(SectorMap map,Vector2 coordinate);
+        public virtual bool OnInteract(SectorMap map,Vector2 coordinate)
+        {
+            for(int i = 0;i<mods.Count;i++)
+            {
+                if(mods[i].exTiming == StepActionType.interact)
+                {
+                    mods[i].Execute(this);
+                }
+            }
+
+            return true;
+        }
         //終了条件はbotによって違う
         public abstract bool CheckIfEnd();
 
         public int GetStatus(StatusType type)
         {
-            return nowStatus.GetValue(type);
+            return nowStatus.GetValue(type).Value;
         }
 
 
@@ -123,7 +137,20 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             return inventory.items.Count;
         }
 
-        public abstract BotStatusList Evolution(int resourceNum,bool distructive = false);
+        public bool ModStatus(StatusType statusType,Func<int,int> modifier)
+        {
+            var max = InochiConfig.GetMaxValue(type,statusType);
+            var value = nowStatus.GetValue(statusType).Value;
+            
+            value = modifier(value);
+            if(max != null && value > max)
+            {
+                return false;
+            }
+
+            nowStatus.SetValue(statusType,value);
+            return true;
+        }
     }
 
     protected List<ArmBotData> datas = new List<ArmBotData>();
@@ -143,5 +170,5 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
 
         Debug.LogError("Bot of type:"+type+" not found");
         return null;
-    } 
+    }
 }

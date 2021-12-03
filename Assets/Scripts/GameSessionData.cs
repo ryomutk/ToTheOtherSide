@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 public class GameSessionData:ISalvageData
 {
     public SectorMap map{get;set;}
-    public MOTHERData.MotherEntity MOTHER{get;set;}
+    public MOTHERData.Entity MOTHER{get;set;}
     public Vector2 currentMOTHERCoordinate{get;set;}
     public bool stockIsFull{get{return stocks.Count >= MOTHER.GetStatus(StatusType.stock);}}
     //現在の資源データ

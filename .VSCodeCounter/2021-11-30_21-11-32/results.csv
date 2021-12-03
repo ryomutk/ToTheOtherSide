@@ -1,0 +1,394 @@
+"filename", "language", "Markdown", "XML", "Log", "JSON", "ShaderLab", "C#", "CSS", "HTML", "comment", "blank", "total"
+"d:\UnityProjects\ToTheOtherSide\Assembly-CSharp-Editor.csproj", "XML", 0, 837, 0, 0, 0, 0, 0, 0, 7, 1, 845
+"d:\UnityProjects\ToTheOtherSide\Assembly-CSharp-firstpass.csproj", "XML", 0, 791, 0, 0, 0, 0, 0, 0, 7, 1, 799
+"d:\UnityProjects\ToTheOtherSide\Assembly-CSharp.csproj", "XML", 0, 954, 0, 0, 0, 0, 0, 0, 7, 1, 962
+"d:\UnityProjects\ToTheOtherSide\Assets\Aevus\EmergencyExit\CreateInfiniteLoopDemo.cs", "C#", 0, 0, 0, 0, 0, 23, 0, 0, 1, 4, 28
+"d:\UnityProjects\ToTheOtherSide\Assets\Aevus\EmergencyExit\EmergencyExit.cs", "C#", 0, 0, 0, 0, 0, 97, 0, 0, 17, 21, 135
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\10+505ed.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\15(+5)+b8df8.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\60+8a823.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\60+f82e5.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Boundary+90972.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\CharacterMod.layout.json", "JSON", 0, 0, 0, 1830, 0, 0, 0, 0, 0, 0, 1830
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Hp_+fab54.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Min_+d1770.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Name+29b4c.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Spd_+104b7.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Thumb+6589b.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Track+86d14.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Track+c50be.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Track+cef55.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\Track+de6d7.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\↳Color+8d65c.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\パス 4+2d968.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\宝石のアイコン1+0f48f.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\長方形 11+859e0.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\長方形 12+77d6d.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\長方形 15+d3494.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\🎨 Color+271f3.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\🎨 Color+43981.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\💡States+ab1dc.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\CharacterMod\💡States+b965a.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\19+49462.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\190+09901.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\22%+21650.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\365m+d8d4f.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\52(71-19)+2c5dd.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\Barrier_+52fcd.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\Found+8dead.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\IslandInfoPanel.layout.json", "JSON", 0, 0, 0, 1750, 0, 0, 0, 0, 0, 0, 1750
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\Miasma_+56b40.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\Node_ 123+e5773.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\Resource_+1e021.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\_5m12s+64199.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\前面オブジェクトで型抜き 1+3cc56.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\合体 3+86506.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\合体 4+d4bcc.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\楕円形 1+a01c6.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\楕円形 2+21d9e.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\楕円形 5+f7bb7.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\楕円形 6+ba767.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\現在のシマ(クオータービュー)+e3b2b.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\生存確率_+0152a.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\線 9+d7384.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\長方形 2+657aa.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\長方形 4+e1480.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\長方形 5+61f5e.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\長方形 6+ae177.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\IslandInfoPanel\長方形 7+43f10.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\MainPanel.layout.json", "JSON", 0, 0, 0, 1520, 0, 0, 0, 0, 0, 0, 1520
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\パス 1+50b95.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\パス 2+33220.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\ミニマップ+1e90d.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\交差 1+4d46d.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\交差 2+2840f.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\前面オブジェクトで型抜き 1+fcb5d.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\前面オブジェクトで型抜き 2+58d17.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\前面オブジェクトで型抜き 3+4730e.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\合体 2+83391.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\楕円形 1+07784.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\楕円形 10+68bdb.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\楕円形 11+1045e.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\楕円形 2+5fe1b.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\楕円形 4+6bd64.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\楕円形 8+6ab11.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\楕円形 9+c8125.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\現在のシマ(クオータービュー)+6040c.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\線 5+e27d6.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\線 6+bc281.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\線 7+6ccb6.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\線 8+4a6c0.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\長方形 1+ee10f.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\MainPanel\長方形 2+994e3.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\10+626e5.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\10+9e08b.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\7+7183a.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\Hp_+549b1.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\Min_+895dd.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\Name+d1f01.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\RawButton1+1f0dc.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\RawButton1+652fd.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\Spd_+5a6e8.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\StockPanel.layout.json", "JSON", 0, 0, 0, 1744, 0, 0, 0, 0, 0, 0, 1744
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\Stocks+ebc9b.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\Stocks+f100e.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\Thumb+c0d5b.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\パス 3+053b3.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\出撃+57089.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\合体 5+f1a29.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\多角形 1+437c2.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\進化+82977.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\長方形 10+38100.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\長方形 11+40da2.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\長方形 12+17001.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\長方形 13+9c80c.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\長方形 13+a8fdc.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\長方形 14+5c00c.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\RawDatas\StockPanel\長方形 8+f4a28.png.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\CharacterMod\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\CharacterMod\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\IslandInfoPanel\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\IslandInfoPanel\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\MainPanel\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\MainPanel\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\StockPanel\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\CreatedSprites\StockPanel\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\EditorUtil.cs", "C#", 0, 0, 0, 0, 0, 168, 0, 0, 30, 27, 225
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\ElementFactory.cs", "C#", 0, 0, 0, 0, 0, 39, 0, 0, 5, 5, 49
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\ButtonElement.cs", "C#", 0, 0, 0, 0, 0, 75, 0, 0, 14, 14, 103
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\Element.cs", "C#", 0, 0, 0, 0, 0, 55, 0, 0, 23, 13, 91
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\ElementUtil.cs", "C#", 0, 0, 0, 0, 0, 636, 0, 0, 63, 106, 805
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\GroupElement.cs", "C#", 0, 0, 0, 0, 0, 110, 0, 0, 8, 11, 129
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\ImageElement.cs", "C#", 0, 0, 0, 0, 0, 64, 0, 0, 7, 12, 83
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\InputElement.cs", "C#", 0, 0, 0, 0, 0, 35, 0, 0, 4, 8, 47
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\InstanceElement.cs", "C#", 0, 0, 0, 0, 0, 56, 0, 0, 23, 8, 87
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\MaskElement.cs", "C#", 0, 0, 0, 0, 0, 10, 0, 0, 4, 1, 15
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\RectElement.cs", "C#", 0, 0, 0, 0, 0, 19, 0, 0, 4, 3, 26
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\ScrollbarElement.cs", "C#", 0, 0, 0, 0, 0, 67, 0, 0, 7, 10, 84
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\SliderElement.cs", "C#", 0, 0, 0, 0, 0, 62, 0, 0, 5, 10, 77
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\TextElement.cs", "C#", 0, 0, 0, 0, 0, 113, 0, 0, 7, 21, 141
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\TextMeshProElement.cs", "C#", 0, 0, 0, 0, 0, 81, 0, 0, 13, 17, 111
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\ToggleElement.cs", "C#", 0, 0, 0, 0, 0, 66, 0, 0, 11, 13, 90
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Elements\ViewportElement.cs", "C#", 0, 0, 0, 0, 0, 73, 0, 0, 9, 13, 95
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Importer.cs", "C#", 0, 0, 0, 0, 0, 350, 0, 0, 137, 76, 563
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\JsonExtensions.cs", "C#", 0, 0, 0, 0, 0, 55, 0, 0, 0, 19, 74
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Libraries\MiniJSON\MiniJSON.cs", "C#", 0, 0, 0, 0, 0, 400, 0, 0, 96, 76, 572
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Libraries\OnionRing\OnionRing.cs", "C#", 0, 0, 0, 0, 0, 184, 0, 0, 0, 30, 214
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\Postprocessor.cs", "C#", 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 6
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\PrefabCreator.cs", "C#", 0, 0, 0, 0, 0, 98, 0, 0, 15, 16, 129
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\PreprocessTexture.cs", "C#", 0, 0, 0, 0, 0, 41, 0, 0, 16, 4, 61
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\RenderContext.cs", "C#", 0, 0, 0, 0, 0, 207, 0, 0, 32, 39, 278
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Importer\Scripts\Editor\TextureUtil.cs", "C#", 0, 0, 0, 0, 0, 315, 0, 0, 88, 61, 464
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\BarSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\BarSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ButtonSwapSpriteSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ButtonSwapSpriteSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ComponentToPrefabSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ComponentToPrefabSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\GameSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\GameSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\GridScrollSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\GridScrollSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ImageSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ImageSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\InputFieldSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\InputFieldSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\LayoutRepeatGridSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\LayoutRepeatGridSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\Main\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\Main\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\MaskSample2\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\MaskSample2\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\MaskSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\MaskSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\PaddingSample2\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\PaddingSample2\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\PaddingSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\PaddingSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\PinnablelScrollGroupsTest\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\PinnablelScrollGroupsTest\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\RadioSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\RadioSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\RepeatGridSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\RepeatGridSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\RepeatGridScrollSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\RepeatGridScrollSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ResizableScrollGroupsSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ResizableScrollGroupsSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ResponsiveSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ResponsiveSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollGroupMaskTest\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollGroupMaskTest\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollGroupsSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollGroupsSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollMaskSample2\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollMaskSample2\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollMaskSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ScrollMaskSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ToggleSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ToggleSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ToggleSwapSpriteSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\ToggleSwapSpriteSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\VerticalHorizontalScrollSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\VerticalHorizontalScrollSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\VerticalStackSample2\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\VerticalStackSample2\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\VerticalStackSample\ImageHashMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Samples\Sprites\VerticalStackSample\ImagePathMap-cache.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Scripts\Runtime\CoverImage.cs", "C#", 0, 0, 0, 0, 0, 53, 0, 0, 0, 8, 61
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Scripts\Runtime\DotsScrollbar.cs", "C#", 0, 0, 0, 0, 0, 197, 0, 0, 8, 37, 242
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Scripts\Runtime\ScrollRectEx.cs", "C#", 0, 0, 0, 0, 0, 44, 0, 0, 12, 6, 62
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Scripts\Runtime\ToggleGraphicSwap.cs", "C#", 0, 0, 0, 0, 0, 25, 0, 0, 3, 5, 33
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Scripts\Runtime\ToggleToRadio.cs", "C#", 0, 0, 0, 0, 0, 46, 0, 0, 12, 11, 69
+"d:\UnityProjects\ToTheOtherSide\Assets\I0plus\XuidUnity\Scripts\Runtime\XdGuid.cs", "C#", 0, 0, 0, 0, 0, 8, 0, 0, 0, 1, 9
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs", "C#", 0, 0, 0, 0, 0, 98, 0, 0, 80, 25, 203
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs", "C#", 0, 0, 0, 0, 0, 121, 0, 0, 0, 22, 143
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs", "C#", 0, 0, 0, 0, 0, 137, 0, 0, 60, 20, 217
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs", "C#", 0, 0, 0, 0, 0, 125, 0, 0, 51, 18, 194
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs", "C#", 0, 0, 0, 0, 0, 63, 0, 0, 17, 14, 94
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs", "C#", 0, 0, 0, 0, 0, 390, 0, 0, 201, 70, 661
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs", "C#", 0, 0, 0, 0, 0, 264, 0, 0, 99, 41, 404
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs", "C#", 0, 0, 0, 0, 0, 123, 0, 0, 27, 18, 168
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.xml", "XML", 0, 5475, 0, 0, 0, 0, 0, 0, 0, 257, 5732
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml", "XML", 0, 10829, 0, 0, 0, 0, 0, 0, 0, 112, 10941
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.xml", "XML", 0, 202, 0, 0, 0, 0, 0, 0, 0, 1, 203
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.xml", "XML", 0, 9559, 0, 0, 0, 0, 0, 0, 0, 7, 9566
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.xml", "XML", 0, 7775, 0, 0, 0, 0, 0, 0, 0, 14, 7789
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.xml", "XML", 0, 3655, 0, 0, 0, 0, 0, 0, 0, 4, 3659
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Assemblies\link.xml", "XML", 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 6
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Mathematics\MathematicsDrawers.cs", "C#", 0, 0, 0, 0, 0, 744, 0, 0, 29, 110, 883
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\AssemblyImportSettingsAutomation.cs", "C#", 0, 0, 0, 0, 0, 105, 0, 0, 5, 24, 134
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\BuildAOTAutomation.cs", "C#", 0, 0, 0, 0, 0, 58, 0, 0, 5, 16, 79
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\EnsureOdinInspectorDefine.cs", "C#", 0, 0, 0, 0, 0, 40, 0, 0, 69, 12, 121
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\FixBrokenUnityObjectWrapperDrawer.cs", "C#", 0, 0, 0, 0, 0, 175, 0, 0, 5, 28, 208
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\SyncListDrawer.cs", "C#", 0, 0, 0, 0, 0, 66, 0, 0, 11, 11, 88
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\SyncVarAttributeDrawer.cs", "C#", 0, 0, 0, 0, 0, 26, 0, 0, 11, 5, 42
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\Vector2IntMinMaxAttributeDrawer.cs", "C#", 0, 0, 0, 0, 0, 48, 0, 0, 17, 8, 73
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\VectorIntDrawers.cs", "C#", 0, 0, 0, 0, 0, 102, 0, 0, 23, 16, 141
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\VectorIntPropertyResolvers.cs", "C#", 0, 0, 0, 0, 0, 44, 0, 0, 5, 5, 54
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\SerializedNetworkBehaviour.cs", "C#", 0, 0, 0, 0, 0, 40, 0, 0, 15, 12, 67
+"d:\UnityProjects\ToTheOtherSide\Assets\Plugins\Sirenix\Odin Inspector\Scripts\VectorIntFormatters.cs", "C#", 0, 0, 0, 0, 0, 38, 0, 0, 33, 9, 80
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\ArmBotData.cs", "C#", 0, 0, 0, 0, 0, 94, 0, 0, 22, 31, 147
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\BodyParts.cs", "C#", 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 8
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\BotStatusList.cs", "C#", 0, 0, 0, 0, 0, 53, 0, 0, 2, 8, 63
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\BotType.cs", "C#", 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 8
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\EquipmentHolder.cs", "C#", 0, 0, 0, 0, 0, 63, 0, 0, 0, 14, 77
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\InventoryData.cs", "C#", 0, 0, 0, 0, 0, 21, 0, 0, 0, 3, 24
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\ItemStorage.cs", "C#", 0, 0, 0, 0, 0, 5, 0, 0, 0, 1, 6
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\MOTHERData.cs", "C#", 0, 0, 0, 0, 0, 30, 0, 0, 0, 9, 39
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\Modifier\BotModifier.cs", "C#", 0, 0, 0, 0, 0, 6, 0, 0, 0, 1, 7
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\Modifier\EquipmentBehaviour.cs", "C#", 0, 0, 0, 0, 0, 22, 0, 0, 2, 3, 27
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\SearcherData.cs", "C#", 0, 0, 0, 0, 0, 45, 0, 0, 3, 10, 58
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\StatusType.cs", "C#", 0, 0, 0, 0, 0, 12, 0, 0, 1, 0, 13
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ArmBot\VisualData.cs", "C#", 0, 0, 0, 0, 0, 7, 0, 0, 3, 2, 12
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Configs\SessionConfig.cs", "C#", 0, 0, 0, 0, 0, 27, 0, 0, 5, 7, 39
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Configs\StepGenerationConfig.cs", "C#", 0, 0, 0, 0, 0, 139, 0, 0, 13, 50, 202
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\DataIndexer.cs", "C#", 0, 0, 0, 0, 0, 59, 0, 0, 0, 8, 67
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\DataManager.cs", "C#", 0, 0, 0, 0, 0, 41, 0, 0, 22, 11, 74
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\IPermanentData.cs", "C#", 0, 0, 0, 0, 0, 4, 0, 0, 2, 0, 6
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\ISalvageData.cs", "C#", 0, 0, 0, 0, 0, 3, 0, 0, 1, 0, 4
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\LabeledData.cs", "C#", 0, 0, 0, 0, 0, 18, 0, 0, 0, 3, 21
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\SDataValuable.cs", "C#", 0, 0, 0, 0, 0, 4, 0, 0, 1, 1, 6
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\SalvageValuable.cs", "C#", 0, 0, 0, 0, 0, 24, 0, 0, 1, 2, 27
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Sector\EnvironmentAttribute.cs", "C#", 0, 0, 0, 0, 0, 9, 0, 0, 1, 1, 11
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Sector\ExploreData.cs", "C#", 0, 0, 0, 0, 0, 121, 0, 0, 1, 21, 143
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Sector\SessionDataSaver.cs", "C#", 0, 0, 0, 0, 0, 58, 0, 0, 0, 16, 74
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Sector\StepState.cs", "C#", 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 9
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\SessionAddonData.cs", "C#", 0, 0, 0, 0, 0, 13, 0, 0, 0, 4, 17
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\SessionData.cs", "C#", 0, 0, 0, 0, 0, 66, 0, 0, 6, 12, 84
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Talkdata\CharaResponce.cs", "C#", 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 6
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Talkdata\ChatArg.cs", "C#", 0, 0, 0, 0, 0, 11, 0, 0, 0, 2, 13
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Talkdata\QuestionArg.cs", "C#", 0, 0, 0, 0, 0, 34, 0, 0, 0, 7, 41
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\Talkdata\TalkData.cs", "C#", 0, 0, 0, 0, 0, 18, 0, 0, 2, 3, 23
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Datas\TreeStructure\TreeStructuredData.cs", "C#", 0, 0, 0, 0, 0, 116, 0, 0, 8, 25, 149
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EditorScripts\ScriptableObjectCreator.cs", "C#", 0, 0, 0, 0, 0, 71, 0, 0, 15, 17, 103
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EditorScripts\ScriptableUtility.cs", "C#", 0, 0, 0, 0, 0, 2, 0, 0, 49, 0, 51
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EditorScripts\ScriptableViewer.cs", "C#", 0, 0, 0, 0, 0, 47, 0, 0, 20, 13, 80
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EditorScripts\TalkDataViewer.cs", "C#", 0, 0, 0, 0, 0, 16, 0, 0, 1, 3, 20
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EditorScripts\TreeBuilder.cs", "C#", 0, 0, 0, 0, 0, 45, 0, 0, 16, 13, 74
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EditorScripts\TreeStructuredDataEditor.cs", "C#", 0, 0, 0, 0, 0, 87, 0, 0, 20, 32, 139
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\AsyncEvent.cs", "C#", 0, 0, 0, 0, 0, 96, 0, 0, 10, 20, 126
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\CallBacks\ExploreAndSDataSets.cs", "C#", 0, 0, 0, 0, 0, 60, 0, 0, 11, 15, 86
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\CallBacks\ExploreLogDataSets.cs", "C#", 0, 0, 0, 0, 0, 30, 0, 0, 0, 5, 35
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\CallBacks\LogDataSets.cs", "C#", 0, 0, 0, 0, 0, 45, 0, 0, 3, 11, 59
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\DataProvider.cs", "C#", 0, 0, 0, 0, 0, 45, 0, 0, 1, 14, 60
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\EventArgs\ISalvageEventArg.cs", "C#", 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\EventArgs\SelectableArg.cs", "C#", 0, 0, 0, 0, 0, 8, 0, 0, 0, 1, 9
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\EventArgs\SessionEventArg.cs", "C#", 0, 0, 0, 0, 0, 18, 0, 0, 2, 3, 23
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\EventArgs\SystemEventArg.cs", "C#", 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 8
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\EventArgs\UIEventArg.cs", "C#", 0, 0, 0, 0, 0, 23, 0, 0, 0, 4, 27
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\EventManager.cs", "C#", 0, 0, 0, 0, 0, 147, 0, 0, 1, 33, 181
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\GameManager.cs", "C#", 0, 0, 0, 0, 0, 19, 0, 0, 0, 7, 26
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\IEvent.cs", "C#", 0, 0, 0, 0, 0, 14, 0, 0, 0, 1, 15
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\IEventListener.cs", "C#", 0, 0, 0, 0, 0, 8, 0, 0, 4, 1, 13
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\IEventTask.cs", "C#", 0, 0, 0, 0, 0, 8, 0, 0, 0, 3, 11
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\ITask.cs", "C#", 0, 0, 0, 0, 0, 8, 0, 0, 0, 1, 9
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\SalvageEvent.cs", "C#", 0, 0, 0, 0, 0, 113, 0, 0, 12, 18, 143
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\SalvageSessionEvent.cs", "C#", 0, 0, 0, 0, 0, 5, 0, 0, 0, 2, 7
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\SimpleSignal.cs", "C#", 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\SmallTask.cs", "C#", 0, 0, 0, 0, 0, 42, 0, 0, 4, 5, 51
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\SystemEvent.cs", "C#", 0, 0, 0, 0, 0, 5, 0, 0, 0, 2, 7
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\SystemState.cs", "C#", 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 7
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\TaskBase.cs", "C#", 0, 0, 0, 0, 0, 15, 0, 0, 0, 3, 18
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\EventSystem\UIEvent.cs", "C#", 0, 0, 0, 0, 0, 4, 0, 0, 0, 1, 5
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ExploreArg.cs", "C#", 0, 0, 0, 0, 0, 166, 0, 0, 3, 26, 195
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ExploreEvent.cs", "C#", 0, 0, 0, 0, 0, 5, 0, 0, 0, 2, 7
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ExploreObjType.cs", "C#", 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 9
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\CustomLayout.cs", "C#", 0, 0, 0, 0, 0, 63, 0, 0, 10, 14, 87
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Element\BotObject.cs", "C#", 0, 0, 0, 0, 0, 27, 0, 0, 1, 4, 32
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Element\IUIRenderer.cs", "C#", 0, 0, 0, 0, 0, 5, 0, 0, 1, 0, 6
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Element\SectorStepObject.cs", "C#", 0, 0, 0, 0, 0, 19, 0, 0, 1, 4, 24
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Element\UIAnimator.cs", "C#", 0, 0, 0, 0, 0, 51, 0, 0, 4, 14, 69
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Input\ScreenTouchArg.cs", "C#", 0, 0, 0, 0, 0, 10, 0, 0, 2, 2, 14
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\BackPanel.cs", "C#", 0, 0, 0, 0, 0, 21, 0, 0, 0, 4, 25
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\BotRenderer.cs", "C#", 0, 0, 0, 0, 0, 59, 0, 0, 4, 11, 74
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\IUIElement.cs", "C#", 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 4
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\IslandTouchPanel.cs", "C#", 0, 0, 0, 0, 0, 48, 0, 0, 1, 11, 60
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\IslandUIController.cs", "C#", 0, 0, 0, 0, 0, 98, 0, 0, 4, 36, 138
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\PanelName.cs", "C#", 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 9
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\SimplePanel.cs", "C#", 0, 0, 0, 0, 0, 8, 0, 0, 1, 1, 10
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\StockInochiButton.cs", "C#", 0, 0, 0, 0, 0, 35, 0, 0, 2, 7, 44
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\StockPanel.cs", "C#", 0, 0, 0, 0, 0, 85, 0, 0, 0, 20, 105
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\TouchPanel.cs", "C#", 0, 0, 0, 0, 0, 25, 0, 0, 0, 5, 30
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\UIPanel.cs", "C#", 0, 0, 0, 0, 0, 42, 0, 0, 0, 7, 49
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\Panel\UISignalEmitter.cs", "C#", 0, 0, 0, 0, 0, 12, 0, 0, 0, 1, 13
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\TextField\FukidashiName.cs", "C#", 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 5
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\TextField\TalkField.cs", "C#", 0, 0, 0, 0, 0, 23, 0, 0, 3, 8, 34
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GUI\TextField\TextField.cs", "C#", 0, 0, 0, 0, 0, 50, 0, 0, 2, 17, 69
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\GameSessionData.cs", "C#", 0, 0, 0, 0, 0, 22, 0, 0, 1, 4, 27
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\ItemActionType.cs", "C#", 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 6
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\BookItemData.cs", "C#", 0, 0, 0, 0, 0, 19, 0, 0, 2, 3, 24
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\EquipmentItemData.cs", "C#", 0, 0, 0, 0, 0, 18, 0, 0, 4, 4, 26
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\ItemAttribute.cs", "C#", 0, 0, 0, 0, 0, 8, 0, 0, 0, 1, 9
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\ItemData.cs", "C#", 0, 0, 0, 0, 0, 28, 0, 0, 0, 2, 30
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\ItemID.cs", "C#", 0, 0, 0, 0, 0, 6, 0, 0, 3, 0, 9
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\ItemType.cs", "C#", 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 6
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\ResourceData.cs", "C#", 0, 0, 0, 0, 0, 11, 0, 0, 0, 1, 12
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Item\ToolData.cs", "C#", 0, 0, 0, 0, 0, 5, 0, 0, 0, 1, 6
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\ISessionSequencer.cs", "C#", 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 4
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\InteractEvent.cs", "C#", 0, 0, 0, 0, 0, 18, 0, 0, 0, 4, 22
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\Sector\Island.cs", "C#", 0, 0, 0, 0, 0, 9, 0, 0, 186, 2, 197
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\Sector\SectorMap.cs", "C#", 0, 0, 0, 0, 0, 69, 0, 0, 22, 14, 105
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\SessionManager.cs", "C#", 0, 0, 0, 0, 0, 75, 0, 0, 32, 31, 138
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\SessionSequencerOnTheCliff.cs", "C#", 0, 0, 0, 0, 0, 27, 0, 0, 3, 8, 38
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\SessionSequencerProto.cs", "C#", 0, 0, 0, 0, 0, 4, 0, 0, 190, 0, 194
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\SessionTracker.cs", "C#", 0, 0, 0, 0, 0, 30, 0, 0, 7, 6, 43
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SalvageSession\SessionUtility.cs", "C#", 0, 0, 0, 0, 0, 52, 0, 0, 0, 8, 60
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\SelectableEvent.cs", "C#", 0, 0, 0, 0, 0, 5, 0, 0, 0, 1, 6
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\StepActionType.cs", "C#", 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 7
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\TextLog\LogData.cs", "C#", 0, 0, 0, 0, 0, 12, 0, 0, 0, 2, 14
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\TextLog\LogType.cs", "C#", 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 5
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Utility\IInteraptor.cs", "C#", 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 4
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Utility\InstantPool.cs", "C#", 0, 0, 0, 0, 0, 87, 0, 0, 32, 18, 137
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Utility\LogWrighter.cs", "C#", 0, 0, 0, 0, 0, 63, 0, 0, 15, 19, 97
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Utility\SerializableDictionary.cs", "C#", 0, 0, 0, 0, 0, 73, 0, 0, 0, 12, 85
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Utility\SingleScriptableObject.cs", "C#", 0, 0, 0, 0, 0, 38, 0, 0, 0, 7, 45
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Utility\SingleVariantScriptableObject.cs", "C#", 0, 0, 0, 0, 0, 27, 0, 0, 3, 5, 35
+"d:\UnityProjects\ToTheOtherSide\Assets\Scripts\Utility\Singleton.cs", "C#", 0, 0, 0, 0, 0, 27, 0, 0, 1, 5, 33
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\__MACOSX\numbrs-webfontkit\._numbrs-regular-demo.html", "HTML", 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\__MACOSX\numbrs-webfontkit\._numbrs-regular-webfont.svg", "XML", 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\__MACOSX\numbrs-webfontkit\._stylesheet.css", "CSS", 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\__MACOSX\numbrs-webfontkit\specimen_files\._grid_12-825-55-15.css", "CSS", 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\__MACOSX\numbrs-webfontkit\specimen_files\._specimen_stylesheet.css", "CSS", 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\numbrs-webfontkit\numbrs-regular-demo.html", "HTML", 0, 0, 0, 0, 0, 0, 0, 290, 0, 122, 412
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\numbrs-webfontkit\numbrs-regular-webfont.svg", "XML", 0, 42, 0, 0, 0, 0, 0, 0, 0, 0, 42
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\numbrs-webfontkit\specimen_files\grid_12-825-55-15.css", "CSS", 0, 0, 0, 0, 0, 0, 95, 0, 10, 24, 129
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\numbrs-webfontkit\specimen_files\specimen_stylesheet.css", "CSS", 0, 0, 0, 0, 0, 0, 320, 0, 11, 66, 397
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Fonts\numbers\numbrs-webfontkit\stylesheet.css", "CSS", 0, 0, 0, 0, 0, 0, 11, 0, 1, 4, 16
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader", "ShaderLab", 0, 0, 0, 0, 109, 0, 0, 0, 2, 33, 144
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader", "ShaderLab", 0, 0, 0, 0, 112, 0, 0, 0, 3, 31, 146
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader", "ShaderLab", 0, 0, 0, 0, 109, 0, 0, 0, 2, 33, 144
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader", "ShaderLab", 0, 0, 0, 0, 243, 0, 0, 0, 4, 71, 318
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader", "ShaderLab", 0, 0, 0, 0, 241, 0, 0, 0, 4, 66, 311
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader", "ShaderLab", 0, 0, 0, 0, 188, 0, 0, 0, 10, 50, 248
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader", "ShaderLab", 0, 0, 0, 0, 183, 0, 0, 0, 8, 50, 241
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader", "ShaderLab", 0, 0, 0, 0, 82, 0, 0, 0, 4, 21, 107
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader", "ShaderLab", 0, 0, 0, 0, 183, 0, 0, 0, 8, 50, 241
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader", "ShaderLab", 0, 0, 0, 0, 103, 0, 0, 0, 8, 28, 139
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader", "ShaderLab", 0, 0, 0, 0, 122, 0, 0, 0, 4, 33, 159
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_SDF.shader", "ShaderLab", 0, 0, 0, 0, 243, 0, 0, 0, 4, 71, 318
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMP_Sprite.shader", "ShaderLab", 0, 0, 0, 0, 97, 0, 0, 0, 0, 20, 117
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMPro.cginc", "ShaderLab", 0, 0, 0, 0, 63, 0, 0, 0, 2, 20, 85
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc", "ShaderLab", 0, 0, 0, 0, 122, 0, 0, 0, 2, 34, 158
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc", "ShaderLab", 0, 0, 0, 0, 62, 0, 0, 0, 10, 14, 86
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc", "ShaderLab", 0, 0, 0, 0, 76, 0, 0, 0, 7, 19, 102
+"d:\UnityProjects\ToTheOtherSide\Assets\TextMesh Pro\Sprites\EmojiOne.json", "JSON", 0, 0, 0, 155, 0, 0, 0, 0, 0, 2, 157
+"d:\UnityProjects\ToTheOtherSide\Logs\AssetImportWorker0-prev.log", "Log", 0, 0, 92, 0, 0, 0, 0, 0, 0, 7, 99
+"d:\UnityProjects\ToTheOtherSide\Logs\AssetImportWorker0.log", "Log", 0, 0, 53, 0, 0, 0, 0, 0, 0, 2, 55
+"d:\UnityProjects\ToTheOtherSide\Logs\AssetImportWorker1.log", "Log", 0, 0, 5031, 0, 0, 0, 0, 0, 0, 832, 5863
+"d:\UnityProjects\ToTheOtherSide\Logs\AssetImportWorker2.log", "Log", 0, 0, 4051, 0, 0, 0, 0, 0, 0, 601, 4652
+"d:\UnityProjects\ToTheOtherSide\Logs\Packages-Update.log", "Log", 0, 0, 47, 0, 0, 0, 0, 0, 0, 4, 51
+"d:\UnityProjects\ToTheOtherSide\Logs\shadercompiler-AssetImportWorker0.log", "Log", 0, 0, 4, 0, 0, 0, 0, 0, 0, 3, 7
+"d:\UnityProjects\ToTheOtherSide\Logs\shadercompiler-UnityShaderCompiler.exe0.log", "Log", 0, 0, 512, 0, 0, 0, 0, 0, 0, 257, 769
+"d:\UnityProjects\ToTheOtherSide\Logs\shadercompiler-UnityShaderCompiler.exe1.log", "Log", 0, 0, 4, 0, 0, 0, 0, 0, 0, 3, 7
+"d:\UnityProjects\ToTheOtherSide\Logs\shadercompiler-UnityShaderCompiler.exe2.log", "Log", 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 4
+"d:\UnityProjects\ToTheOtherSide\Logs\shadercompiler-UnityShaderCompiler.exe3.log", "Log", 0, 0, 4, 0, 0, 0, 0, 0, 0, 3, 7
+"d:\UnityProjects\ToTheOtherSide\Packages\manifest.json", "JSON", 0, 0, 0, 50, 0, 0, 0, 0, 0, 1, 51
+"d:\UnityProjects\ToTheOtherSide\Packages\packages-lock.json", "JSON", 0, 0, 0, 445, 0, 0, 0, 0, 0, 1, 446
+"d:\UnityProjects\ToTheOtherSide\README.md", "Markdown", 2, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3
+"d:\UnityProjects\ToTheOtherSide\Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj", "XML", 0, 714, 0, 0, 0, 0, 0, 0, 7, 1, 722
+"d:\UnityProjects\ToTheOtherSide\Sirenix.OdinInspector.CompatibilityLayer.csproj", "XML", 0, 690, 0, 0, 0, 0, 0, 0, 7, 1, 698
+"d:\UnityProjects\ToTheOtherSide\Sirenix.OdinInspector.Modules.UnityMathematics.csproj", "XML", 0, 705, 0, 0, 0, 0, 0, 0, 7, 1, 713
+"d:\UnityProjects\ToTheOtherSide\XuidUnity.Importer.Editor.csproj", "XML", 0, 739, 0, 0, 0, 0, 0, 0, 7, 1, 747
+"d:\UnityProjects\ToTheOtherSide\XuidUnity.Runtime.csproj", "XML", 0, 694, 0, 0, 0, 0, 0, 0, 7, 1, 702
+"Total", "-", 2, 43668, 9800, 7849, 2338, 10485, 429, 291, 2402, 5009, 82273

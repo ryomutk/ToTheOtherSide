@@ -1,7 +1,9 @@
 using System;
-
+[Flags]
 public enum PanelName
 {
-    BackButtonPanel,
-    StockPanel
+    none = 0,
+    StockPanel = 1,
+    SideBar = 1 << 1,
+    BackPanel = 1 << 2
 }

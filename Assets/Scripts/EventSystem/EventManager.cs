@@ -10,7 +10,8 @@ public enum EventName
     SessionEvent,
     SystemEvent,
     ScreenTouchEvent,
-    SelectableEvent
+    SelectableEvent,
+    UIEvent
 }
 
 public class EventManager : Singleton<EventManager>
