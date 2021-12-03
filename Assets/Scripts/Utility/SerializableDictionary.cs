@@ -7,8 +7,9 @@ using UnityEngine;
 [Serializable]
 public class SerializableDictionary<T, M>
 {
+    public int Count{get{return rawData.Count;}}
     [Serializable]
-    class SerializableKeyValuePair<K, V>
+    public class SerializableKeyValuePair<K, V>
     {
         public K key { get { return _key; } private set { _key = value; } }
         public V value { get { return _value; } set { _value = value; } }
@@ -81,5 +82,10 @@ public class SerializableDictionary<T, M>
         }
 
         return false;
+    }
+
+    public IEnumerator<SerializableKeyValuePair<T,M>> GetEnumerator()
+    {
+        return rawData.GetEnumerator();
     }
 }
