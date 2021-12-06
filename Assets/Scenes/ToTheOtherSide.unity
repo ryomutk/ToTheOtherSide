@@ -2004,10 +2004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2640200036a127418103c537d1d5c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - names: 1536
-    type: 0
-    action: 1
+  actions: []
 --- !u!114 &923529111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2830,6 +2827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1424572449}
   - component: {fileID: 1424572448}
+  - component: {fileID: 1424572450}
   m_Layer: 0
   m_Name: System
   m_TagString: Untagged
@@ -2864,6 +2862,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1424572450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424572447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0d27ceb58838384c9ecea7eef8b4b9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1429799542
 GameObject:
   m_ObjectHideFlags: 0
@@ -5161,7 +5171,7 @@ MonoBehaviour:
   childrenPanels: []
   showDefault: 0
   swapChild: 0
-  ignorePanel: 96
+  ignorePanel: 352
 --- !u!114 &3987066069000061331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5396,7 +5406,7 @@ MonoBehaviour:
     action: 1
   - names: 4
     type: 0
-    action: 0
+    action: 1
 --- !u!114 &4209463998963987157
 MonoBehaviour:
   m_ObjectHideFlags: 0

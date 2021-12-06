@@ -45,11 +45,13 @@ public class IslandMapPanel : UIPanel
     {
         var task = new SmallTask();
         var last = viewpointOrigin.localScale.x;
+        /*
         if (Mathf.Abs(zoomLevel - last) > animateZoomDeltaValue)
         {
             StartCoroutine(ZoomRoutine(zoomLevel, task));
         }
         else
+        */
         {
             viewpointOrigin.position *= zoomLevel / last;
             viewpointOrigin.localScale = new Vector2(zoomLevel, zoomLevel);

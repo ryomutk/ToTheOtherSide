@@ -15,19 +15,26 @@ public class  StockInochiButton:MonoBehaviour,IUIElement
     Button entityButton;
     TMP_Text[] statusTexts;
     new public IUIRenderer renderer{get;private set;}
-    string botId;
+    ArmBotData.Entity entity;
 
     void Start()
     {
         entityButton = GetComponent<Button>();
         renderer = GetComponent<IUIRenderer>();
+        entityButton.onClick.AddListener(()=>OnSubmit());
+    }
+
+    void OnSubmit()
+    {
+        var arg = new SelectableArg(entity);
+        EventManager.instance.Notice(EventName.SelectableEvent,arg);
     }
 
     public void Initialize(ArmBotData.Entity entity)
     {
         if(entity == null)
         {return;}
-        botId = entity.id;
+        this.entity = entity;
         nameText.text = entity.type.ToString();
         hpText.text = entity.hp.ToString() + "/" + ((int)(entity.hp/entity.normalizedHp)).ToString();
 

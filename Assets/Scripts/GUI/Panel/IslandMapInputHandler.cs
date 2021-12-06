@@ -8,10 +8,10 @@ public class IslandMapInputHandler : IslandMapAddon,IEventListener<SelectableArg
 
     public ITask OnNotice(SelectableArg arg)
     {
-        if(showing)
+        if(showing&&arg.data is Island island)
         {
             scaleSlider.normalizedValue = 1;
-            return mapPanel.Focus(arg.data as Island);
+            return mapPanel.Focus(island);
         }
 
         return SmallTask.nullTask;

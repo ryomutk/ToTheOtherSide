@@ -156,6 +156,7 @@ public class EventManager : Singleton<EventManager>
     where T : SalvageEventArg
     {
         yield return StartCoroutine(LoadEvent(name));
+        
         var eve = eventTable[name] as IEvent<T>;
         eve.Register(listener);
         task.compleated = true;
@@ -181,7 +182,6 @@ public class EventManager : Singleton<EventManager>
 
         var loadtask = DataManager.LoadDataAsync(label);
         yield return new WaitUntil(() => loadtask.compleated);
-        nowLoading.Remove(name);
 
         if (eventTable.ContainsKey(name))
         {
@@ -192,5 +192,6 @@ public class EventManager : Singleton<EventManager>
         {
             eventTable[name] = loadtask.result as IEvent;
         }
+        nowLoading.Remove(name);
     }
 }

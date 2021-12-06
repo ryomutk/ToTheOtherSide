@@ -13,7 +13,8 @@ public class SessionManager : MonoBehaviour, IEventListener<SessionEventArg>
 
     void Start()
     {
-        EventManager.instance.Register(tracker, EventName.SessionEvent);
+        EventManager.instance.Register(this,EventName.SessionEvent);
+        EventManager.instance.Register(this, EventName.SessionEvent);
     }
 
     //Taskに持たせるやつ。
@@ -27,11 +28,11 @@ public class SessionManager : MonoBehaviour, IEventListener<SessionEventArg>
     //リクエストベースで動かすことにしました。
     public ITask OnNotice(SessionEventArg arg)
     {
-        if (arg.state == SessionState.requestSession)
+        if (arg.state == SessionState.requestSummary)
         {
             return RequestSummary(arg.data.master, arg.data.startCoordinate);
         }
-        else if(arg.state == SessionState.requestSummary)
+        else if(arg.state == SessionState.requestSession)
         {
             StartCoroutine(RealtimeSessionRoutine(arg.data));
         }

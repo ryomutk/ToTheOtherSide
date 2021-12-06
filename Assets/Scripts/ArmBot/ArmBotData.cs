@@ -53,7 +53,7 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
 
     //セッションで使うInstanceを取得
     [Serializable]
-    public abstract class Entity
+    public abstract class Entity:ISalvageData
     {   
         //変更されてはたまったものじゃないので公開しない
         //session中、jsonで保存するためにSerializeする
