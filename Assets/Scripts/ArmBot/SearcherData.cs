@@ -17,8 +17,8 @@ public class SearcherData : ArmBotData
         public SearcherEntity(ArmBotData data) : base(data,BotType.searcher)
         { }
 
-        List<Island> _foundSteps = new List<Island>();
-        public List<Island> foundSteps { get { return _foundSteps; } private set { _foundSteps = value; } }
+        List<int> _foundSteps = new List<int>();
+        public List<int> foundSteps { get { return _foundSteps; } private set { _foundSteps = value; } }
 
         public override bool OnInteract(SectorMap map, Vector2 coordinate)
         {
@@ -30,7 +30,7 @@ public class SearcherData : ArmBotData
             {
                 for (int i = 0; i < result; i++)
                 {
-                    var arg = new StepActionArg(this, StepActionType.confirm, foundSteps[foundSteps.Count - i].id);
+                    var arg = new StepActionArg(this, StepActionType.confirm, foundSteps[foundSteps.Count - i]);
                     EventManager.instance.Notice(EventName.SystemExploreEvent,arg);
                 }
             }

@@ -6,29 +6,29 @@ public class SectorMap
 {
     Dictionary<Vector2Int, Island> _mapData = new Dictionary<Vector2Int, Island>();
     public Dictionary<Vector2Int, Island> mapData { get { return _mapData; } }
-    public int[,] miasmaMap{get;private set;}
+    public int[,] miasmaMap { get; private set; }
 
     public Vector2 GetCoordinate(Island target)
     {
         var enumrator = _mapData.GetEnumerator();
 
-        foreach(var data in mapData)
+        foreach (var data in mapData)
         {
-            if(data.Value == target)
+            if (data.Value == target)
             {
                 return data.Key - StepGenerationConfig.instance.originCoords;
             }
-        }    
+        }
 
         //何の脈絡もないTimezoneNotFoundException
-        throw new System.TimeZoneNotFoundException();    
+        throw new System.TimeZoneNotFoundException();
     }
 
     public bool RemoveIsland(Island remove)
     {
-        foreach(var step in mapData)
+        foreach (var step in mapData)
         {
-            if(step.Value == remove)
+            if (step.Value == remove)
             {
                 mapData.Remove(step.Key);
                 return true;
@@ -45,9 +45,9 @@ public class SectorMap
 
     public Island GetIsland(int id)
     {
-        foreach(var data in mapData)
+        foreach (var data in mapData)
         {
-            if(data.Value.id == id)
+            if (data.Value.id == id)
             {
                 return data.Value;
             }
@@ -64,11 +64,11 @@ public class SectorMap
     /// <param name="step">加えるやつ</param>
     /// <param name="safeRange">不可侵領域</param>
     /// <returns></returns>
-    public bool TryAddStep(int x,int y, Island step,float safeRange=0)
+    public bool TryAddStep(int x, int y, Island step, float safeRange = 0)
     {
-        if(!CheckCoordinate(x,y,step.radius+safeRange))
+        if (!CheckCoordinate(x, y, step.radius + safeRange))
         {
-            var coordinate = new Vector2Int(x,y);
+            var coordinate = new Vector2Int(x, y);
             _mapData[coordinate] = step;
 
             return true;
@@ -83,16 +83,16 @@ public class SectorMap
     /// <param name="coordinate"></param>
     /// <param name="range"></param>
     /// <returns></returns>
-    public bool CheckCoordinate(int x,int y,float range = 0)
+    public bool CheckCoordinate(int x, int y, float range = 0)
     {
         float sqrDistance;
         foreach (var stepCoordPair in _mapData)
         {
             var xdir = stepCoordPair.Key.x - x;
             var ydir = stepCoordPair.Key.y - y;
-            sqrDistance = Mathf.Pow(xdir,2)+Mathf.Pow(ydir,2);
+            sqrDistance = Mathf.Pow(xdir, 2) + Mathf.Pow(ydir, 2);
 
-            if (sqrDistance < Mathf.Pow(range+stepCoordPair.Value.radius,2))
+            if (sqrDistance < Mathf.Pow(range + stepCoordPair.Value.radius, 2))
             {
                 return true;
             }
@@ -112,7 +112,7 @@ public class SectorMap
     /// <returns>見つけた島の数</returns>
     public int TryFindRange(Vector2 coordinate, float range, ref List<Island> result, bool refreshResult = false)
     {
-        if(refreshResult)
+        if (refreshResult)
         {
             result.Clear();
         }
@@ -122,9 +122,31 @@ public class SectorMap
         foreach (var stepCoordPair in _mapData)
         {
             sqrDistance = Vector2.Distance(stepCoordPair.Key, coordinate);
-            if (sqrDistance < Mathf.Pow(range+stepCoordPair.Value.radius, 2))
+            if (sqrDistance < Mathf.Pow(range + stepCoordPair.Value.radius, 2))
             {
                 result.Add(stepCoordPair.Value);
+                foundCount++;
+            }
+        }
+
+        return foundCount;
+    }
+
+    public int TryFindRange(Vector2 coordinate, float range, ref List<int> result, bool refreshResult = false)
+    {
+        if (refreshResult)
+        {
+            result.Clear();
+        }
+
+        float sqrDistance;
+        int foundCount = 0;
+        foreach (var stepCoordPair in _mapData)
+        {
+            sqrDistance = Vector2.Distance(stepCoordPair.Key, coordinate);
+            if (sqrDistance < Mathf.Pow(range + stepCoordPair.Value.radius, 2))
+            {
+                result.Add(stepCoordPair.Value.id);
                 foundCount++;
             }
         }
