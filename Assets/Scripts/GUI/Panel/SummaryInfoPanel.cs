@@ -24,7 +24,9 @@ public class SummaryInfoPanel:UIPanel,ILoadSalvageData<SessionData>
         var island = data.visitedPlace[0];
         var metaIsland = IslandUtility.GetMetaData(island);
         distanceField.text = metaIsland.metorDistanceFM.ToString();
-        durationField.text = SessionConfig.instance.GetSessionDuration(data).ToString();
+        var durationSec = SessionConfig.instance.GetSessionDuration(data);
+        var min = (int)durationSec/60;
+        durationField.text = ":"+durationSec.ToString()+"m"+(durationSec-min*60).ToString()+"s";
         nameField.text = metaIsland.name;
         placeMiasma.text = metaIsland.miasma.ToString();
         barrier.text = metaIsland.barrier.ToString();

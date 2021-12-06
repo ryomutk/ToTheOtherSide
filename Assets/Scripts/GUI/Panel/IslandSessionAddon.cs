@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class IslandSessionAddon : IslandMapAddon, IEventListener<SessionEventArg>, IEventListener<SelectableArg>
 {
     public override PanelName name { get { return PanelName.SessionAddon; } }
-    SessionInfo sessionInfo = null;
+    SessionInfo sessionInfo = new SessionInfo();
     [SerializeField] UIPanel summaryPanel;
     ILoadSalvageData<SessionData> summaryLoader;
     [SerializeField] Button submitButton;
@@ -77,12 +77,15 @@ public class IslandSessionAddon : IslandMapAddon, IEventListener<SessionEventArg
 
     protected override ITask Show()
     {
+        EventManager.instance.Register<SessionEventArg>(this,EventName.SessionEvent);
+        EventManager.instance.Register<SelectableArg>(this,EventName.SelectableEvent);
         return base.Show();
     }
 
     protected override ITask Hide()
     {
-
+        EventManager.instance.Disregister<SessionEventArg>(this,EventName.SessionEvent);
+        EventManager.instance.Disregister<SelectableArg>(this,EventName.SelectableEvent);
         return base.Hide();
     }
 }

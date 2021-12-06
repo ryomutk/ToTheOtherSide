@@ -11,8 +11,8 @@ public abstract class UIPanel : MonoBehaviour, IEventListener<UIEventArg>
     [SerializeField] UIPanel[] childrenPanels;
     //Trueの場合,ChildrenPanelの一番上のものをShowで見せる。
     //Falseの場合、すべてHideする
-    [SerializeField,ShowIf("childrenPanels.Length > 0")] bool showDefault = false;
-    [SerializeField,ShowIf("childrenPanels.Length > 0")] bool swapChild = false;
+    [SerializeField,ShowIf("@childrenPanels.Length > 0")] bool showDefault = false;
+    [SerializeField,ShowIf("@childrenPanels.Length > 0")] bool swapChild = false;
 
     protected virtual void Start()
     {
