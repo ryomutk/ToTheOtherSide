@@ -2,17 +2,6 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using System.Collections.Generic;
 using System.Collections;
-public enum EventName
-{
-    none,
-    SystemExploreEvent,
-    RealtimeExploreEvent,
-    SessionEvent,
-    SystemEvent,
-    ScreenTouchEvent,
-    SelectableEvent,
-    UIEvent
-}
 
 public class EventManager : Singleton<EventManager>
 {
@@ -166,6 +155,11 @@ public class EventManager : Singleton<EventManager>
 
     IEnumerator LoadEvent(EventName name)
     {
+        if(eventTable.ContainsKey(name))
+        {
+            yield break;
+        }
+
         //すでにロードが始まっている場合
         if (nowLoading.Contains(name))
         {
