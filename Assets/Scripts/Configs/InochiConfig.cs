@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName ="Configs/Inochi")]
 public class InochiConfig:SingleScriptableObject<InochiConfig>
 {
     [SerializeField] SerializableDictionary<BotType,BotStatusList> maxStatusValues;

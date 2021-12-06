@@ -36,4 +36,15 @@ public class SessionConfig : SingleScriptableObject<SessionConfig>
         public StepState state;
         public float multiplier;
     }
+
+    public float GetSessionDuration(SessionData data)
+    {
+        float count = 0;
+        foreach(ExploreArg arg in data.eventsOccoured)
+        {
+            count += GetDuration(arg);
+        }
+
+        return count;
+    }
 }

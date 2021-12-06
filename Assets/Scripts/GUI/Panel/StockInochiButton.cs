@@ -25,6 +25,8 @@ public class  StockInochiButton:MonoBehaviour,IUIElement
 
     public void Initialize(ArmBotData.Entity entity)
     {
+        if(entity == null)
+        {return;}
         botId = entity.id;
         nameText.text = entity.type.ToString();
         hpText.text = entity.hp.ToString() + "/" + ((int)(entity.hp/entity.normalizedHp)).ToString();

@@ -8,6 +8,22 @@ public class SectorMap
     public Dictionary<Vector2Int, Island> mapData { get { return _mapData; } }
     public int[,] miasmaMap{get;private set;}
 
+    public Vector2 GetCoordinate(Island target)
+    {
+        var enumrator = _mapData.GetEnumerator();
+
+        foreach(var data in mapData)
+        {
+            if(data.Value == target)
+            {
+                return data.Key - StepGenerationConfig.instance.originCoords;
+            }
+        }    
+
+        //何の脈絡もないTimezoneNotFoundException
+        throw new System.TimeZoneNotFoundException();    
+    }
+
     public bool RemoveIsland(Island remove)
     {
         foreach(var step in mapData)
@@ -25,6 +41,19 @@ public class SectorMap
     public void SetMiasma(int[,] miasmaMap)
     {
         this.miasmaMap = miasmaMap;
+    }
+
+    public Island GetIsland(int id)
+    {
+        foreach(var data in mapData)
+        {
+            if(data.Value.id == id)
+            {
+                return data.Value;
+            }
+        }
+
+        return null;
     }
 
     /// <summary>

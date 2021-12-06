@@ -1,6 +1,7 @@
 using UnityEngine.AddressableAssets;
 using UnityEngine;
 using System.Collections;
+using Sirenix.OdinInspector;
 
 //DataLabelをなるべく使わないようにする目的で作られた。
 public class DataProvider : Singleton<DataProvider>, IEventListener<SystemEventArg>
@@ -8,7 +9,19 @@ public class DataProvider : Singleton<DataProvider>, IEventListener<SystemEventA
     SalvageValuable<ISalvageData> gameData;
     [SerializeField] AssetLabelReference l_gameDataLabel;
 
-    public static GameSessionData nowGameData { get { return instance.gameData.value as GameSessionData; } }
+    [ShowInInspector, ReadOnly]
+    public static GameSessionData nowGameData
+    {
+        get
+        {
+            if (instance!=null&& instance.gameData != null)
+            {
+
+                return instance.gameData.value as GameSessionData;
+            }
+            return null;
+        }
+    }
 
     void Start()
     {

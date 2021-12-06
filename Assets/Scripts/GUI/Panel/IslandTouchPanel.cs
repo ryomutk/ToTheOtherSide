@@ -19,7 +19,7 @@ public class IslandTouchPanel : TouchPanel
 
         Vector2 coordinate = localPosition / StepGenerationConfig.instance.gridToCanvasrate;
         coordinate += StepGenerationConfig.instance.originCoords;
-        var res = DataProvider.nowGameData.map.TryFindRange(coordinate, 0, ref sectorlist);
+        var res = DataProvider.nowGameData.map.TryFindRange(coordinate, 0, ref sectorlist,true);
 
         if (res == 1)
         {

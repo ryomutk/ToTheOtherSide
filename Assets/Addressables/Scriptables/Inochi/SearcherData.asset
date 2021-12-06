@@ -26,9 +26,12 @@ MonoBehaviour:
       value: {fileID: 0}
   statusList:
     values:
-    - type: 0
-      value: 0
-    - type: 1
-      value: 0
-    - type: 2
-      value: 0
+      rawData:
+      - _key: 0
+        _value: 100
+      - _key: 1
+        _value: 20
+      - _key: 2
+        _value: 2
+      - _key: 9
+        _value: 1

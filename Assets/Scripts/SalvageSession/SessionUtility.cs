@@ -4,21 +4,16 @@ using System.Linq;
 
 public static class SessionUtility
 {
-    static Dictionary<BotType, int> botCostTable = new Dictionary<BotType, int>()
-    {
-        {BotType.miner,100},
-        {BotType.searcher,50}
-    };
 
-    public static bool TryCreateNewInochi(BotType type, out ArmBotData.Entity entity)
-    {
-        entity = null;
+    static int GetCost(BotType type){return InochiConfig.GetPurchaseCost(type);}
 
+    public static bool TryCreateNewInochi(BotType type)
+    {
         if (DataProvider.nowGameData.stockIsFull)
         {
             return false;
         }
-        else if (botCostTable[type] < DataProvider.nowGameData.resourceTable[ItemID.resource])
+        else if (GetCost(type) < DataProvider.nowGameData.resourceTable[ItemID.resource])
         {
             return false;
         }
@@ -28,8 +23,8 @@ public static class SessionUtility
         }
         else
         {
-            DataProvider.nowGameData.resourceTable[ItemID.resource] -= botCostTable[type];
-            entity = ArmBotData.CreateInstance(type);
+            DataProvider.nowGameData.resourceTable[ItemID.resource] -= GetCost(type);
+            var entity = ArmBotData.CreateInstance(type);
 
             DataProvider.nowGameData.AddStock(entity);
             return true;

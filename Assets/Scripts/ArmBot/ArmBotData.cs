@@ -85,6 +85,7 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             nowStatus = data.status.CopySelf();
             equipment = data._equipment;
             inventory = new InventoryData();
+            this.type = type;
             this.id = DateTime.Now.ToString("yyyyMMddHHmmss");
         }
 

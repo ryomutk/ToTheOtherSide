@@ -20,7 +20,7 @@ public class BotStatusList : ISalvageData
     [SerializeField, ListDrawerSettings(HideAddButton = true, HideRemoveButton = true)]
     SerializableDictionary<StatusType, int> values = new SerializableDictionary<StatusType, int>();
 
-    public StatusType[] types;
+    public StatusType[] types{get;}
     public void SetValue(StatusType type, int value)
     {
         values[type] = value;

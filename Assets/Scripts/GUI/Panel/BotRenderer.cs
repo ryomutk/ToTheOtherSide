@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class BotRenderer : MonoBehaviour, IUIRenderer, IEventListener<ExploreArg>, IEventListener<SessionEventArg>
+public class BotRenderer : MonoBehaviour, IEventListener<ExploreArg>, IEventListener<SessionEventArg>
 {
     //[SerializeField] SerializableDictionary<BotType,BotObject> icons;
     //テスト用にアイコンは一つ

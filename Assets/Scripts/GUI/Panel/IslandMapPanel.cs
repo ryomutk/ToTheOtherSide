@@ -4,20 +4,75 @@ using System.Collections.Generic;
 using System.Text;
 
 //島をならべしもの。
-//
-public class IslandUIController : UIPanel
+public class IslandMapPanel : UIPanel
 {
     public override PanelName name { get { return PanelName.IslandPanel; } }
     [SerializeField] InstantPool<SectorStepObject> stepPool;
     [SerializeField] SectorStepObject islandPref;
     [SerializeField] int initNum = 50;
-    [SerializeField] RectTransform islandOrigin;
+    [SerializeField] RectTransform _viewPointTransform;
+
+    //これ以上一気にZoomレベルが動いたらアニメーションを加える
+    [SerializeField] float animateZoomDeltaValue = 1;
+    public RectTransform viewpointOrigin { get { return _viewPointTransform; } }
     List<SectorStepObject> stepTable = new List<SectorStepObject>();
-
-
 
     //Logをとるためのビルダ
     StringBuilder logString = new StringBuilder();
+
+    IEnumerator FocusRoutine(Vector2 viewPosition, SmallTask task)
+    {
+        viewpointOrigin.position = viewPosition * -1 * viewpointOrigin.localScale.x;
+        yield return null;
+        task.compleated = true;
+    }
+
+    IEnumerator ZoomRoutine(float zoomLevel, SmallTask task)
+    {
+        var last = viewpointOrigin.localScale.x;
+
+        yield return StartCoroutine(HideMap());
+
+        viewpointOrigin.position *= zoomLevel / last;
+        viewpointOrigin.localScale = new Vector2(zoomLevel, zoomLevel);
+
+        yield return StartCoroutine(DrawMap());
+
+        task.compleated = true;
+    }
+
+    public ITask Zoom(float zoomLevel)
+    {
+        var task = new SmallTask();
+        var last = viewpointOrigin.localScale.x;
+        if (Mathf.Abs(zoomLevel - last) > animateZoomDeltaValue)
+        {
+            StartCoroutine(ZoomRoutine(zoomLevel, task));
+        }
+        else
+        {
+            viewpointOrigin.position *= zoomLevel / last;
+            viewpointOrigin.localScale = new Vector2(zoomLevel, zoomLevel);
+            task.compleated = true;
+        }
+
+        return task;
+    }
+
+    public ITask Focus(Vector2 coordinate)
+    {
+        var task = new SmallTask();
+        var position = coordinate * StepGenerationConfig.instance.gridToCanvasrate;
+
+        StartCoroutine(FocusRoutine(position, task));
+        return task;
+    }
+
+    public ITask Focus(Island target)
+    {
+        var coordinate = DataProvider.nowGameData.map.GetCoordinate(target);
+        return Focus(coordinate);
+    }
 
 
     protected override ITask Show()
@@ -39,17 +94,17 @@ public class IslandUIController : UIPanel
         return task;
     }
 
-    IEnumerator DrawMap(SmallTask task)
-    { 
+    IEnumerator DrawMap(SmallTask task = null)
+    {
         var map = DataProvider.nowGameData.map;
         var mapTask = new SmallTask();
 
         var baseDraw = base.Show();
 
-        yield return new WaitUntil(()=>baseDraw.compleated);
+        yield return new WaitUntil(() => baseDraw.compleated);
 
-        
-        stepPool = new InstantPool<SectorStepObject>(islandOrigin);
+
+        stepPool = new InstantPool<SectorStepObject>(viewpointOrigin);
         stepPool.CreatePool(islandPref, initNum, false);
 
         stepTable.Clear();
@@ -110,24 +165,29 @@ public class IslandUIController : UIPanel
 #endif
 
 
-        task.compleated = true;
+        if (task != null)
+        {
+            task.compleated = true;
+        }
     }
 
-    IEnumerator HideMap(SmallTask task)
+    IEnumerator HideMap(SmallTask task = null)
     {
         foreach (var step in stepTable)
         {
             var hideTask = step.renderer.Hide();
             yield return new WaitUntil(() => hideTask.compleated);
         }
-        UnloadData();
 
-        task.compleated = true;
+        if (task != null)
+        {
+            task.compleated = true;
+        }
     }
 
     void UnloadData()
     {
-        stepTable = null;
+        stepTable.Clear();
         stepPool = null;
     }
 

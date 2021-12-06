@@ -1,14 +1,18 @@
 using UnityEngine;
+using Sirenix.OdinInspector;
 
+
+[RequireComponent(typeof(IUIRenderer))]
 public abstract class UIPanel : MonoBehaviour, IEventListener<UIEventArg>
 {
     new IUIRenderer renderer;
     new public abstract PanelName name { get; }
-    protected bool showing{get;private set;}
+    protected bool showing { get; private set; }
     [SerializeField] UIPanel[] childrenPanels;
     //Trueの場合,ChildrenPanelの一番上のものをShowで見せる。
     //Falseの場合、すべてHideする
-    [SerializeField] bool showDefault;
+    [SerializeField,ShowIf("childrenPanels.Length > 0")] bool showDefault = false;
+    [SerializeField,ShowIf("childrenPanels.Length > 0")] bool swapChild = false;
 
     protected virtual void Start()
     {
@@ -37,6 +41,8 @@ public abstract class UIPanel : MonoBehaviour, IEventListener<UIEventArg>
 
     protected virtual ITask Show()
     {
+        //システムなどでこれを使ったりする時を考えてここで模範店至徳
+        showing = true;
         if (showDefault && childrenPanels.Length != 0)
         {
             childrenPanels[0].Show();
@@ -46,11 +52,16 @@ public abstract class UIPanel : MonoBehaviour, IEventListener<UIEventArg>
                 childrenPanels[i].Hide();
             }
         }
+
+
         return renderer.Draw();
     }
 
     protected virtual ITask Hide()
     {
+        //システムなどでこれを使ったりする時を考えてここで模範店至徳
+        showing = false;
+
         return renderer.Hide();
     }
 

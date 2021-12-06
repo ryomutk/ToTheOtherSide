@@ -1,8 +1,20 @@
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class UISignalEmitter : MonoBehaviour
 {
+    Button button;
+
+    void Start()
+    {
+        button = GetComponent<Button>();
+        if(button!=null)
+        {
+            button.onClick.AddListener(()=>Emit());
+        }
+    }
+
     [Serializable]
     class UIActions
     {

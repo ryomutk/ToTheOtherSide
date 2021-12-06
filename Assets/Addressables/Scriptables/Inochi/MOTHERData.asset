@@ -24,17 +24,21 @@ MonoBehaviour:
       value: {fileID: 0}
     - type: 4
       value: {fileID: 0}
+  maxBarrier: 0
   _status:
     values:
-    - type: 0
-      value: 1000
-    - type: 1
-      value: 10
-    - type: 5
-      value: 1
-    - type: 6
-      value: 5
-    - type: 7
-      value: 5
-    - type: 8
-      value: 10
+      rawData:
+      - _key: 0
+        _value: 1000
+      - _key: 1
+        _value: 5
+      - _key: 5
+        _value: 1
+      - _key: 6
+        _value: 5
+      - _key: 7
+        _value: 10
+      - _key: 8
+        _value: 10
+      - _key: 9
+        _value: 1

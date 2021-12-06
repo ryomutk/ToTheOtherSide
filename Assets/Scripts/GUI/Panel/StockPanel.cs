@@ -15,6 +15,18 @@ public class StockPanel : UIPanel
     [SerializeField] int initNum;
     [SerializeField] ScrollRect buttonArea;
     [SerializeField] float buttonGap = 50f;
+    int nowStocks;
+
+    void Update()
+    {
+        if(showing)
+        {
+            if(nowStocks!=DataProvider.nowGameData.stocks.Count)
+            {
+                StartCoroutine(OverrayUpdate());
+            }
+        }
+    }
 
     protected override void Start()
     {
@@ -51,6 +63,12 @@ public class StockPanel : UIPanel
     {
         var showTask = base.Show();
         yield return new WaitUntil(() => showTask.compleated);
+        yield return StartCoroutine(OverrayUpdate());
+        task.compleated = true;
+    }
+
+    IEnumerator OverrayUpdate()
+    {
 
         List<ITask> tasks = new List<ITask>();
         buttonPool.ForeachObject(x =>
@@ -66,8 +84,6 @@ public class StockPanel : UIPanel
         {
             yield return new WaitUntil(() => tasks[i].compleated);
         }
-
-        task.compleated = true;
     }
 
     protected override ITask Hide()

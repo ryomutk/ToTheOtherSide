@@ -6,6 +6,10 @@ using Sirenix.OdinInspector;
 public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
 {
     [SerializeField] float _gridToWorld = 0.2f;
+    [SerializeField] float _gridToMetor = 0.1f;
+    public float gridToCanvasrate { get { return _gridToWorld; } }
+    public float gridToMetor{get{return _gridToMetor;}}
+    
     [SerializeField] SectorStepObject rawIslandPref;
     public float islandScale{get;private set;}
 
@@ -28,7 +32,6 @@ public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
     [SerializeField] Vector2Int mapSize = new Vector2Int(100, 100);
     [SerializeField] int originTilling = 2;
     [SerializeField] int goalTilling = 2;
-    public float gridToCanvasrate { get { return _gridToWorld; } }
 
     //プレファブの島の半径の大きさ
     [SerializeField] int rawIslandSize = 1;
@@ -164,9 +167,11 @@ public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
     //どっちもできるだけ顕著にする。特に後者
     SectorMap InitIslands(SectorMap map)
     {
-
+        int count = 0;
         foreach (var step in map.mapData)
         {
+            step.Value.id = count;
+
             var cords = step.Key;
             var baseVol = map.miasmaMap[cords.x, cords.y] * resMiaMultiplier;
 
