@@ -9,10 +9,17 @@ public abstract class UIPanel : MonoBehaviour, IEventListener<UIEventArg>
     new public abstract PanelName name { get; }
     protected bool showing { get; private set; }
     [SerializeField] UIPanel[] childrenPanels;
+
+    //warningを表示するかの判定のみに使う
+    bool showCollision{get{return showDefault&&showAll;}}
     //Trueの場合,ChildrenPanelの一番上のものをShowで見せる。
     //Falseの場合、すべてHideする
+    //ShowAll優先。
+    [InfoBox("Show All優先です",InfoMessageType.Warning,"showCollision")]
     [SerializeField,ShowIf("@childrenPanels.Length > 0")] bool showDefault = false;
     [SerializeField,ShowIf("@childrenPanels.Length > 0")] bool swapChild = false;
+    //Parentと同時にすべて表示する。
+    [SerializeField,ShowIf("@childrenPanels.Length > 0")] bool showAll = false;
 
     protected virtual void Start()
     {
@@ -43,7 +50,14 @@ public abstract class UIPanel : MonoBehaviour, IEventListener<UIEventArg>
     {
         //システムなどでこれを使ったりする時を考えてここで模範店至徳
         showing = true;
-        if (showDefault && childrenPanels.Length != 0)
+        if(showAll && childrenPanels.Length!=0)
+        {
+            for(int i = 0;i<childrenPanels.Length;i++)
+            {
+                childrenPanels[i].Show();
+            }
+        }
+        else if (showDefault && childrenPanels.Length != 0)
         {
             childrenPanels[0].Show();
 

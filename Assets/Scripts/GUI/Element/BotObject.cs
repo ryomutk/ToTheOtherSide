@@ -7,13 +7,23 @@ using System.Collections;
 public class  BotObject:MonoBehaviour
 {
     new IUIRenderer renderer;
+    [SerializeField] UnityEngine.UI.Slider hpbar;
     void Start()
     {
         renderer = GetComponent<IUIRenderer>();
     }
 
+    public virtual void Load(ArmBotData.Entity entity)
+    {
+        hpbar.normalizedValue = entity.normalizedHp;
+    }
+
     public ITask Show()
     {
+        if(renderer==null)
+        {
+            renderer = GetComponent<IUIRenderer>();
+        }
         return renderer.Draw();
     }
 

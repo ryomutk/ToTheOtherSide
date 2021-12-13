@@ -1,25 +1,28 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class BotRenderer : MonoBehaviour, IEventListener<ExploreArg>, IEventListener<SessionEventArg>
+public class BotRenderer : UIPanel, IEventListener<ExploreArg>, IEventListener<SessionEventArg>
 {
+    public override PanelName name{get{return PanelName.BotRenderer;}}
     //[SerializeField] SerializableDictionary<BotType,BotObject> icons;
     //テスト用にアイコンは一つ
     [SerializeField] BotObject icon;
     [SerializeField] Transform mapOrigin;
     InstantPool<BotObject> botPool;
     Dictionary<ArmBotData.Entity, BotObject> iconDictionary = new Dictionary<ArmBotData.Entity, BotObject>();
-    bool drawing = false;
-    void Start()
+    protected override void Start()
     {
+        base.Start();
+
         EventManager.instance.Register<ExploreArg>(this, EventName.RealtimeExploreEvent);
         EventManager.instance.Register<SessionEventArg>(this, EventName.SessionEvent);
         botPool = new InstantPool<BotObject>(mapOrigin);
+        botPool.CreatePool(icon,2,false);
     }
 
     public ITask OnNotice(SessionEventArg arg)
     {
-        if (!drawing)
+        if (!showing)
         {
             return SmallTask.nullTask;
         }
@@ -45,7 +48,7 @@ public class BotRenderer : MonoBehaviour, IEventListener<ExploreArg>, IEventList
 
     public ITask OnNotice(ExploreArg arg)
     {
-        if (!drawing)
+        if (!showing)
         {
             return SmallTask.nullTask;
         }
@@ -54,21 +57,11 @@ public class BotRenderer : MonoBehaviour, IEventListener<ExploreArg>, IEventList
         if (arg is TravelExArg trarg)
         {
             //座標を上書きするだけ
-            iconDictionary[arg.from].transform.localPosition = trarg.coordinate * StepGenerationConfig.instance.gridToCanvasrate;
+            iconDictionary[arg.from].transform.localPosition = (trarg.coordinate-StepGenerationConfig.instance.originCoords) * StepGenerationConfig.instance.gridToCanvasrate;
+            iconDictionary[arg.from].Load(arg.from);
         }
 
         return SmallTask.nullTask;
     }
 
-    public ITask Draw()
-    {
-        drawing = true;
-        return SmallTask.nullTask;
-    }
-
-    public ITask Hide()
-    {
-        drawing = false;
-        return SmallTask.nullTask;
-    }
 }

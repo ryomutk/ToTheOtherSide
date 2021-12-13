@@ -36,6 +36,7 @@ where T : Component
             if (makeParent)
             {
                 parent = new GameObject(obj.name + "Pool").transform;
+                parent.localPosition = Vector3.zero;
             }
             else
             {

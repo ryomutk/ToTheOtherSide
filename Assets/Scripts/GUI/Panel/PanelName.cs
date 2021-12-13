@@ -14,5 +14,6 @@ public enum PanelName
     IslandInfoPanel = 1 << 7,
     MapInput        = 1 << 8,
     SessionAddon    = 1 << 9,
-    SummaryPanel    = 1 << 10
+    SummaryPanel    = 1 << 10,
+    BotRenderer = 1 <<11
 }

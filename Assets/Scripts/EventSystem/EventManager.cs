@@ -27,16 +27,13 @@ public class EventManager : Singleton<EventManager>
     {
         if (eventTable.TryGetValue(name, out var eve))
         {
-            try
+            var teve = eve as IEvent<T>;
+            if (teve == null)
             {
-                var teve = eve as IEvent<T>;
-                return teve.Notice(arg);
+                Debug.LogError(name + " is not event of arg " + typeof(T) + "!" + "(" + eve.GetType() + ")");
             }
-            catch (System.NullReferenceException)
-            {
-                Debug.LogError(name +" is not event of arg "+typeof(T)+"!"+"("+eve.GetType()+")");
-                return SmallTask.nullTask;
-            }
+            
+            return teve.Notice(arg);
         }
 
 #if DEBUG

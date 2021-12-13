@@ -1131,7 +1131,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1429799543}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1475,6 +1475,7 @@ MonoBehaviour:
   childrenPanels: []
   showDefault: 0
   swapChild: 0
+  showAll: 0
   summaryPanel: {fileID: 7012971015723241887}
   submitButton: {fileID: 332151497}
 --- !u!114 &844205000
@@ -2044,6 +2045,7 @@ MonoBehaviour:
   childrenPanels: []
   showDefault: 0
   swapChild: 0
+  showAll: 0
   resourceField: {fileID: 1843199636}
   cristalField: {fileID: 1776407625}
 --- !u!225 &1046733747
@@ -2682,6 +2684,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2080932868}
   - {fileID: 1542248455}
   - {fileID: 741758405}
   - {fileID: 2070158766}
@@ -2707,8 +2710,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   childrenPanels:
   - {fileID: 2070158769}
-  showDefault: 1
+  - {fileID: 2080932871}
+  showDefault: 0
   swapChild: 0
+  showAll: 1
   islandPref: {fileID: 7244816392088256459, guid: b0ea69a786fd3be47b97bb5f864027e2, type: 3}
   initNum: 50
   _viewPointTransform: {fileID: 1542248455}
@@ -2914,7 +2919,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1429799543}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3138,6 +3143,7 @@ MonoBehaviour:
   childrenPanels: []
   showDefault: 0
   swapChild: 0
+  showAll: 0
   _name: 8
 --- !u!1 &1773497647
 GameObject:
@@ -3702,6 +3708,7 @@ MonoBehaviour:
   childrenPanels: []
   showDefault: 0
   swapChild: 0
+  showAll: 0
   _name: 16
 --- !u!225 &1967798697
 CanvasGroup:
@@ -4082,7 +4089,7 @@ RectTransform:
   m_Children:
   - {fileID: 1554091183}
   m_Father: {fileID: 1429799543}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4135,6 +4142,7 @@ MonoBehaviour:
   childrenPanels: []
   showDefault: 0
   swapChild: 0
+  showAll: 0
   scaleSlider: {fileID: 1554091184}
 --- !u!225 &2070158770
 CanvasGroup:
@@ -4148,6 +4156,93 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &2080932867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2080932868}
+  - component: {fileID: 2080932870}
+  - component: {fileID: 2080932869}
+  - component: {fileID: 2080932871}
+  m_Layer: 5
+  m_Name: BotIconRender
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2080932868
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080932867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1429799543}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2080932869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080932867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac38a96d7249d4f4fa1900797af65a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &2080932870
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080932867}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: f2e28b997797e6c479f73e37ffe54b46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2080932871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080932867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 025d00a8ffdfe4b4c8e5ce69a8393a79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childrenPanels: []
+  showDefault: 0
+  swapChild: 0
+  showAll: 0
+  icon: {fileID: 3990996908744054895, guid: d0bb371790df6554c998254134794eda, type: 3}
+  mapOrigin: {fileID: 1542248455}
 --- !u!114 &2119389816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5593,6 +5688,7 @@ MonoBehaviour:
   childrenPanels: []
   showDefault: 0
   swapChild: 0
+  showAll: 0
   ignorePanel: 352
 --- !u!114 &3987066069000061331
 MonoBehaviour:
@@ -6889,6 +6985,7 @@ MonoBehaviour:
   childrenPanels: []
   showDefault: 0
   swapChild: 0
+  showAll: 0
   distanceField: {fileID: 996120377}
   resourceField: {fileID: 4879483558353404147}
   durationField: {fileID: 727679913}
@@ -7660,6 +7757,7 @@ MonoBehaviour:
   childrenPanels: []
   showDefault: 0
   swapChild: 0
+  showAll: 0
   nowCount: {fileID: 866072514}
   maxNum: {fileID: 1522826779}
   buttonPref: {fileID: 3413134604503514369, guid: 8d9b202ce79f0c34bba7063d8781f7ef, type: 3}
@@ -7865,6 +7963,7 @@ MonoBehaviour:
   - {fileID: 1967798696}
   showDefault: 1
   swapChild: 0
+  showAll: 0
   _name: 2
 --- !u!225 &8834273713049766156
 CanvasGroup:

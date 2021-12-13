@@ -36,6 +36,27 @@ public class SessionTracker : IEventListener<SessionEventArg>
             this.tracker = tracker;
             EventManager.instance.Register(this, EventName.RealtimeExploreEvent);
         }
+        public void RegisterSession(SessionData data)
+        {
+            var start = Vector2Int.FloorToInt(data.startCoordinate);
+
+            if(!locationTable.ContainsKey(start))
+            {
+                locationTable[start] = new List<SessionData>();
+            }
+            locationTable[start].Add(data);
+        }
+        public void DisregisterSession(SessionData data)
+        {
+            var end = Vector2Int.FloorToInt(data.nowCoordinate);
+            var result = locationTable[end].Remove(data);
+#if DEBUG
+            if (!result)
+            {
+                Debug.LogError("Session not found!");
+            }
+#endif
+        }
         public ITask OnNotice(ExploreArg arg)
         {
             if (arg.type == ExploreObjType.Travel)
@@ -67,13 +88,11 @@ public class SessionTracker : IEventListener<SessionEventArg>
                 }
 
                 var now = Vector2Int.FloorToInt(targ.coordinate);
-                if (locationTable[now] == null)
+                if (!locationTable.ContainsKey(now))
                 {
                     locationTable[now] = new List<SessionData>();
                 }
-
                 locationTable[now].Add(session);
-
             }
             return SmallTask.nullTask;
         }
@@ -99,12 +118,16 @@ public class SessionTracker : IEventListener<SessionEventArg>
             //現状そんなことはないはずで、それにコストが見合わないため、とりあえずこのままにする
             _ongoingSessionTable[arg.data.master.id] = newSession;
             var realtimeLoad = EventManager.instance.Register(newSession, EventName.RealtimeExploreEvent);
+
+            locationTracker.RegisterSession(newSession);
+
             return realtimeLoad;
         }
         else if (arg.state == SessionState.compleate)
         {
             var targetSession = _ongoingSessionTable[arg.data.master.id];
             targetSession.Compleated();
+            locationTracker.DisregisterSession(arg.data);
             _ongoingSessionTable.Remove(arg.data.master.id);
             EventManager.instance.Disregister(targetSession, EventName.RealtimeExploreEvent);
         }
