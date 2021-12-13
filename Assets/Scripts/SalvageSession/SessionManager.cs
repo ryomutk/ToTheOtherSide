@@ -70,7 +70,7 @@ public class SessionManager : MonoBehaviour, IEventListener<SessionEventArg>
         var summaryData = new SessionData(sessionMaster, startCords);
 
         //EvBuilderとSequencerを準備
-        ISessionSequencer sequencer = new SessionSequencerOnTheCliff(DataProvider.nowGameData.map, sessionMaster, startCords);
+        ISessionSequencer sequencer = new SessionSequencerOnTheCliff(DataProvider.nowGameData.map, sessionMaster, startCords,summaryData);
 
         var eventRegister = EventManager.instance.Register(summaryData, EventName.SystemExploreEvent);
         yield return new WaitUntil(() => eventRegister.compleated);

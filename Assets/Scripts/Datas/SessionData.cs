@@ -45,7 +45,7 @@ public class SessionData : ISalvageData, IEventListener<ExploreArg>
 #if DEBUG
                 Debug.Log("nowCoordinate" + nowCoordinate);
 #endif
-                nowCoordinate = (arg as TravelExArg).coordinate;
+                nowCoordinate += (arg as TravelExArg).traveledVec;
             }
             else if (arg is StepActionArg aarg)
             {

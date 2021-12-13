@@ -36,8 +36,6 @@ public class SearcherData : ArmBotData
                 }
             }
 
-            hp -= (int)MapUtility.GetMiasmaDamage(coordinate);
-
             return true;
         }
 

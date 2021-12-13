@@ -39,12 +39,10 @@ public class SerializableExArg : ExploreArg
 public class TravelExArg : SerializableExArg
 {
     public override ExploreObjType type{get{return ExploreObjType.Travel;}}
-    public Vector2 coordinate { get; }
     public Vector2 traveledVec { get; }
 
-    public TravelExArg(ArmBotData.Entity from, Vector2 coordinate, Vector2 traveledVec) : base(from)
+    public TravelExArg(ArmBotData.Entity from, Vector2 traveledVec) : base(from)
     {
-        this.coordinate = coordinate;
         this.traveledVec = traveledVec;
     }
 
@@ -53,8 +51,6 @@ public class TravelExArg : SerializableExArg
     {
         builder.AppendLine();
         builder.AppendLine("--TRAVELED ARG--");
-        builder.Append("coordinate:");
-        builder.AppendLine(coordinate.ToString());
         builder.Append("  traveled:");
         builder.AppendLine(traveledVec.ToString());
         builder.AppendLine();

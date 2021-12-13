@@ -53,19 +53,19 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
 
     //セッションで使うInstanceを取得
     [Serializable]
-    public abstract class Entity:ISalvageData
-    {   
+    public abstract class Entity : ISalvageData
+    {
         //変更されてはたまったものじゃないので公開しない
         //session中、jsonで保存するためにSerializeする
         [SerializeField] BotStatusList defaultStatus;
         [SerializeField] EquipmentHolder equipment;
         [SerializeField] InventoryData inventory;
-        public StatusType[] statusTypes{get{return nowStatus.types;}}
-        public string id{get;}
+        public StatusType[] statusTypes { get { return nowStatus.types; } }
+        public string id { get; }
         public BotType type { get; }
         public Vector2 facingDirection { get; set; }
         public List<EntityMod> mods = new List<EntityMod>();
-        
+
 
         protected BotStatusList nowStatus;
         public int hp
@@ -76,10 +76,10 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
 
         public float normalizedHp
         {
-            get{return nowStatus.GetValue(StatusType.hp).Value/defaultStatus.GetValue(StatusType.hp).Value;}
+            get { return nowStatus.GetValue(StatusType.hp).Value / defaultStatus.GetValue(StatusType.hp).Value; }
         }
 
-        public Entity(ArmBotData data,BotType type)
+        public Entity(ArmBotData data, BotType type)
         {
             defaultStatus = data.status;
             nowStatus = data.status.CopySelf();
@@ -89,18 +89,31 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             this.id = DateTime.Now.ToString("yyyyMMddHHmmss");
         }
 
-        public virtual bool OnInteract(SectorMap map,Vector2 coordinate)
+        public virtual bool OnInteract(SectorMap map, Vector2 coordinate)
         {
-            for(int i = 0;i<mods.Count;i++)
+            for (int i = 0; i < mods.Count; i++)
             {
-                if(mods[i].exTiming == StepActionType.interact)
+                if (mods[i].exTiming == StepActionType.interact)
                 {
                     mods[i].Execute(this);
                 }
             }
 
+            hp -= (int)MapUtility.GetMiasmaDamage(coordinate);
+
             return true;
         }
+
+        protected virtual void Move()
+        {
+            var delta = facingDirection.normalized * GetStatus(StatusType.speed) * SessionConfig.instance.speedMultiplier;
+
+            var arg = new TravelExArg(this, delta);
+            EventManager.instance.Notice<ExploreArg>(EventName.SystemExploreEvent, arg);
+
+        }
+
+
         //終了条件はbotによって違う
         public abstract bool CheckIfEnd();
 
@@ -133,23 +146,23 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             inventory.Add(item);
 
             var arg = new ItemExArg(this, item, ItemActionType.get);
-            EventManager.instance.Notice<ExploreArg>(EventName.SystemExploreEvent,arg);
+            EventManager.instance.Notice<ExploreArg>(EventName.SystemExploreEvent, arg);
 
             return inventory.items.Count;
         }
 
-        public bool ModStatus(StatusType statusType,Func<int,int> modifier)
+        public bool ModStatus(StatusType statusType, Func<int, int> modifier)
         {
-            var max = InochiConfig.GetMaxValue(type,statusType);
+            var max = InochiConfig.GetMaxValue(type, statusType);
             var value = nowStatus.GetValue(statusType).Value;
-            
+
             value = modifier(value);
-            if(max != null && value > max)
+            if (max != null && value > max)
             {
                 return false;
             }
 
-            nowStatus.SetValue(statusType,value);
+            nowStatus.SetValue(statusType, value);
             return true;
         }
     }
@@ -157,19 +170,19 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
     protected List<ArmBotData> datas = new List<ArmBotData>();
 
     protected abstract Entity CreateInstance();
-    
+
 
     public static Entity CreateInstance(BotType type)
     {
-        for(int i = 0;i < variantInstances.Count;i++)
+        for (int i = 0; i < variantInstances.Count; i++)
         {
-            if(variantInstances[i].type == type)
+            if (variantInstances[i].type == type)
             {
                 return variantInstances[i].CreateInstance();
             }
         }
 
-        Debug.LogError("Bot of type:"+type+" not found");
+        Debug.LogError("Bot of type:" + type + " not found");
         return null;
     }
 }

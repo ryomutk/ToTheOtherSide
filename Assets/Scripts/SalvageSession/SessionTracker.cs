@@ -63,7 +63,7 @@ public class SessionTracker : IEventListener<SessionEventArg>
             {
                 var targ = arg as TravelExArg;
                 var session = tracker._ongoingSessionTable[targ.from.id];
-                var last = Vector2Int.FloorToInt(targ.coordinate - targ.traveledVec);
+                var last = Vector2Int.FloorToInt(session.nowCoordinate - targ.traveledVec);
                 var targetSessions = locationTable[last];
                 if (targetSessions.Count == 1)
                 {
@@ -87,7 +87,7 @@ public class SessionTracker : IEventListener<SessionEventArg>
 #endif
                 }
 
-                var now = Vector2Int.FloorToInt(targ.coordinate);
+                var now = Vector2Int.FloorToInt(session.nowCoordinate);
                 if (!locationTable.ContainsKey(now))
                 {
                     locationTable[now] = new List<SessionData>();
