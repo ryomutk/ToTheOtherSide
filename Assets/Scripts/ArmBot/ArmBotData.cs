@@ -133,7 +133,7 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             inventory.Add(item);
 
             var arg = new ItemExArg(this, item, ItemActionType.get);
-            EventManager.instance.Notice(EventName.SystemExploreEvent,arg);
+            EventManager.instance.Notice<ExploreArg>(EventName.SystemExploreEvent,arg);
 
             return inventory.items.Count;
         }

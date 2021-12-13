@@ -27,8 +27,15 @@ public class EventManager : Singleton<EventManager>
     {
         if (eventTable.TryGetValue(name, out var eve))
         {
-            var teve = eve as IEvent<T>;
-            return teve.Notice(arg);
+            try
+            {
+                var teve = eve as IEvent<T>;
+                return teve.Notice(arg);
+            }
+            catch (System.NullReferenceException)
+            {
+                Debug.LogError(name +" is not event of arg "+typeof(T)+"!"+"("+eve.GetType()+")");
+            }
         }
 
 #if DEBUG
@@ -145,7 +152,7 @@ public class EventManager : Singleton<EventManager>
     where T : SalvageEventArg
     {
         yield return StartCoroutine(LoadEvent(name));
-        
+
         var eve = eventTable[name] as IEvent<T>;
         eve.Register(listener);
         task.compleated = true;
@@ -155,7 +162,7 @@ public class EventManager : Singleton<EventManager>
 
     IEnumerator LoadEvent(EventName name)
     {
-        if(eventTable.ContainsKey(name))
+        if (eventTable.ContainsKey(name))
         {
             yield break;
         }

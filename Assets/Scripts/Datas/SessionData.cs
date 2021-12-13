@@ -12,6 +12,7 @@ using Sirenix.OdinInspector;
 [Serializable]
 public class SessionData : ISalvageData, IEventListener<ExploreArg>
 {
+    public string id{get;}
     public bool isFinished { get { return nowState == SessionState.compleated; } }
     public ArmBotData.Entity master { get; }
 
@@ -44,15 +45,15 @@ public class SessionData : ISalvageData, IEventListener<ExploreArg>
 #if DEBUG
                 Debug.Log("nowCoordinate" + nowCoordinate);
 #endif
-                nowCoordinate += (arg as TravelExArg).coordinate;
+                nowCoordinate = (arg as TravelExArg).coordinate;
             }
-            else if (arg is StepExArg sarg)
+            else if (arg is StepActionArg aarg)
             {
-                if (!visitedPlace.Contains(sarg.step))
+                if (!visitedPlace.Contains(aarg.stepId))
                 {
-                    visitedPlace.Add(sarg.step);
+                    visitedPlace.Add(aarg.stepId);
                 }
-                nowPlace = sarg.step;
+                nowPlace = aarg.stepId;
             }
 
             eventsOccoured.Add(arg as SerializableExArg);
@@ -68,6 +69,7 @@ public class SessionData : ISalvageData, IEventListener<ExploreArg>
 
     public SessionData(ArmBotData.Entity wingMan,Vector2 startCoordinate)
     {
+        this.id = System.DateTime.Now.ToString("yyyyMMddHHmmss");
         this.master = wingMan;
         this.nowCoordinate = startCoordinate;
         this.startCoordinate = startCoordinate;

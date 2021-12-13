@@ -9,6 +9,8 @@ public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
     [SerializeField] float _gridToMetor = 0.1f;
     public float gridToCanvasrate { get { return _gridToWorld; } }
     public float gridToMetor{get{return _gridToMetor;}}
+    [SerializeField]float _miasmaDamageRate = 0.01f;
+    public float miasmaDamageRate{get{return _miasmaDamageRate;}}
     
     [SerializeField] SectorStepObject rawIslandPref;
     public float islandScale{get;private set;}

@@ -21,8 +21,8 @@ public class SummaryInfoPanel:UIPanel,ILoadSalvageData<SessionData>
             #endif
             return SmallTask.nullTask;
         }
-        var island = data.visitedPlace[0];
-        var metaIsland = IslandUtility.GetMetaData(island);
+        var island = data.visitedPlace[data.visitedPlace.Count];
+        var metaIsland = MapUtility.GetMetaData(island);
         distanceField.text = metaIsland.metorDistanceFM.ToString();
         var durationSec = SessionConfig.instance.GetSessionDuration(data);
         var min = (int)durationSec/60;

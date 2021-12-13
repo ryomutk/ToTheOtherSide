@@ -28,12 +28,14 @@ public class SearcherData : ArmBotData
 
             if (result > 0)
             {
-                for (int i = 0; i < result; i++)
+                for (int i = 1; i <= result; i++)
                 {
                     var arg = new StepActionArg(this, StepActionType.confirm, foundSteps[foundSteps.Count - i]);
-                    EventManager.instance.Notice(EventName.SystemExploreEvent,arg);
+                    EventManager.instance.Notice<ExploreArg>(EventName.SystemExploreEvent,arg);
                 }
             }
+
+            hp -= (int)MapUtility.GetMiasmaDamage(coordinate);
 
             return true;
         }

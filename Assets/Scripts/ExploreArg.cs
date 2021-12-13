@@ -38,6 +38,7 @@ public class SerializableExArg : ExploreArg
 //いちじょーほー
 public class TravelExArg : SerializableExArg
 {
+    public override ExploreObjType type{get{return ExploreObjType.Travel;}}
     public Vector2 coordinate { get; }
     public Vector2 traveledVec { get; }
 

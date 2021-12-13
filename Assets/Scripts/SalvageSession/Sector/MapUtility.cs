@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public static class IslandUtility
+public static class MapUtility
 {
     class IslandMetaData : IMetaIsland
     {
@@ -33,5 +33,16 @@ public static class IslandUtility
         data.metorDistanceFM = (data.rawCoordinate-DataProvider.nowGameData.currentMOTHERCoordinate).magnitude*StepGenerationConfig.instance.gridToMetor;
 
         return data;
+    }
+
+    public static int GetMiasma(Vector2 coordinate)
+    {
+        var coords = Vector2Int.FloorToInt(coordinate);
+        return DataProvider.nowGameData.map.miasmaMap[coords.x,coords.y];
+    }
+
+    public static float GetMiasmaDamage(Vector2 coordnate)
+    {
+        return GetMiasma(coordnate)*StepGenerationConfig.instance.miasmaDamageRate;     
     }
 }

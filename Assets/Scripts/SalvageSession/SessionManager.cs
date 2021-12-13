@@ -5,15 +5,17 @@ using Sirenix.OdinInspector;
 using System;
 using System.Text;
 
+//ドローンの飛行セッション管理を行う
 public class SessionManager : MonoBehaviour, IEventListener<SessionEventArg>
 {
     ISessionSequencer sequencer = null;
     SessionTracker tracker = new SessionTracker();
+    
 
 
     void Start()
     {
-        EventManager.instance.Register(this,EventName.SessionEvent);
+        EventManager.instance.Register(tracker,EventName.SessionEvent);
         EventManager.instance.Register(this, EventName.SessionEvent);
     }
 

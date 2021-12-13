@@ -19,7 +19,6 @@ public class GameSessionData:ISalvageData
     public ReadOnlyCollection<ArmBotData.Entity> stocks{get{return _stocks.AsReadOnly();}}
     List<ArmBotData.Entity> _stocks = new List<ArmBotData.Entity>();
     
-    
     public bool AddStock(ArmBotData.Entity entity)
     {
         if(!stockIsFull)

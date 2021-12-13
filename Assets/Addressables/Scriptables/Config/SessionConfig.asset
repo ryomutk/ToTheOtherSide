@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7774bcadb9c4d4b4e83ae6f9ea22d28a, type: 3}
   m_Name: SessionConfig
   m_EditorClassIdentifier: 
-  _speedMultiplier: 1
+  _speedMultiplier: 0.01
   tickDuration: 0.5
+  _sourceSheldMultiplier: 0.1

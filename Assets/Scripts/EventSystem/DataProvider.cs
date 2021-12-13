@@ -46,6 +46,8 @@ public class DataProvider : Singleton<DataProvider>, IEventListener<SystemEventA
         var loadTask = DataManager.LoadDataAsync(l_gameDataLabel);
         yield return new WaitUntil(() => loadTask.compleated);
         gameData = loadTask.result as SalvageValuable<ISalvageData>;
+
+
         gameData.value = new GameSessionData();
 
         InitMap();
@@ -56,6 +58,7 @@ public class DataProvider : Singleton<DataProvider>, IEventListener<SystemEventA
 
         nowGameData.MOTHER = ArmBotData.CreateInstance(BotType.MOTHER);
 
+        SessionUtility.TryCreateNewInochi(BotType.searcher);
 
         task.compleated = true;
     }
