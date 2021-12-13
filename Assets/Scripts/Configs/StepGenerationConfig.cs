@@ -29,6 +29,8 @@ public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
         islandScale = targetSizeWorld/nowWorldChohen;
     }
 
+    //0,0以外でのx=0の場所のMiasma
+    [SerializeField] int _minMiasma = 5;
     public float maxMiasma { get { return _maxMiasma; } }
     [SerializeField] float _maxMiasma = 200;
     [SerializeField] Vector2Int mapSize = new Vector2Int(100, 100);
@@ -115,10 +117,12 @@ public class StepGenerationConfig : SingleScriptableObject<StepGenerationConfig>
     //とりあえずMiasmaはy座標だけを指標に設定。上がり方は…二次関数
     int GetMiasmaLv(int x, int y)
     {
-        var max = Mathf.Sqrt(_maxMiasma);
-        var normalizedVal = y * max / (float)mapSize.y;
-
-        return (int)Mathf.Pow(normalizedVal, 2);
+        if(x==originCoords.x&&y==originCoords.y){return 0;}
+        var maxDelta = _maxMiasma-_minMiasma;
+        var max = Mathf.Sqrt(maxDelta);
+        var normalizedVal =  (y * max / (float)mapSize.y);
+        
+        return _minMiasma+(int)Mathf.Pow(normalizedVal,2);
     }
 
     //島を配置

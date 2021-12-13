@@ -9,12 +9,13 @@ using System.Text;
 public class SessionManager : MonoBehaviour, IEventListener<SessionEventArg>
 {
     ISessionSequencer sequencer = null;
-    SessionTracker tracker = new SessionTracker();
+    SessionTracker tracker;
     
 
 
     void Start()
     {
+        tracker = new SessionTracker();
         EventManager.instance.Register(tracker,EventName.SessionEvent);
         EventManager.instance.Register(this, EventName.SessionEvent);
     }
@@ -116,7 +117,7 @@ public class SessionManager : MonoBehaviour, IEventListener<SessionEventArg>
         {
             var duration = SessionConfig.instance.GetDuration(exArg);
             yield return new WaitForSeconds(duration);
-            var stepTask = EventManager.instance.Notice(EventName.RealtimeExploreEvent, exArg);
+            var stepTask = EventManager.instance.Notice<ExploreArg>(EventName.RealtimeExploreEvent, exArg);
 
 
             //処理おおきにつき、ちゃんと確認

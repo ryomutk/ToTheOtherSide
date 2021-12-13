@@ -8,6 +8,7 @@ public interface IMetaIsland
     StepState state{get;}
     int miasma{get;}
     int barrier{get;}
+    int resource{get;}
     /// <summary>
     /// MOTHERからのきょり
     /// </summary>

@@ -7,6 +7,7 @@ public class SummaryInfoPanel:UIPanel,ILoadSalvageData<SessionData>
 {
     public override PanelName name => PanelName.SummaryPanel;
     [SerializeField] TMP_Text distanceField;
+    [SerializeField] TMP_Text resourceField;
     [SerializeField] TMP_Text durationField; 
     [SerializeField] TMP_Text nameField;
     [SerializeField] TMP_Text placeMiasma;
@@ -21,7 +22,8 @@ public class SummaryInfoPanel:UIPanel,ILoadSalvageData<SessionData>
             #endif
             return SmallTask.nullTask;
         }
-        var island = data.visitedPlace[data.visitedPlace.Count];
+
+        var island = data.visitedPlace[data.visitedPlace.Count-1];
         var metaIsland = MapUtility.GetMetaData(island);
         distanceField.text = metaIsland.metorDistanceFM.ToString();
         var durationSec = SessionConfig.instance.GetSessionDuration(data);
@@ -30,7 +32,7 @@ public class SummaryInfoPanel:UIPanel,ILoadSalvageData<SessionData>
         nameField.text = metaIsland.name;
         placeMiasma.text = metaIsland.miasma.ToString();
         barrier.text = metaIsland.barrier.ToString();
-
+        resourceField.text = metaIsland.resource.ToString();
         return Show();
     }
     

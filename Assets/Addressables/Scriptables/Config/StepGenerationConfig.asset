@@ -16,6 +16,7 @@ MonoBehaviour:
   _gridToMetor: 0.1
   _miasmaDamageRate: 1
   rawIslandPref: {fileID: 7244816392088256459, guid: b0ea69a786fd3be47b97bb5f864027e2, type: 3}
+  _minMiasma: 1
   _maxMiasma: 200
   mapSize: {x: 100, y: 100}
   originTilling: 2

@@ -9,11 +9,20 @@ public class IslandSessionAddon : IslandMapAddon, IEventListener<SessionEventArg
     ILoadSalvageData<SessionData> summaryLoader;
     [SerializeField] Button submitButton;
 
+    //Submitを押すとスタートするセッション。
+    //閉じられたときにnullになる
+    SessionData sessionReady = null;
+
     class SessionInfo
     {
         public Vector2? towardCoords = null;
         public string selectedBot = null;
         public bool filled { get { return towardCoords != null && selectedBot != null; } }
+        public void Reset()
+        {
+            towardCoords = null;
+            selectedBot = null;
+        }
     }
 
     protected override void Start()
@@ -39,6 +48,12 @@ public class IslandSessionAddon : IslandMapAddon, IEventListener<SessionEventArg
         {
             var motCord = DataProvider.nowGameData.currentMOTHERCoordinate;
             SessionUtility.RequestSummary(sessionInfo.selectedBot,Vector2Int.RoundToInt(motCord),sessionInfo.towardCoords.Value-motCord);
+            sessionInfo.Reset();
+        }
+        else if(sessionReady!=null)
+        {
+            SessionUtility.RequestSession(sessionReady);
+            sessionReady = null;
         }
         else
         {
@@ -48,11 +63,14 @@ public class IslandSessionAddon : IslandMapAddon, IEventListener<SessionEventArg
         }
     }
 
+
     public ITask OnNotice(SessionEventArg arg)
     {
         if (arg.state == SessionState.summary)
         {
+            sessionReady = arg.data;
             summaryLoader.Load(arg.data);
+            EventManager.instance.Notice(EventName.UIEvent,new UIEventArg(PanelName.BackPanel,ShowType.overrap,PanelAction.show));
         }
 
         return SmallTask.nullTask;
@@ -77,6 +95,7 @@ public class IslandSessionAddon : IslandMapAddon, IEventListener<SessionEventArg
 
     protected override ITask Show()
     {
+        sessionInfo.Reset();
         EventManager.instance.Register<SessionEventArg>(this,EventName.SessionEvent);
         EventManager.instance.Register<SelectableArg>(this,EventName.SelectableEvent);
         return base.Show();
@@ -84,6 +103,8 @@ public class IslandSessionAddon : IslandMapAddon, IEventListener<SessionEventArg
 
     protected override ITask Hide()
     {
+        sessionReady = null;
+        sessionInfo.Reset();
         EventManager.instance.Disregister<SessionEventArg>(this,EventName.SessionEvent);
         EventManager.instance.Disregister<SelectableArg>(this,EventName.SelectableEvent);
         return base.Hide();

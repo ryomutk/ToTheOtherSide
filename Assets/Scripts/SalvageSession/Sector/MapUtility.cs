@@ -11,6 +11,7 @@ public static class MapUtility
         public int miasma { get; set;}
         public int barrier { get; set;}
         public float metorDistanceFM { get;set; }
+        public int resource{get;set;}
     }
     
     public static IMetaIsland GetMetaData(int islandID)
@@ -24,6 +25,7 @@ public static class MapUtility
         data.rawCoordinate = DataProvider.nowGameData.map.GetCoordinate(island);
         data.localCoordinate = data.rawCoordinate - StepGenerationConfig.instance.originCoords;
         data.name = island.name;
+        data.resource = island.resourceLv;
         //data.state = 
 
         var (x,y) = ((int)data.rawCoordinate.x,(int)data.localCoordinate.y);

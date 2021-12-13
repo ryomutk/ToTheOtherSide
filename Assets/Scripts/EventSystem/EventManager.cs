@@ -35,6 +35,7 @@ public class EventManager : Singleton<EventManager>
             catch (System.NullReferenceException)
             {
                 Debug.LogError(name +" is not event of arg "+typeof(T)+"!"+"("+eve.GetType()+")");
+                return SmallTask.nullTask;
             }
         }
 

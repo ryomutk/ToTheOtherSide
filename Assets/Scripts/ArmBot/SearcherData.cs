@@ -30,6 +30,7 @@ public class SearcherData : ArmBotData
             {
                 for (int i = 1; i <= result; i++)
                 {
+                    //見えた島を通知
                     var arg = new StepActionArg(this, StepActionType.confirm, foundSteps[foundSteps.Count - i]);
                     EventManager.instance.Notice<ExploreArg>(EventName.SystemExploreEvent,arg);
                 }

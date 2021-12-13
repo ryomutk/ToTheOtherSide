@@ -33,6 +33,7 @@ public class SessionTracker : IEventListener<SessionEventArg>
         SessionTracker tracker;
         public LocationTracker(SessionTracker tracker)
         {
+            this.tracker = tracker;
             EventManager.instance.Register(this, EventName.RealtimeExploreEvent);
         }
         public ITask OnNotice(ExploreArg arg)
