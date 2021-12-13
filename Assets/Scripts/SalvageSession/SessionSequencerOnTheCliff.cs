@@ -52,7 +52,7 @@ public class SessionSequencerOnTheCliff : ISessionSequencer
 
             Utility.LogWriter.Log(builder.ToString(), "TravelLog", true);
 
-            entity.OnInteract(map, selfData.nowCoordinate);
+            entity.OnUpdate(map, selfData.nowCoordinate);
         }
 
     }

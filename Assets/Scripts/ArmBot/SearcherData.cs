@@ -14,14 +14,22 @@ public class SearcherData : ArmBotData
 
     public class SearcherEntity : Entity
     {
+        public override Entity GetGhost()
+        {
+            var copy = base.GetGhost() as SearcherEntity;
+            copy.foundSteps = this.foundSteps.GetRange(0,foundSteps.Count);
+            return copy;
+        }
         public SearcherEntity(ArmBotData data) : base(data,BotType.searcher)
         { }
 
         List<int> _foundSteps = new List<int>();
         public List<int> foundSteps { get { return _foundSteps; } private set { _foundSteps = value; } }
 
-        public override bool OnInteract(SectorMap map, Vector2 coordinate)
+        public override bool OnUpdate(SectorMap map, Vector2 coordinate)
         {
+            base.OnUpdate(map,coordinate);
+            base.Move();
             //発見報告をするンゴねぇ
             //目視で角煮！
             var result = map.TryFindRange(coordinate, GetStatus(StatusType.search), ref _foundSteps);

@@ -79,6 +79,14 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             get { return nowStatus.GetValue(StatusType.hp).Value / defaultStatus.GetValue(StatusType.hp).Value; }
         }
 
+        public virtual Entity GetGhost()
+        {
+            var copy = this.MemberwiseClone() as Entity;
+            copy.nowStatus = this.nowStatus.CopySelf();
+            copy.mods = this.mods.GetRange(0,mods.Count);
+            return copy;
+        }
+
         public Entity(ArmBotData data, BotType type)
         {
             defaultStatus = data.status;
@@ -89,7 +97,7 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
             this.id = DateTime.Now.ToString("yyyyMMddHHmmss");
         }
 
-        public virtual bool OnInteract(SectorMap map, Vector2 coordinate)
+        public virtual bool OnUpdate(SectorMap map, Vector2 coordinate)
         {
             for (int i = 0; i < mods.Count; i++)
             {
@@ -101,13 +109,18 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
 
             var delta = -(int)MapUtility.GetMiasmaDamage(coordinate);
             hp += delta;
-
-            var arg = new BotEventArg(this, BotActionType.damaged, StatusType.hp, delta);
-            EventManager.instance.Notice(EventName.BotEvent, arg);
             
+            var barg = new BotEventArg(this, BotActionType.damaged, StatusType.hp, delta);
+            EventManager.instance.Notice(EventName.BotEvent, barg);
+
             return true;
         }
 
+
+        /// <summary>
+        /// 継承先で呼んでください
+        /// 私は知りません。
+        /// </summary>
         protected virtual void Move()
         {
             var delta = facingDirection.normalized * GetStatus(StatusType.speed) * SessionConfig.instance.speedMultiplier;

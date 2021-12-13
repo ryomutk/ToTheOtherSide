@@ -39,7 +39,7 @@ public class MOTHERData : ArmBotData
             return hp >= 0;
         }
 
-        public override bool OnInteract(SectorMap map, Vector2 coordinate)
+        public override bool OnUpdate(SectorMap map, Vector2 coordinate)
         {
             throw new System.NotImplementedException();
         }
