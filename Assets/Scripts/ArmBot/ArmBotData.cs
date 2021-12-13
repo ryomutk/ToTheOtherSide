@@ -65,8 +65,8 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
         public BotType type { get; }
         public Vector2 facingDirection { get; set; }
         public List<EntityMod> mods = new List<EntityMod>();
-        public Entity realBody{get;private set;}
-        public bool isGhost{get{return realBody!=null;}}
+        public Entity realBody { get; private set; }
+        public bool isGhost { get { return realBody != null; } }
 
 
         protected BotStatusList nowStatus;
@@ -83,11 +83,15 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
 
         public virtual Entity GetGhost()
         {
-            if(this.isGhost){Debug.LogError("I am ghost");}
+            if (this.isGhost)
+            {
+                Debug.LogError("I am ghost");
+                return null;
+            }
 
             var copy = this.MemberwiseClone() as Entity;
             copy.nowStatus = this.nowStatus.CopySelf();
-            copy.mods = this.mods.GetRange(0,mods.Count);
+            copy.mods = this.mods.GetRange(0, mods.Count);
             copy.realBody = this;
             return copy;
         }
@@ -114,7 +118,7 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
 
             var delta = -(int)MapUtility.GetMiasmaDamage(coordinate);
             hp += delta;
-            
+
             var barg = new BotEventArg(this, BotActionType.damaged, StatusType.hp, delta);
             EventManager.instance.Notice(EventName.BotEvent, barg);
 
