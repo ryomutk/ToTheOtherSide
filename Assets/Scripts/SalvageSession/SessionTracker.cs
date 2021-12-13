@@ -12,10 +12,13 @@ public class SessionTracker : IEventListener<SessionEventArg>
     Dictionary<string, SessionData> _ongoingSessionTable = new Dictionary<string, SessionData>();
     LocationTracker locationTracker;
 
+    public Dictionary<string,SessionData> ongoingSessionTable{get{return _ongoingSessionTable;}}
+
     public SessionTracker()
     {
         locationTracker = new LocationTracker(this);
     }
+
 
 
     //StartEv か EndEvが発行されたとき
@@ -112,11 +115,20 @@ public class SessionTracker : IEventListener<SessionEventArg>
         //Sessionが動いていないとき
         if (arg.state == SessionState.start)
         {
-            var newSession = new SessionData(arg.data.master, arg.data.startCoordinate);
+            SessionData newSession = null;
+            if(arg.data.master.isGhost)
+            {
+                newSession = new SessionData(arg.data.master.realBody, arg.data.startCoordinate);
+            }
+            else
+            {
+                Debug.LogWarning("why are you alive?");
+                newSession = new SessionData(arg.data.master,arg.data.startCoordinate);
+            }
 
             //1機体複数セッションはここでのみ対応していない。
             //現状そんなことはないはずで、それにコストが見合わないため、とりあえずこのままにする
-            _ongoingSessionTable[arg.data.master.id] = newSession;
+            _ongoingSessionTable[newSession.master.id] = newSession;
             var realtimeLoad = EventManager.instance.Register(newSession, EventName.RealtimeExploreEvent);
 
             locationTracker.RegisterSession(newSession);

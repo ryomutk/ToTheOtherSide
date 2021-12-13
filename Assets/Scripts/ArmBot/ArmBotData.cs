@@ -65,6 +65,8 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
         public BotType type { get; }
         public Vector2 facingDirection { get; set; }
         public List<EntityMod> mods = new List<EntityMod>();
+        public Entity realBody{get;private set;}
+        public bool isGhost{get{return realBody!=null;}}
 
 
         protected BotStatusList nowStatus;
@@ -81,9 +83,12 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
 
         public virtual Entity GetGhost()
         {
+            if(this.isGhost){Debug.LogError("I am ghost");}
+
             var copy = this.MemberwiseClone() as Entity;
             copy.nowStatus = this.nowStatus.CopySelf();
             copy.mods = this.mods.GetRange(0,mods.Count);
+            copy.realBody = this;
             return copy;
         }
 

@@ -8,15 +8,14 @@ using System.Text;
 //ドローンの飛行セッション管理を行う
 public class SessionManager : MonoBehaviour, IEventListener<SessionEventArg>
 {
-    ISessionSequencer sequencer = null;
     SessionTracker tracker;
-    
+
 
 
     void Start()
     {
         tracker = new SessionTracker();
-        EventManager.instance.Register(tracker,EventName.SessionEvent);
+        EventManager.instance.Register(tracker, EventName.SessionEvent);
         EventManager.instance.Register(this, EventName.SessionEvent);
     }
 
@@ -35,7 +34,7 @@ public class SessionManager : MonoBehaviour, IEventListener<SessionEventArg>
         {
             return RequestSummary(arg.data.master, arg.data.startCoordinate);
         }
-        else if(arg.state == SessionState.requestSession)
+        else if (arg.state == SessionState.requestSession)
         {
             StartCoroutine(RealtimeSessionRoutine(arg.data));
         }
@@ -66,16 +65,20 @@ public class SessionManager : MonoBehaviour, IEventListener<SessionEventArg>
     //これの結果はSessionDataに書き込まれ,タスクを介してリクエスト元に返される.
     IEnumerator SummaryRoutine(ArmBotData.Entity sessionMaster, DataContainer container, Vector2 startCords)
     {
-
-        var summaryData = new SessionData(sessionMaster, startCords);
+        var summaryGhost = sessionMaster.GetGhost();
+        var summaryData = new SessionData(summaryGhost, startCords);
 
         //EvBuilderとSequencerを準備
-        ISessionSequencer sequencer = new SessionSequencerOnTheCliff(DataProvider.nowGameData.map, sessionMaster, startCords,summaryData);
+        //ISessionSequencer sequencer = new SessionSequencerOnTheCliff(DataProvider.nowGameData.map, sessionMaster, startCords,summaryData);
 
         var eventRegister = EventManager.instance.Register(summaryData, EventName.SystemExploreEvent);
         yield return new WaitUntil(() => eventRegister.compleated);
+        var map = DataProvider.nowGameData.map;
         //処理開始
-        sequencer.BuildSession();
+        while (!summaryGhost.CheckIfEnd())
+        {
+            summaryGhost.OnUpdate(map, summaryData.nowCoordinate);
+        }
 
 
         //今後EventManagerで諸Event のログをつけてもらうようにする
@@ -109,16 +112,35 @@ public class SessionManager : MonoBehaviour, IEventListener<SessionEventArg>
     {
         var started = EventManager.instance.Notice(EventName.SessionEvent, new SessionEventArg(SessionState.start, sessionData));
         yield return new WaitUntil(() => started.compleated);
+        var session = tracker.ongoingSessionTable[sessionData.master.id];
 
+        bool updated = false;
+        Action onStep = () =>
+        {
+            updated = true;
+        };
 
+        session.onUpdate += onStep;
+
+        while (session.master.CheckIfEnd())
+        {
+            session.master.OnUpdate(DataProvider.nowGameData.map, session.nowCoordinate);
+            yield return new WaitUntil(() => updated);
+            updated = false;
+            var arg = session.eventsOccoured[session.eventsOccoured.Count-1];
+            var time = SessionConfig.instance.GetDuration(arg);
+            if(time!=0){yield return new WaitForSeconds(time);}
+        }
+
+        session.onUpdate -= onStep;
+
+        /*
         var stepClock = 0;
-
         foreach (var exArg in sessionData.eventsOccoured)
         {
             var duration = SessionConfig.instance.GetDuration(exArg);
             yield return new WaitForSeconds(duration);
             var stepTask = EventManager.instance.Notice<ExploreArg>(EventName.RealtimeExploreEvent, exArg);
-
 
             //処理おおきにつき、ちゃんと確認
             if (!stepTask.compleated)
@@ -128,6 +150,7 @@ public class SessionManager : MonoBehaviour, IEventListener<SessionEventArg>
 
             stepClock++;
         }
+        */
 
         //終了を報告
         EventManager.instance.Notice(EventName.SessionEvent, new SessionEventArg(SessionState.compleate, sessionData));

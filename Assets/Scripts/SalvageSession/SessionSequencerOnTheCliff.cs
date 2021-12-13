@@ -1,5 +1,6 @@
 using UnityEngine;
 
+/*
 public class SessionSequencerOnTheCliff : ISessionSequencer
 {
     //このセッションを主導するEntity
@@ -57,3 +58,4 @@ public class SessionSequencerOnTheCliff : ISessionSequencer
 
     }
 }
+*/
