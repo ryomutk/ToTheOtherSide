@@ -1,14 +1,15 @@
 public enum StatusType
 {
+    none,
+    
     hp,
     speed,
     search,
     capacity,
     mining,
-    tomoshibi,
-    //ここから下トモシビ内ステータス
+    tomoshibi,      //ここから下トモシビ内ステータス
     stock,          //ストック限界
     fuelRate,       //1秒に消費されるFuel
-    sheldLevel,      //消費燃料*SLV = シールド値
+    sheldLevel,     //消費燃料*SLV = シールド値
     LV
 }

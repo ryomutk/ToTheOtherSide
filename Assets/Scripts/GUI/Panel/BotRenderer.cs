@@ -31,7 +31,7 @@ public class BotRenderer : UIPanel, IEventListener<ExploreArg>, IEventListener<S
         {
             var obj = botPool.GetObj();
             iconDictionary[arg.data.master] = obj;
-            obj.transform.localPosition = Vector2.zero;
+            obj.transform.localPosition = (arg.data.startCoordinate-StepGenerationConfig.instance.originCoords)*StepGenerationConfig.instance.gridToCanvasrate;
             obj.Show();
         }
         else if (arg.state == SessionState.compleate)
@@ -57,7 +57,7 @@ public class BotRenderer : UIPanel, IEventListener<ExploreArg>, IEventListener<S
         if (arg is TravelExArg trarg)
         {
             //座標を上書きするだけ
-            iconDictionary[arg.from].transform.localPosition = (trarg.coordinate-StepGenerationConfig.instance.originCoords) * StepGenerationConfig.instance.gridToCanvasrate;
+            iconDictionary[arg.from].transform.localPosition += (Vector3) trarg.traveledVec * StepGenerationConfig.instance.gridToCanvasrate;
             iconDictionary[arg.from].Load(arg.from);
         }
 

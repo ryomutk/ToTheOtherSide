@@ -3419,6 +3419,9 @@ MonoBehaviour:
     - _key: 7
       _value:
         m_LabelString: EV_UI
+    - _key: 8
+      _value:
+        m_LabelString: Ev_BotEvent
 --- !u!114 &1776790545
 MonoBehaviour:
   m_ObjectHideFlags: 0

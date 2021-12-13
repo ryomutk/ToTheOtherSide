@@ -28,17 +28,17 @@ MonoBehaviour:
   _status:
     values:
       rawData:
-      - _key: 0
-        _value: 1000
       - _key: 1
+        _value: 1000
+      - _key: 2
         _value: 5
-      - _key: 5
-        _value: 1
       - _key: 6
-        _value: 5
+        _value: 1
       - _key: 7
-        _value: 10
+        _value: 5
       - _key: 8
         _value: 10
       - _key: 9
+        _value: 10
+      - _key: 10
         _value: 1

@@ -88,6 +88,7 @@ MonoBehaviour:
     - V_GameData
     - Ev_Selected
     - EV_UI
+    - Ev_BotEvent
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 88b49ec05a878144888648843499ea5b, type: 2}

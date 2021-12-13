@@ -99,8 +99,12 @@ public abstract class ArmBotData : SingleVariantScriptableObject<ArmBotData>, IS
                 }
             }
 
-            hp -= (int)MapUtility.GetMiasmaDamage(coordinate);
+            var delta = -(int)MapUtility.GetMiasmaDamage(coordinate);
+            hp += delta;
 
+            var arg = new BotEventArg(this, BotActionType.damaged, StatusType.hp, delta);
+            EventManager.instance.Notice(EventName.BotEvent, arg);
+            
             return true;
         }
 

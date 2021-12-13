@@ -27,11 +27,11 @@ MonoBehaviour:
   statusList:
     values:
       rawData:
-      - _key: 0
-        _value: 100
       - _key: 1
-        _value: 20
+        _value: 100
       - _key: 2
+        _value: 20
+      - _key: 3
         _value: 2
-      - _key: 9
+      - _key: 10
         _value: 1

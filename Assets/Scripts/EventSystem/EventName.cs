@@ -7,5 +7,6 @@ public enum EventName
     SystemEvent,
     ScreenTouchEvent,
     SelectableEvent,
-    UIEvent
+    UIEvent,
+    BotEvent
 }
